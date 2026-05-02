@@ -1,9 +1,9 @@
-# Portfolio — Adnan Adamou
+﻿# Portfolio — Adnan Adamou
 
 Site vitrine statique, bilingue **FR / EN**.  
 Stack : HTML + CSS + JavaScript pur. Aucun framework, aucun build step.
 
-Live : [adnanadamou.netlify.app](https://adnanadamou.netlify.app)
+Live : [adnan-data.netlify.app](https://adnan-data.netlify.app)
 
 ---
 

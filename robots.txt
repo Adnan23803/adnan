@@ -1,0 +1,5 @@
+﻿User-agent: *
+Allow: /
+Disallow: /.vscode/
+
+Sitemap: https://adnan-data.netlify.app/sitemap.xml

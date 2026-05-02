@@ -1,0 +1,21 @@
+# macOS
+.DS_Store
+
+# Windows
+Thumbs.db
+Desktop.ini
+
+# Editeurs
+.vscode/*
+!.vscode/extensions.json
+.idea/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Dépendances (au cas où tu ajoutes du build plus tard)
+node_modules/
+
+# Netlify
+.netlify/

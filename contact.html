@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Adnan Adamou</title>
+  <meta name="description" content="Contactez Adnan Adamou pour vos projets de data analysis, gestion de l'information ou formation." />
+  <link rel="icon" href="images/logo.jpg" type="image/jpeg" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="lang-fr">
+
+  <!-- ============== HEADER (shared) ============== -->
+  <header class="site-header">
+    <div class="nav">
+      <a href="index.html" class="brand">
+        <img src="images/logo.jpg" alt="Data Solution" class="brand-logo">
+        <span>Adnan Adamou</span>
+      </a>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html"><span lang="fr">Accueil</span><span lang="en">Home</span></a></li>
+        <li><a href="about.html"><span lang="fr">À propos</span><span lang="en">About</span></a></li>
+        <li><a href="projects.html"><span lang="fr">Projets</span><span lang="en">Projects</span></a></li>
+        <li><a href="videos.html"><span lang="fr">Tutoriels</span><span lang="en">Tutorials</span></a></li>
+        <li><a href="contact.html"><span lang="fr">Contact</span><span lang="en">Contact</span></a></li>
+        <li class="lang-toggle-wrapper">
+          <div class="lang-toggle" role="group" aria-label="Language">
+            <button data-lang="fr" aria-pressed="true">FR</button>
+            <button data-lang="en" aria-pressed="false">EN</button>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- ============== PAGE HERO ============== -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow reveal">
+        <span lang="fr">Contact</span>
+        <span lang="en">Contact</span>
+      </span>
+      <h1 class="reveal">
+        <span lang="fr">Prenons le <em>temps</em> d'échanger.</span>
+        <span lang="en">Let's <em>take the time</em> to talk.</span>
+      </h1>
+      <p class="lead reveal" style="margin-top:1.5rem;">
+        <span lang="fr">
+          Mission, formation, audit de pipeline ou simple question — j'apporte une réponse sous 48 h.
+        </span>
+        <span lang="en">
+          Assignment, training, pipeline audit or a simple question — I reply within 48 hours.
+        </span>
+      </p>
+    </div>
+  </section>
+
+  <!-- ============== CONTACT ============== -->
+  <section>
+    <div class="container">
+      <div class="contact-grid">
+
+        <!-- Coordonnées -->
+        <div class="reveal">
+          <span class="eyebrow"><span lang="fr">Coordonnées</span><span lang="en">Direct</span></span>
+          <h2 style="margin: 1rem 0 2rem;">
+            <span lang="fr">Écrire directement.</span>
+            <span lang="en">Reach out directly.</span>
+          </h2>
+
+          <div class="contact-info">
+            <div class="contact-info-row">
+              <span class="key">Email</span>
+              <span class="val"><a href="mailto:adnanadamou@gmail.com">adnanadamou@gmail.com</a></span>
+            </div>
+            <div class="contact-info-row">
+              <span class="key"><span lang="fr">Téléphone</span><span lang="en">Phone</span></span>
+              <span class="val"><a href="tel:+22790941410">+227 90 94 14 10</a></span>
+            </div>
+            <div class="contact-info-row">
+              <span class="key">YouTube</span>
+              <span class="val"><a href="https://youtube.com/@datasolution" target="_blank" rel="noopener">@datasolution</a></span>
+            </div>
+            <div class="contact-info-row">
+              <span class="key">Facebook</span>
+              <span class="val"><a href="https://m.facebook.com/106771031899764/" target="_blank" rel="noopener">Data Solution</a></span>
+            </div>
+            <div class="contact-info-row">
+              <span class="key"><span lang="fr">Localisation</span><span lang="en">Location</span></span>
+              <span class="val">Niamey · Niger</span>
+            </div>
+          </div>
+
+          <p style="margin-top:2rem; color:var(--ink-muted); font-size:0.9rem;">
+            <span lang="fr">
+              Pour les projets confidentiels, merci d'indiquer un cadre de discussion.
+            </span>
+            <span lang="en">
+              For confidential projects, please indicate a discussion framework.
+            </span>
+          </p>
+        </div>
+
+        <!-- Formulaire (Netlify Forms — fonctionne sans backend !) -->
+        <div class="reveal">
+          <span class="eyebrow"><span lang="fr">Formulaire</span><span lang="en">Form</span></span>
+          <h2 style="margin: 1rem 0 2rem;">
+            <span lang="fr">Ou laisser un message.</span>
+            <span lang="en">Or leave a message.</span>
+          </h2>
+
+          <form
+            class="form"
+            name="contact"
+            method="POST"
+            data-netlify="true"
+            netlify-honeypot="bot-field"
+            action="/?sent=true">
+            <!-- champs cachés requis par Netlify -->
+            <input type="hidden" name="form-name" value="contact" />
+            <p style="display:none;">
+              <label>Don't fill this out: <input name="bot-field" /></label>
+            </p>
+
+            <div class="field">
+              <label for="name"><span lang="fr">Nom</span><span lang="en">Name</span></label>
+              <input id="name" type="text" name="name" required autocomplete="name" />
+            </div>
+            <div class="field">
+              <label for="email">Email</label>
+              <input id="email" type="email" name="email" required autocomplete="email" />
+            </div>
+            <div class="field">
+              <label for="subject"><span lang="fr">Sujet</span><span lang="en">Subject</span></label>
+              <input id="subject" type="text" name="subject" />
+            </div>
+            <div class="field">
+              <label for="message"><span lang="fr">Message</span><span lang="en">Message</span></label>
+              <textarea id="message" name="message" rows="5" required></textarea>
+            </div>
+            <div>
+              <button type="submit" class="btn btn-primary">
+                <span lang="fr">Envoyer</span>
+                <span lang="en">Send</span>
+                <span class="arrow">→</span>
+              </button>
+            </div>
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== FOOTER (shared) ============== -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="images/logo.jpg" alt="Data Solution" class="footer-logo">
+        <h3>Adnan Adamou</h3>
+        <p>
+          <span lang="fr">Data Analyst &amp; Information Manager. Niamey, Niger.</span>
+          <span lang="en">Data Analyst &amp; Information Manager. Niamey, Niger.</span>
+        </p>
+      </div>
+      <div class="footer-col">
+        <h5><span lang="fr">Navigation</span><span lang="en">Navigation</span></h5>
+        <ul>
+          <li><a href="index.html"><span lang="fr">Accueil</span><span lang="en">Home</span></a></li>
+          <li><a href="about.html"><span lang="fr">À propos</span><span lang="en">About</span></a></li>
+          <li><a href="projects.html"><span lang="fr">Projets</span><span lang="en">Projects</span></a></li>
+          <li><a href="videos.html"><span lang="fr">Tutoriels</span><span lang="en">Tutorials</span></a></li>
+          <li><a href="contact.html"><span lang="fr">Contact</span><span lang="en">Contact</span></a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5><span lang="fr">Suivre</span><span lang="en">Follow</span></h5>
+        <ul>
+          <li><a href="https://youtube.com/@datasolution" target="_blank" rel="noopener">YouTube ↗</a></li>
+          <li><a href="https://m.facebook.com/106771031899764/" target="_blank" rel="noopener">Facebook ↗</a></li>
+          <li><a href="mailto:adnanadamou@gmail.com">Email ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-year>2026</span> Adnan Adamou. <span lang="fr">Tous droits réservés.</span><span lang="en">All rights reserved.</span></span>
+      <span lang="fr">Conçu avec soin · Niamey</span>
+      <span lang="en">Crafted with care · Niamey</span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

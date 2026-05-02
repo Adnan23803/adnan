@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tutoriels — Adnan Adamou · Data Solution</title>
+  <meta name="description" content="Tutoriels vidéo gratuits sur KoboToolbox, ODK, Power BI, Tableau, QGIS, ArcGIS, Excel, SPSS — par Adnan Adamou (chaîne Data Solution)." />
+  <link rel="icon" href="images/logo.jpg" type="image/jpeg" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="lang-fr">
+
+  <!-- ============== HEADER ============== -->
+  <header class="site-header">
+    <div class="nav">
+      <a href="index.html" class="brand">
+        <img src="images/logo.jpg" alt="Data Solution" class="brand-logo">
+        <span>Adnan Adamou</span>
+      </a>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html"><span lang="fr">Accueil</span><span lang="en">Home</span></a></li>
+        <li><a href="about.html"><span lang="fr">À propos</span><span lang="en">About</span></a></li>
+        <li><a href="projects.html"><span lang="fr">Projets</span><span lang="en">Projects</span></a></li>
+        <li><a href="videos.html"><span lang="fr">Tutoriels</span><span lang="en">Tutorials</span></a></li>
+        <li><a href="contact.html"><span lang="fr">Contact</span><span lang="en">Contact</span></a></li>
+        <li class="lang-toggle-wrapper">
+          <div class="lang-toggle" role="group" aria-label="Language">
+            <button data-lang="fr" aria-pressed="true">FR</button>
+            <button data-lang="en" aria-pressed="false">EN</button>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- ============== PAGE HERO ============== -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow reveal">
+        <span lang="fr">Chaîne YouTube · Data Solution</span>
+        <span lang="en">YouTube Channel · Data Solution</span>
+      </span>
+      <h1 class="reveal">
+        <span lang="fr">Tutoriels <em>pratiques</em>,<br>en français.</span>
+        <span lang="en">Practical <em>tutorials</em>,<br>in French.</span>
+      </h1>
+      <p class="lead reveal" style="margin-top:1.25rem;">
+        <span lang="fr">
+          Formations gratuites sur les outils de collecte, d'analyse et de visualisation de données. KoboToolbox, ODK, Power BI, Tableau, QGIS, ArcGIS, Excel, SPSS et plus encore.
+        </span>
+        <span lang="en">
+          Free training on data collection, analysis and visualization tools. KoboToolbox, ODK, Power BI, Tableau, QGIS, ArcGIS, Excel, SPSS and more.
+        </span>
+      </p>
+    </div>
+  </section>
+
+  <!-- ============== FEATURED VIDEO ============== -->
+  <section style="padding-top:0;">
+    <div class="container">
+      <div class="feature-card reveal">
+        <div>
+          <span class="feature-tag">
+            <span lang="fr">Dernière vidéo</span>
+            <span lang="en">Latest video</span>
+          </span>
+          <h2 style="margin-bottom:1rem;">
+            <span lang="fr">Découvrir <em>Data Solution</em></span>
+            <span lang="en">Discover <em>Data Solution</em></span>
+          </h2>
+          <p style="color:var(--ink-soft);">
+            <span lang="fr">
+              La chaîne Data Solution propose des tutoriels structurés pour maîtriser les outils utilisés par les professionnels de la donnée dans les ONG, agences gouvernementales et institutions de développement.
+            </span>
+            <span lang="en">
+              The Data Solution channel offers structured tutorials for mastering tools used by data professionals in NGOs, government agencies and development institutions.
+            </span>
+          </p>
+          <div class="btn-row" style="margin-top:1.75rem;">
+            <a href="https://youtube.com/@datasolution" target="_blank" rel="noopener" class="btn btn-primary">
+              <span lang="fr">Voir la chaîne complète</span>
+              <span lang="en">See the full channel</span>
+              <span class="arrow">↗</span>
+            </a>
+          </div>
+        </div>
+        <!-- ✏️  VIDÉO MISE EN AVANT : remplacez HWlhjwzC2gA par l'ID de votre choix -->
+        <div class="feature-visual" onclick="playYT(this,'HWlhjwzC2gA')" role="button" tabindex="0" aria-label="Lire la vidéo" onkeydown="if(event.key==='Enter'||event.key===' ')playYT(this,'HWlhjwzC2gA')">
+          <div class="play-icon" aria-hidden="true"></div>
+          <span class="channel-handle">@datasolution</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== VIDEO GRID ============== -->
+  <section style="background:var(--paper-soft);">
+    <div class="container">
+      <div class="section-head" style="margin-bottom:2rem;">
+        <div>
+          <span class="eyebrow">
+            <span lang="fr">Catalogue</span>
+            <span lang="en">Catalogue</span>
+          </span>
+          <h2 style="margin-top:1rem;">
+            <span lang="fr">Parcourir par thème.</span>
+            <span lang="en">Browse by topic.</span>
+          </h2>
+        </div>
+        <p class="lead">
+          <span lang="fr">Cliquez sur ▶ pour lire directement sur cette page, ou explorez le thème sur YouTube.</span>
+          <span lang="en">Click ▶ to play right here, or explore the topic on YouTube.</span>
+        </p>
+      </div>
+
+      <!-- ✏️  GRILLE DE VIDÉOS
+           Pour ajouter une vidéo intégrable :
+           - Copiez un bloc .video-card
+           - Remplacez VIDEO_ID par l'identifiant YouTube (dans l'URL : youtube.com/watch?v=VIDEO_ID)
+           - Remplacez l'attribut src de <img> : https://img.youtube.com/vi/VIDEO_ID/mqdefault.jpg
+           - Mettez à jour onclick="playYT(this,'VIDEO_ID')"
+           Pour une vidéo liée (ouvre YouTube) : copiez un .video-card-link
+      -->
+      <div class="video-grid">
+
+        <!-- ── Vidéo 1 : inline player (exemple avec ID connu) ── -->
+        <!-- ✏️ Remplacez HWlhjwzC2gA par votre ID -->
+        <div class="video-card" onclick="playYT(this,'HWlhjwzC2gA')">
+          <div class="video-thumb">
+            <img src="https://img.youtube.com/vi/HWlhjwzC2gA/mqdefault.jpg" alt="Tutoriel KoboToolbox" loading="lazy">
+            <div class="video-play-btn" aria-hidden="true"><span></span></div>
+          </div>
+          <div class="video-info">
+            <span class="video-category">KoboToolbox</span>
+            <h3><span lang="fr">Tutoriel KoboToolbox</span><span lang="en">KoboToolbox Tutorial</span></h3>
+            <p><span lang="fr">Formation complète sur la collecte de données avec KoboToolbox.</span><span lang="en">Complete training on data collection with KoboToolbox.</span></p>
+          </div>
+        </div>
+
+        <!-- ── Vidéo 2 : lien YouTube (thème Power BI) ── -->
+        <!-- ✏️ Remplacez par un .video-card onclick="playYT(...)" quand vous avez l'ID -->
+        <a href="https://www.youtube.com/@datasolution/search?query=power+bi" target="_blank" rel="noopener" class="video-card-link">
+          <div class="vcl-visual">
+            <div class="vcl-icon">📊</div>
+            <span lang="fr">Power BI &amp; Tableau</span>
+            <span lang="en">Power BI &amp; Tableau</span>
+          </div>
+          <div class="video-info">
+            <span class="video-category">Visualisation</span>
+            <h3><span lang="fr">Tableaux de bord Power BI &amp; Tableau</span><span lang="en">Power BI &amp; Tableau Dashboards</span></h3>
+            <p><span lang="fr">Créer des tableaux de bord interactifs et des rapports visuels.</span><span lang="en">Create interactive dashboards and visual reports.</span></p>
+            <span class="vcl-cta"><span lang="fr">Voir sur YouTube</span><span lang="en">Watch on YouTube</span> ↗</span>
+          </div>
+        </a>
+
+        <!-- ── Vidéo 3 : lien YouTube (thème ODK) ── -->
+        <a href="https://www.youtube.com/@datasolution/search?query=odk" target="_blank" rel="noopener" class="video-card-link">
+          <div class="vcl-visual">
+            <div class="vcl-icon">📱</div>
+            <span>ODK Collect</span>
+          </div>
+          <div class="video-info">
+            <span class="video-category"><span lang="fr">Collecte</span><span lang="en">Collection</span></span>
+            <h3><span lang="fr">ODK Collect &amp; XLSForm</span><span lang="en">ODK Collect &amp; XLSForm</span></h3>
+            <p><span lang="fr">Concevoir et déployer des formulaires de collecte sur mobile.</span><span lang="en">Design and deploy mobile data collection forms.</span></p>
+            <span class="vcl-cta"><span lang="fr">Voir sur YouTube</span><span lang="en">Watch on YouTube</span> ↗</span>
+          </div>
+        </a>
+
+        <!-- ── Vidéo 4 : lien YouTube (thème QGIS) ── -->
+        <a href="https://www.youtube.com/@datasolution/search?query=qgis" target="_blank" rel="noopener" class="video-card-link">
+          <div class="vcl-visual">
+            <div class="vcl-icon">🗺️</div>
+            <span>QGIS · ArcGIS</span>
+          </div>
+          <div class="video-info">
+            <span class="video-category">SIG &amp; <span lang="fr">Cartographie</span><span lang="en">Mapping</span></span>
+            <h3><span lang="fr">QGIS, ArcGIS &amp; Télédétection</span><span lang="en">QGIS, ArcGIS &amp; Remote Sensing</span></h3>
+            <p><span lang="fr">Produire des cartes thématiques et analyser des données spatiales.</span><span lang="en">Produce thematic maps and analyse spatial data.</span></p>
+            <span class="vcl-cta"><span lang="fr">Voir sur YouTube</span><span lang="en">Watch on YouTube</span> ↗</span>
+          </div>
+        </a>
+
+        <!-- ── Vidéo 5 : lien YouTube (thème Excel/SPSS) ── -->
+        <a href="https://www.youtube.com/@datasolution/search?query=excel+spss" target="_blank" rel="noopener" class="video-card-link">
+          <div class="vcl-visual">
+            <div class="vcl-icon">📈</div>
+            <span>Excel · SPSS</span>
+          </div>
+          <div class="video-info">
+            <span class="video-category"><span lang="fr">Analyse statistique</span><span lang="en">Statistical analysis</span></span>
+            <h3><span lang="fr">Excel avancé &amp; SPSS</span><span lang="en">Advanced Excel &amp; SPSS</span></h3>
+            <p><span lang="fr">Analyse de données, tableaux croisés, statistiques descriptives.</span><span lang="en">Data analysis, cross-tabulation, descriptive statistics.</span></p>
+            <span class="vcl-cta"><span lang="fr">Voir sur YouTube</span><span lang="en">Watch on YouTube</span> ↗</span>
+          </div>
+        </a>
+
+        <!-- ── Vidéo 6 : lien YouTube (thème DHIS2/automatisation) ── -->
+        <a href="https://www.youtube.com/@datasolution/search?query=dhis2+automatisation" target="_blank" rel="noopener" class="video-card-link">
+          <div class="vcl-visual">
+            <div class="vcl-icon">⚙️</div>
+            <span>DHIS2 · Make · Zapier</span>
+          </div>
+          <div class="video-info">
+            <span class="video-category"><span lang="fr">Intégration &amp; automatisation</span><span lang="en">Integration &amp; Automation</span></span>
+            <h3><span lang="fr">DHIS2, Make &amp; Automatisation</span><span lang="en">DHIS2, Make &amp; Automation</span></h3>
+            <p><span lang="fr">Intégrer et automatiser vos flux de données entre plateformes.</span><span lang="en">Integrate and automate your data flows between platforms.</span></p>
+            <span class="vcl-cta"><span lang="fr">Voir sur YouTube</span><span lang="en">Watch on YouTube</span> ↗</span>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== CTA CHANNEL ============== -->
+  <section>
+    <div class="container" style="text-align:center;">
+      <span class="eyebrow">
+        <span lang="fr">Plus de 100 vidéos disponibles</span>
+        <span lang="en">Over 100 videos available</span>
+      </span>
+      <h2 style="margin-top:1rem; max-width:18ch; margin-left:auto; margin-right:auto;">
+        <span lang="fr">Toute la chaîne, <em style="font-style:italic; color:var(--terracotta);">gratuitement.</em></span>
+        <span lang="en">The full channel, <em style="font-style:italic; color:var(--terracotta);">for free.</em></span>
+      </h2>
+      <p style="color:var(--ink-soft); margin:1rem auto 2rem; max-width:48ch;">
+        <span lang="fr">Abonnez-vous pour être notifié des nouveaux tutoriels. Tous les contenus sont en français, pensés pour les praticiens terrain.</span>
+        <span lang="en">Subscribe to be notified of new tutorials. All content is in French, designed for field practitioners.</span>
+      </p>
+      <div class="btn-row" style="justify-content:center; flex-wrap:wrap;">
+        <a href="https://youtube.com/@datasolution" target="_blank" rel="noopener" class="btn btn-primary">
+          <span lang="fr">S'abonner à la chaîne</span>
+          <span lang="en">Subscribe to the channel</span>
+          <span class="arrow">↗</span>
+        </a>
+        <a href="https://m.facebook.com/106771031899764/" target="_blank" rel="noopener" class="btn">
+          <span lang="fr">Suivre sur Facebook</span>
+          <span lang="en">Follow on Facebook</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== FOOTER ============== -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="images/logo.jpg" alt="Data Solution" class="footer-logo">
+        <h3>Adnan Adamou</h3>
+        <p>
+          <span lang="fr">Data Analyst &amp; Information Manager. Niamey, Niger.</span>
+          <span lang="en">Data Analyst &amp; Information Manager. Niamey, Niger.</span>
+        </p>
+      </div>
+      <div class="footer-col">
+        <h5><span lang="fr">Navigation</span><span lang="en">Navigation</span></h5>
+        <ul>
+          <li><a href="index.html"><span lang="fr">Accueil</span><span lang="en">Home</span></a></li>
+          <li><a href="about.html"><span lang="fr">À propos</span><span lang="en">About</span></a></li>
+          <li><a href="projects.html"><span lang="fr">Projets</span><span lang="en">Projects</span></a></li>
+          <li><a href="videos.html"><span lang="fr">Tutoriels</span><span lang="en">Tutorials</span></a></li>
+          <li><a href="contact.html"><span lang="fr">Contact</span><span lang="en">Contact</span></a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5><span lang="fr">Suivre</span><span lang="en">Follow</span></h5>
+        <ul>
+          <li><a href="https://youtube.com/@datasolution" target="_blank" rel="noopener">YouTube ↗</a></li>
+          <li><a href="https://m.facebook.com/106771031899764/" target="_blank" rel="noopener">Facebook ↗</a></li>
+          <li><a href="mailto:adnanadamou@gmail.com">Email ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-year>2026</span> Adnan Adamou. <span lang="fr">Tous droits réservés.</span><span lang="en">All rights reserved.</span></span>
+      <span lang="fr">Conçu avec soin · Niamey</span>
+      <span lang="en">Crafted with care · Niamey</span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

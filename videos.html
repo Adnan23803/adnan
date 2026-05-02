@@ -22,7 +22,6 @@
       </button>
       <ul class="nav-links">
         <li><a href="index.html"><span lang="fr">Accueil</span><span lang="en">Home</span></a></li>
-        <li><a href="about.html"><span lang="fr">À propos</span><span lang="en">About</span></a></li>
         <li><a href="projects.html"><span lang="fr">Projets</span><span lang="en">Projects</span></a></li>
         <li><a href="videos.html"><span lang="fr">Tutoriels</span><span lang="en">Tutorials</span></a></li>
         <li><a href="contact.html"><span lang="fr">Contact</span><span lang="en">Contact</span></a></li>
@@ -87,8 +86,9 @@
             </a>
           </div>
         </div>
-        <!-- ✏️  VIDÉO MISE EN AVANT : remplacez HWlhjwzC2gA par l'ID de votre choix -->
         <div class="feature-visual" onclick="playYT(this,'HWlhjwzC2gA')" role="button" tabindex="0" aria-label="Lire la vidéo" onkeydown="if(event.key==='Enter'||event.key===' ')playYT(this,'HWlhjwzC2gA')">
+          <img src="https://img.youtube.com/vi/HWlhjwzC2gA/hqdefault.jpg" alt="Tutoriel Data Solution" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;">
+          <div style="position:absolute; inset:0; background:rgba(26,31,46,0.4);"></div>
           <div class="play-icon" aria-hidden="true"></div>
           <span class="channel-handle">@datasolution</span>
         </div>
@@ -102,8 +102,8 @@
       <div class="section-head" style="margin-bottom:2rem;">
         <div>
           <span class="eyebrow">
-            <span lang="fr">Catalogue</span>
-            <span lang="en">Catalogue</span>
+            <span lang="fr">Playlists</span>
+            <span lang="en">Playlists</span>
           </span>
           <h2 style="margin-top:1rem;">
             <span lang="fr">Parcourir par thème.</span>
@@ -111,104 +111,122 @@
           </h2>
         </div>
         <p class="lead">
-          <span lang="fr">Cliquez sur ▶ pour lire directement sur cette page, ou explorez le thème sur YouTube.</span>
-          <span lang="en">Click ▶ to play right here, or explore the topic on YouTube.</span>
+          <span lang="fr">8 playlists structurées, disponibles gratuitement sur YouTube.</span>
+          <span lang="en">8 structured playlists, available for free on YouTube.</span>
         </p>
       </div>
 
-      <!-- ✏️  GRILLE DE VIDÉOS
-           Pour ajouter une vidéo intégrable :
-           - Copiez un bloc .video-card
-           - Remplacez VIDEO_ID par l'identifiant YouTube (dans l'URL : youtube.com/watch?v=VIDEO_ID)
-           - Remplacez l'attribut src de <img> : https://img.youtube.com/vi/VIDEO_ID/mqdefault.jpg
-           - Mettez à jour onclick="playYT(this,'VIDEO_ID')"
-           Pour une vidéo liée (ouvre YouTube) : copiez un .video-card-link
-      -->
       <div class="video-grid">
 
-        <!-- ── Vidéo 1 : inline player (exemple avec ID connu) ── -->
-        <!-- ✏️ Remplacez HWlhjwzC2gA par votre ID -->
-        <div class="video-card" onclick="playYT(this,'HWlhjwzC2gA')">
-          <div class="video-thumb">
-            <img src="https://img.youtube.com/vi/HWlhjwzC2gA/mqdefault.jpg" alt="Tutoriel KoboToolbox" loading="lazy">
-            <div class="video-play-btn" aria-hidden="true"><span></span></div>
-          </div>
-          <div class="video-info">
-            <span class="video-category">KoboToolbox</span>
-            <h3><span lang="fr">Tutoriel KoboToolbox</span><span lang="en">KoboToolbox Tutorial</span></h3>
-            <p><span lang="fr">Formation complète sur la collecte de données avec KoboToolbox.</span><span lang="en">Complete training on data collection with KoboToolbox.</span></p>
-          </div>
-        </div>
-
-        <!-- ── Vidéo 2 : lien YouTube (thème Power BI) ── -->
-        <!-- ✏️ Remplacez par un .video-card onclick="playYT(...)" quand vous avez l'ID -->
-        <a href="https://www.youtube.com/@datasolution/search?query=power+bi" target="_blank" rel="noopener" class="video-card-link">
+        <!-- ── Playlist 1 : KoboToolbox de A à Z ── -->
+        <a href="https://www.youtube.com/playlist?list=PLBf204ZoDDg1SDYUWHVoe5ow691F2PbKh" target="_blank" rel="noopener" class="video-card-link">
           <div class="vcl-visual">
-            <div class="vcl-icon">📊</div>
-            <span lang="fr">Power BI &amp; Tableau</span>
-            <span lang="en">Power BI &amp; Tableau</span>
+            <div class="vcl-icon">📋</div>
+            <span>KoboToolbox</span>
           </div>
           <div class="video-info">
-            <span class="video-category">Visualisation</span>
-            <h3><span lang="fr">Tableaux de bord Power BI &amp; Tableau</span><span lang="en">Power BI &amp; Tableau Dashboards</span></h3>
-            <p><span lang="fr">Créer des tableaux de bord interactifs et des rapports visuels.</span><span lang="en">Create interactive dashboards and visual reports.</span></p>
-            <span class="vcl-cta"><span lang="fr">Voir sur YouTube</span><span lang="en">Watch on YouTube</span> ↗</span>
+            <span class="video-category"><span lang="fr">Collecte de données</span><span lang="en">Data collection</span></span>
+            <h3><span lang="fr">KoboToolbox de A à Z</span><span lang="en">KoboToolbox from A to Z</span></h3>
+            <p><span lang="fr">Maîtriser KoboToolbox de bout en bout : création de formulaires, déploiement, supervision et export des données.</span><span lang="en">Master KoboToolbox end to end: form creation, deployment, supervision and data export.</span></p>
+            <span class="vcl-cta"><span lang="fr">Voir la playlist</span><span lang="en">View playlist</span> ↗</span>
           </div>
         </a>
 
-        <!-- ── Vidéo 3 : lien YouTube (thème ODK) ── -->
-        <a href="https://www.youtube.com/@datasolution/search?query=odk" target="_blank" rel="noopener" class="video-card-link">
-          <div class="vcl-visual">
-            <div class="vcl-icon">📱</div>
-            <span>ODK Collect</span>
-          </div>
-          <div class="video-info">
-            <span class="video-category"><span lang="fr">Collecte</span><span lang="en">Collection</span></span>
-            <h3><span lang="fr">ODK Collect &amp; XLSForm</span><span lang="en">ODK Collect &amp; XLSForm</span></h3>
-            <p><span lang="fr">Concevoir et déployer des formulaires de collecte sur mobile.</span><span lang="en">Design and deploy mobile data collection forms.</span></p>
-            <span class="vcl-cta"><span lang="fr">Voir sur YouTube</span><span lang="en">Watch on YouTube</span> ↗</span>
-          </div>
-        </a>
-
-        <!-- ── Vidéo 4 : lien YouTube (thème QGIS) ── -->
-        <a href="https://www.youtube.com/@datasolution/search?query=qgis" target="_blank" rel="noopener" class="video-card-link">
+        <!-- ── Playlist 2 : Initiation à la cartographie et au SIG ── -->
+        <a href="https://www.youtube.com/playlist?list=PLBf204ZoDDg2KgMPOImnEQM43E65CWIRL" target="_blank" rel="noopener" class="video-card-link">
           <div class="vcl-visual">
             <div class="vcl-icon">🗺️</div>
-            <span>QGIS · ArcGIS</span>
+            <span>SIG · Cartographie</span>
           </div>
           <div class="video-info">
             <span class="video-category">SIG &amp; <span lang="fr">Cartographie</span><span lang="en">Mapping</span></span>
-            <h3><span lang="fr">QGIS, ArcGIS &amp; Télédétection</span><span lang="en">QGIS, ArcGIS &amp; Remote Sensing</span></h3>
-            <p><span lang="fr">Produire des cartes thématiques et analyser des données spatiales.</span><span lang="en">Produce thematic maps and analyse spatial data.</span></p>
-            <span class="vcl-cta"><span lang="fr">Voir sur YouTube</span><span lang="en">Watch on YouTube</span> ↗</span>
+            <h3><span lang="fr">Initiation à la cartographie et au SIG</span><span lang="en">Introduction to Mapping &amp; GIS</span></h3>
+            <p><span lang="fr">Les bases de la cartographie numérique et des Systèmes d'Information Géographique pour les débutants.</span><span lang="en">Fundamentals of digital mapping and Geographic Information Systems for beginners.</span></p>
+            <span class="vcl-cta"><span lang="fr">Voir la playlist</span><span lang="en">View playlist</span> ↗</span>
           </div>
         </a>
 
-        <!-- ── Vidéo 5 : lien YouTube (thème Excel/SPSS) ── -->
-        <a href="https://www.youtube.com/@datasolution/search?query=excel+spss" target="_blank" rel="noopener" class="video-card-link">
+        <!-- ── Playlist 3 : Formulaire XLSForm ── -->
+        <a href="https://www.youtube.com/playlist?list=PLBf204ZoDDg0byuMBualkYlIyHrTZ1rg_" target="_blank" rel="noopener" class="video-card-link">
+          <div class="vcl-visual">
+            <div class="vcl-icon">📝</div>
+            <span>XLSForm</span>
+          </div>
+          <div class="video-info">
+            <span class="video-category"><span lang="fr">Conception de formulaires</span><span lang="en">Form design</span></span>
+            <h3><span lang="fr">Formulaire XLSForm</span><span lang="en">XLSForm Forms</span></h3>
+            <p><span lang="fr">Concevoir des formulaires avancés en XLSForm : logique de saut, contraintes, calculs et traductions.</span><span lang="en">Design advanced XLSForm forms: skip logic, constraints, calculations and translations.</span></p>
+            <span class="vcl-cta"><span lang="fr">Voir la playlist</span><span lang="en">View playlist</span> ↗</span>
+          </div>
+        </a>
+
+        <!-- ── Playlist 4 : Gestion du serveur KoboToolbox ── -->
+        <a href="https://www.youtube.com/playlist?list=PLBf204ZoDDg0lta73ZwNGY6cMUScHRQUQ" target="_blank" rel="noopener" class="video-card-link">
+          <div class="vcl-visual">
+            <div class="vcl-icon">⚙️</div>
+            <span>Serveur KoboToolbox</span>
+          </div>
+          <div class="video-info">
+            <span class="video-category"><span lang="fr">Administration</span><span lang="en">Administration</span></span>
+            <h3><span lang="fr">Gestion du serveur KoboToolbox</span><span lang="en">KoboToolbox Server Management</span></h3>
+            <p><span lang="fr">Paramétrer et administrer un serveur KoboToolbox : comptes utilisateurs, projets, API et gestion des données.</span><span lang="en">Configure and manage a KoboToolbox server: user accounts, projects, API and data management.</span></p>
+            <span class="vcl-cta"><span lang="fr">Voir la playlist</span><span lang="en">View playlist</span> ↗</span>
+          </div>
+        </a>
+
+        <!-- ── Playlist 5 : Création de formulaire avec ODK Build ── -->
+        <a href="https://www.youtube.com/playlist?list=PLBf204ZoDDg1gv0MsJ-yjDpyvJWqZFR-i" target="_blank" rel="noopener" class="video-card-link">
+          <div class="vcl-visual">
+            <div class="vcl-icon">📱</div>
+            <span>ODK Build</span>
+          </div>
+          <div class="video-info">
+            <span class="video-category"><span lang="fr">Collecte de données</span><span lang="en">Data collection</span></span>
+            <h3><span lang="fr">Création de formulaire avec ODK Build</span><span lang="en">Form creation with ODK Build</span></h3>
+            <p><span lang="fr">Créer et déployer des formulaires de collecte mobile avec l'interface visuelle d'ODK Build.</span><span lang="en">Create and deploy mobile data collection forms using ODK Build's visual interface.</span></p>
+            <span class="vcl-cta"><span lang="fr">Voir la playlist</span><span lang="en">View playlist</span> ↗</span>
+          </div>
+        </a>
+
+        <!-- ── Playlist 6 : Analyse des données avec Le Sphinx ── -->
+        <a href="https://www.youtube.com/playlist?list=PLBf204ZoDDg2qCgor07Ckf9sZNeDMpV5i" target="_blank" rel="noopener" class="video-card-link">
+          <div class="vcl-visual">
+            <div class="vcl-icon">📊</div>
+            <span>Le Sphinx</span>
+          </div>
+          <div class="video-info">
+            <span class="video-category"><span lang="fr">Analyse de données</span><span lang="en">Data analysis</span></span>
+            <h3><span lang="fr">Analyse des données avec Le Sphinx</span><span lang="en">Data Analysis with Le Sphinx</span></h3>
+            <p><span lang="fr">Saisie, traitement et analyse statistique des données d'enquête avec le logiciel Sphinx V5.</span><span lang="en">Enter, process and statistically analyse survey data with Sphinx V5 software.</span></p>
+            <span class="vcl-cta"><span lang="fr">Voir la playlist</span><span lang="en">View playlist</span> ↗</span>
+          </div>
+        </a>
+
+        <!-- ── Playlist 7 : Cartographie vectorielle avec QGis ── -->
+        <a href="https://www.youtube.com/playlist?list=PLBf204ZoDDg2ohx6qsyDJ9m1A4CI9w7gO" target="_blank" rel="noopener" class="video-card-link">
+          <div class="vcl-visual">
+            <div class="vcl-icon">🌍</div>
+            <span>QGIS</span>
+          </div>
+          <div class="video-info">
+            <span class="video-category">SIG &amp; <span lang="fr">Cartographie</span><span lang="en">Mapping</span></span>
+            <h3><span lang="fr">Cartographie vectorielle avec QGIS</span><span lang="en">Vector Mapping with QGIS</span></h3>
+            <p><span lang="fr">Produire des cartes thématiques vectorielles avec QGIS : couches, symbologie, mise en page et export.</span><span lang="en">Produce vector thematic maps with QGIS: layers, symbology, layout and export.</span></p>
+            <span class="vcl-cta"><span lang="fr">Voir la playlist</span><span lang="en">View playlist</span> ↗</span>
+          </div>
+        </a>
+
+        <!-- ── Playlist 8 : Analyse statistique avec Excel et Le Sphinx ── -->
+        <a href="https://www.youtube.com/playlist?list=PLBf204ZoDDg2YKUl9em-3G9EVXLoWAZqk" target="_blank" rel="noopener" class="video-card-link">
           <div class="vcl-visual">
             <div class="vcl-icon">📈</div>
-            <span>Excel · SPSS</span>
+            <span>Excel · Sphinx</span>
           </div>
           <div class="video-info">
             <span class="video-category"><span lang="fr">Analyse statistique</span><span lang="en">Statistical analysis</span></span>
-            <h3><span lang="fr">Excel avancé &amp; SPSS</span><span lang="en">Advanced Excel &amp; SPSS</span></h3>
-            <p><span lang="fr">Analyse de données, tableaux croisés, statistiques descriptives.</span><span lang="en">Data analysis, cross-tabulation, descriptive statistics.</span></p>
-            <span class="vcl-cta"><span lang="fr">Voir sur YouTube</span><span lang="en">Watch on YouTube</span> ↗</span>
-          </div>
-        </a>
-
-        <!-- ── Vidéo 6 : lien YouTube (thème DHIS2/automatisation) ── -->
-        <a href="https://www.youtube.com/@datasolution/search?query=dhis2+automatisation" target="_blank" rel="noopener" class="video-card-link">
-          <div class="vcl-visual">
-            <div class="vcl-icon">⚙️</div>
-            <span>DHIS2 · Make · Zapier</span>
-          </div>
-          <div class="video-info">
-            <span class="video-category"><span lang="fr">Intégration &amp; automatisation</span><span lang="en">Integration &amp; Automation</span></span>
-            <h3><span lang="fr">DHIS2, Make &amp; Automatisation</span><span lang="en">DHIS2, Make &amp; Automation</span></h3>
-            <p><span lang="fr">Intégrer et automatiser vos flux de données entre plateformes.</span><span lang="en">Integrate and automate your data flows between platforms.</span></p>
-            <span class="vcl-cta"><span lang="fr">Voir sur YouTube</span><span lang="en">Watch on YouTube</span> ↗</span>
+            <h3><span lang="fr">Analyse statistique avec Excel et Le Sphinx</span><span lang="en">Statistical Analysis with Excel &amp; Le Sphinx</span></h3>
+            <p><span lang="fr">Combiner Excel et Sphinx pour l'analyse statistique complète des données d'enquête.</span><span lang="en">Combine Excel and Sphinx for complete statistical analysis of survey data.</span></p>
+            <span class="vcl-cta"><span lang="fr">Voir la playlist</span><span lang="en">View playlist</span> ↗</span>
           </div>
         </a>
 
@@ -260,7 +278,6 @@
         <h5><span lang="fr">Navigation</span><span lang="en">Navigation</span></h5>
         <ul>
           <li><a href="index.html"><span lang="fr">Accueil</span><span lang="en">Home</span></a></li>
-          <li><a href="about.html"><span lang="fr">À propos</span><span lang="en">About</span></a></li>
           <li><a href="projects.html"><span lang="fr">Projets</span><span lang="en">Projects</span></a></li>
           <li><a href="videos.html"><span lang="fr">Tutoriels</span><span lang="en">Tutorials</span></a></li>
           <li><a href="contact.html"><span lang="fr">Contact</span><span lang="en">Contact</span></a></li>
@@ -269,6 +286,7 @@
       <div class="footer-col">
         <h5><span lang="fr">Suivre</span><span lang="en">Follow</span></h5>
         <ul>
+          <li><a href="https://www.linkedin.com/in/adnan-data" target="_blank" rel="noopener">LinkedIn ↗</a></li>
           <li><a href="https://youtube.com/@datasolution" target="_blank" rel="noopener">YouTube ↗</a></li>
           <li><a href="https://m.facebook.com/106771031899764/" target="_blank" rel="noopener">Facebook ↗</a></li>
           <li><a href="mailto:adnanadamou@gmail.com">Email ↗</a></li>

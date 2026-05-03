@@ -3,27 +3,49 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Projets — Adnan Adamou · Data Analyst Niger</title>
+  <title>Projets — KoboToolbox, Power BI, QGIS · Adnan Adamou Niger</title>
   <meta name="description" content="Sélection de projets en data analysis, collecte KoboToolbox, tableaux de bord Power BI, cartographie QGIS et formations humanitaires — Adnan Adamou, Data Analyst à Niamey, Niger." />
   <meta property="og:title" content="Projets — Adnan Adamou · Data Analyst Niger" />
   <meta property="og:description" content="Sélection de projets en data analysis, collecte KoboToolbox, tableaux de bord Power BI, cartographie QGIS et formations humanitaires — Adnan Adamou, Niamey." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://adnan-data.netlify.app/projects.html" />
-  <meta property="og:image" content="https://adnan-data.netlify.app/images/logo.jpg" />
-  <meta name="twitter:card" content="summary" />
-  <link rel="canonical" href="https://adnan-data.netlify.app/projects.html" />
+  <meta property="og:url" content="https://www.adnandata.com/projects.html" />
+  <meta property="og:image" content="https://www.adnandata.com/images/logo.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://www.adnandata.com/images/logo.jpg" />
+  <link rel="canonical" href="https://www.adnandata.com/projects.html" />
+  <link rel="alternate" hreflang="fr" href="https://www.adnandata.com/projects.html" />
+  <link rel="alternate" hreflang="en" href="https://www.adnandata.com/projects.html" />
+  <link rel="alternate" hreflang="x-default" href="https://www.adnandata.com/" />
   <meta name="robots" content="index, follow" />
-  <link rel="icon" href="images/logo.jpg" type="image/jpeg" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="alternate icon" href="assets/favicon.ico" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..700,0..100&family=Manrope:wght@300;400;500;600;700&display=swap">
   <link rel="stylesheet" href="css/style.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.adnandata.com/" },
+      { "@type": "ListItem", "position": 2, "name": "Projets", "item": "https://www.adnandata.com/projects.html" }
+    ]
+  }
+  </script>
 </head>
 <body class="lang-fr">
 
   <!-- ============== HEADER (shared) ============== -->
   <header class="site-header">
-    <div class="nav">
+    <nav class="nav" aria-label="Navigation">
       <a href="index.html" class="brand">
-        <img src="images/logo.jpg" alt="Data Solution" class="brand-logo">
-        <span>Adnan Adamou</span>
+        <img src="assets/picto.svg" alt="Data Solution" class="brand-logo" />
+        <span class="brand-text">
+          <span class="brand-name">Data Solution</span>
+          <span class="brand-sub">Adnan Adamou</span>
+        </span>
       </a>
       <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -40,8 +62,10 @@
           </div>
         </li>
       </ul>
-    </div>
+    </nav>
   </header>
+
+  <main>
 
   <!-- ============== PAGE HERO ============== -->
   <section class="page-hero">
@@ -66,8 +90,8 @@
             <span lang="fr">Projet phare · En continu</span>
             <span lang="en">Featured · Ongoing</span>
           </span>
-          <h2 style="margin-bottom:1rem;">Data Solution</h2>
-          <p style="color:var(--ink-soft);">
+          <h2 class="mb-1">Data Solution</h2>
+          <p class="color-soft">
             <span lang="fr">
               Plateforme éducative francophone autour des outils de collecte et d'analyse de données. Tutoriels structurés sur KoboToolbox, ODK, ArcGIS, QGIS, Power BI, Tableau, Excel, SPSS — destinés aux ONG, agences gouvernementales et étudiants en sciences sociales.
             </span>
@@ -75,7 +99,7 @@
               Francophone educational platform centred on data collection and analysis tools. Structured tutorials on KoboToolbox, ODK, ArcGIS, QGIS, Power BI, Tableau, Excel, SPSS — aimed at NGOs, government agencies and social science students.
             </span>
           </p>
-          <div class="btn-row" style="margin-top:1.75rem;">
+          <div class="btn-row mt-175">
             <a href="https://youtube.com/@datasolution" target="_blank" rel="noopener" class="btn btn-primary">
               <span lang="fr">Voir la chaîne</span>
               <span lang="en">See the channel</span>
@@ -95,7 +119,7 @@
   </section>
 
   <!-- ============== FEATURED: RADIO FM ============== -->
-  <section style="padding-top:0;">
+  <section class="flush-top">
     <div class="container">
       <div class="feature-card reveal">
         <div>
@@ -103,11 +127,11 @@
             <span lang="fr">Service · Digitalisation Media</span>
             <span lang="en">Service · Media Digitalization</span>
           </span>
-          <h2 style="margin-bottom:1rem;">
+          <h2 class="mb-1">
             <span lang="fr">Votre radio FM, <em>diffusée dans le monde entier.</em></span>
             <span lang="en">Your FM radio, <em>broadcast worldwide.</em></span>
           </h2>
-          <p style="color:var(--ink-soft);">
+          <p class="color-soft">
             <span lang="fr">
               Solution clé en main opérationnelle en 7 jours : encodage 128 kbps, VPS haute performance, AzuraCast, intégration Radio Garden, application mobile Android &amp; iOS et formation de votre équipe.
             </span>
@@ -115,7 +139,7 @@
               Turnkey solution live in 7 days: 128 kbps encoding, high-performance VPS, AzuraCast, Radio Garden integration, Android &amp; iOS mobile app and team training.
             </span>
           </p>
-          <div class="btn-row" style="margin-top:1.75rem;">
+          <div class="btn-row mt-175">
             <a href="contact.html" class="btn btn-primary">
               <span lang="fr">Prendre contact</span>
               <span lang="en">Get in touch</span>
@@ -176,10 +200,10 @@
   -->
   <section style="padding-top:2rem;">
     <div class="container">
-      <div class="section-head" style="margin-bottom:2rem;">
+      <div class="section-head mb-2">
         <div>
           <span class="eyebrow"><span lang="fr">Autres réalisations</span><span lang="en">Other work</span></span>
-          <h2 style="margin-top:1rem;">
+          <h2 class="mt-1">
             <span lang="fr">Sélection.</span>
             <span lang="en">A selection.</span>
           </h2>
@@ -200,10 +224,10 @@
         <div class="project-row reveal">
           <div class="project-num">01</div>
           <div>
-            <div class="project-title">
+            <h3 class="project-title">
               <span lang="fr">Système de collecte multi-pays · KoboToolbox</span>
               <span lang="en">Multi-country data collection system · KoboToolbox</span>
-            </div>
+            </h3>
             <div class="project-tags">
               <span>KoboToolbox</span>
               <span>XLSForm</span>
@@ -214,10 +238,10 @@
           </div>
           <p class="project-desc">
             <span lang="fr">
-              Conception d'un dispositif d'enquête répliqué sur plusieurs pays, avec validation terrain, traduction, et synchronisation vers un entrepôt central.
+              Conception et déploiement d'un dispositif d'enquête standardisé dans plusieurs pays : formulaires XLSForm avancés, validation terrain, logique de saut et traductions multilingues. Synchronisation automatique des soumissions vers un entrepôt de données central pour consolidation et analyse comparative inter-sites.
             </span>
             <span lang="en">
-              Survey instrument replicated across multiple countries, with field validation, translation, and sync to a central warehouse.
+              Design and deployment of a standardised survey instrument across multiple countries: advanced XLSForm forms, field validation, skip logic and multilingual translations. Automatic synchronisation of submissions to a central data warehouse for consolidation and cross-site comparative analysis.
             </span>
           </p>
           <div class="project-year">2024</div>
@@ -227,10 +251,10 @@
         <div class="project-row reveal">
           <div class="project-num">02</div>
           <div>
-            <div class="project-title">
+            <h3 class="project-title">
               <span lang="fr">Tableau de bord opérationnel · Power BI</span>
               <span lang="en">Operational dashboard · Power BI</span>
-            </div>
+            </h3>
             <div class="project-tags">
               <span>Power BI</span>
               <span>DAX</span>
@@ -239,10 +263,10 @@
           </div>
           <p class="project-desc">
             <span lang="fr">
-              Tableau de bord temps réel agrégé depuis DHIS2 et plusieurs sources Excel, suivi de performance par région et indicateurs clés.
+              Tableau de bord temps réel agrégé depuis DHIS2 et plusieurs sources Excel via Power Query. Suivi de performance par région, indicateurs clés de pilotage et calculs DAX avancés. Conçu pour être lisible et actionnable par les équipes opérationnelles sans formation technique préalable.
             </span>
             <span lang="en">
-              Real-time dashboard aggregated from DHIS2 and multiple Excel sources, regional performance tracking and key indicators.
+              Real-time dashboard aggregated from DHIS2 and multiple Excel sources via Power Query. Regional performance tracking, key operational indicators and advanced DAX calculations. Designed to be readable and actionable by field teams without prior technical training.
             </span>
           </p>
           <div class="project-year">2024</div>
@@ -252,10 +276,10 @@
         <div class="project-row reveal">
           <div class="project-num">03</div>
           <div>
-            <div class="project-title">
+            <h3 class="project-title">
               <span lang="fr">Automatisation Kobo → Google Sheets → Tableau</span>
               <span lang="en">Kobo → Google Sheets → Tableau automation</span>
-            </div>
+            </h3>
             <div class="project-tags">
               <span>Make</span>
               <span>Apps Script</span>
@@ -277,10 +301,10 @@
         <div class="project-row reveal">
           <div class="project-num">04</div>
           <div>
-            <div class="project-title">
+            <h3 class="project-title">
               <span lang="fr">Cartographie SIG · QGIS</span>
               <span lang="en">GIS Cartography · QGIS</span>
-            </div>
+            </h3>
             <div class="project-tags">
               <span>QGIS</span>
               <span>OpenStreetMap</span>
@@ -290,10 +314,10 @@
           </div>
           <p class="project-desc">
             <span lang="fr">
-              Production de cartes thématiques pour rapports terrain&nbsp;: zones d'intervention, densité bénéficiaires, accessibilité.
+              Production de cartes thématiques pour rapports terrain : zones d'intervention, densité des bénéficiaires et analyse de l'accessibilité. Intégration de données OpenStreetMap, couches vectorielles et télédétection pour cartographier précisément les zones d'action humanitaire.
             </span>
             <span lang="en">
-              Thematic maps for field reports: intervention zones, beneficiary density, accessibility.
+              Thematic map production for field reports: intervention zones, beneficiary density and accessibility analysis. Integration of OpenStreetMap data, vector layers and remote sensing to accurately map humanitarian action areas.
             </span>
           </p>
           <div class="project-year">2023</div>
@@ -303,10 +327,10 @@
         <div class="project-row reveal">
           <div class="project-num">05</div>
           <div>
-            <div class="project-title">
+            <h3 class="project-title">
               <span lang="fr">Digitalisation Radio FM · AzuraCast</span>
               <span lang="en">FM Radio Digitalization · AzuraCast</span>
-            </div>
+            </h3>
             <div class="project-tags">
               <span>AzuraCast</span>
               <span>VPS Linux</span>
@@ -332,10 +356,10 @@
         <div class="project-row reveal">
           <div class="project-num">06</div>
           <div>
-            <div class="project-title">
+            <h3 class="project-title">
               <span lang="fr">Enquête d'audience radio · Méthodes mixtes &amp; SIG</span>
               <span lang="en">Radio Audience Survey · Mixed Methods &amp; GIS</span>
-            </div>
+            </h3>
             <div class="project-tags">
               <span>KoboToolbox</span>
               <span>CAPI</span>
@@ -362,10 +386,10 @@
         <div class="project-row reveal">
           <div class="project-num">07</div>
           <div>
-            <div class="project-title">
+            <h3 class="project-title">
               <span lang="fr">Déploiement multi-pays · KoboToolbox &amp; Power Query</span>
               <span lang="en">Multi-country deployment · KoboToolbox &amp; Power Query</span>
-            </div>
+            </h3>
             <div class="project-tags">
               <span>KoboToolbox</span>
               <span>Power Query</span>
@@ -389,10 +413,10 @@
         <div class="project-row reveal">
           <div class="project-num">08</div>
           <div>
-            <div class="project-title">
+            <h3 class="project-title">
               <span lang="fr">Enseignement universitaire · Traitement &amp; Analyse Quantitative</span>
               <span lang="en">University Teaching · Quantitative Data Processing &amp; Analysis</span>
-            </div>
+            </h3>
             <div class="project-tags">
               <span>SPSS</span>
               <span>Excel</span>
@@ -410,7 +434,7 @@
               Lecturer for the Soc503 module (Quantitative Data Processing &amp; Analysis) in the Master's programme, Department of Sociology, Université Abdou Moumouni de Niamey.
             </span>
           </p>
-          <div class="project-year">2020–2022</div>
+          <div class="project-year">2019–2026</div>
         </div>
 
         <!-- ── DUPLIQUE CE BLOC POUR AJOUTER UN PROJET ── -->
@@ -418,10 +442,10 @@
         <div class="project-row reveal">
           <div class="project-num">05</div>
           <div>
-            <div class="project-title">
+            <h3 class="project-title">
               <span lang="fr">Titre du projet</span>
               <span lang="en">Project title</span>
-            </div>
+            </h3>
             <div class="project-tags">
               <span>Tag1</span><span>Tag2</span>
             </div>
@@ -444,8 +468,8 @@
   </section>
 
   <!-- ============== CTA ============== -->
-  <section style="background:var(--paper-soft);">
-    <div class="container" style="text-align:center;">
+  <section class="section-soft">
+    <div class="container text-center">
       <h2 style="max-width:20ch; margin: 0 auto 1.5rem;">
         <span lang="fr">Discutons de votre <em style="font-style:italic; color:var(--terracotta);">prochain projet</em>.</span>
         <span lang="en">Let's talk about your <em style="font-style:italic; color:var(--terracotta);">next project</em>.</span>
@@ -458,12 +482,13 @@
     </div>
   </section>
 
+  </main>
+
   <!-- ============== FOOTER (shared) ============== -->
   <footer class="site-footer">
     <div class="footer-grid">
       <div class="footer-brand">
-        <img src="images/logo.jpg" alt="Data Solution" class="footer-logo">
-        <h3>Adnan Adamou</h3>
+        <img src="assets/logo-horizontal.svg" alt="Data Solution — Adnan Adamou" loading="lazy">
         <p>
           <span lang="fr">Data Analyst &amp; Information Manager. Niamey, Niger.</span>
           <span lang="en">Data Analyst &amp; Information Manager. Niamey, Niger.</span>
@@ -489,10 +514,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© <span data-year>2026</span> Adnan Adamou. <span lang="fr">Tous droits réservés.</span><span lang="en">All rights reserved.</span></span>
-      <span lang="fr">Conçu avec soin · Niamey</span>
-      <span lang="en">Crafted with care · Niamey</span>
-    </div>
+      <span>© <span data-year>2026</span> Adnan Adamou. <span lang="fr">Tous droits réservés.</span><span lang="en">All rights reserved.</span></span></div>
   </footer>
 
   <script src="js/main.js"></script>

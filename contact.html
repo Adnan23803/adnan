@@ -3,27 +3,69 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Contact — Adnan Adamou · Data Analyst Niamey</title>
+  <title>Contacter Adnan Adamou — Data Analyst Niamey, Niger</title>
   <meta name="description" content="Adnan Adamou, Data Analyst & Information Manager à Niamey, Niger. Docteur en géographie, disponible pour missions humanitaires, formations et audits de pipeline de données." />
   <meta property="og:title" content="Contact — Adnan Adamou · Data Analyst Niamey" />
   <meta property="og:description" content="Data Analyst & Information Manager à Niamey, Niger. Disponible pour missions humanitaires, formations terrain et audits de pipeline de données." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://adnan-data.netlify.app/contact.html" />
-  <meta property="og:image" content="https://adnan-data.netlify.app/images/logo.jpg" />
-  <meta name="twitter:card" content="summary" />
-  <link rel="canonical" href="https://adnan-data.netlify.app/contact.html" />
+  <meta property="og:url" content="https://www.adnandata.com/contact.html" />
+  <meta property="og:image" content="https://www.adnandata.com/images/logo.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://www.adnandata.com/images/logo.jpg" />
+  <link rel="canonical" href="https://www.adnandata.com/contact.html" />
+  <link rel="alternate" hreflang="fr" href="https://www.adnandata.com/contact.html" />
+  <link rel="alternate" hreflang="en" href="https://www.adnandata.com/contact.html" />
+  <link rel="alternate" hreflang="x-default" href="https://www.adnandata.com/" />
   <meta name="robots" content="index, follow" />
-  <link rel="icon" href="images/logo.jpg" type="image/jpeg" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="alternate icon" href="assets/favicon.ico" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..700,0..100&family=Manrope:wght@300;400;500;600;700&display=swap">
   <link rel="stylesheet" href="css/style.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.adnandata.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Contact", "item": "https://www.adnandata.com/contact.html" }
+        ]
+      },
+      {
+        "@type": "ContactPage",
+        "name": "Contact — Adnan Adamou",
+        "url": "https://www.adnandata.com/contact.html",
+        "mainEntity": {
+          "@type": "Person",
+          "name": "Adnan Adamou Daouda",
+          "email": "adnanadamou@gmail.com",
+          "telephone": "+22790941410",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Niamey",
+            "addressCountry": "NE"
+          }
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body class="lang-fr">
 
   <!-- ============== HEADER (shared) ============== -->
   <header class="site-header">
-    <div class="nav">
+    <nav class="nav" aria-label="Navigation">
       <a href="index.html" class="brand">
-        <img src="images/logo.jpg" alt="Data Solution" class="brand-logo">
-        <span>Adnan Adamou</span>
+        <img src="assets/picto.svg" alt="Data Solution" class="brand-logo" />
+        <span class="brand-text">
+          <span class="brand-name">Data Solution</span>
+          <span class="brand-sub">Adnan Adamou</span>
+        </span>
       </a>
       <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -40,8 +82,10 @@
           </div>
         </li>
       </ul>
-    </div>
+    </nav>
   </header>
+
+  <main>
 
   <!-- ============== PAGE HERO ============== -->
   <section class="page-hero">
@@ -62,7 +106,7 @@
     <div class="container">
       <div class="about-grid">
         <div class="about-portrait reveal" aria-label="Adnan Adamou">
-          <img src="images/photo.jpg" alt="Adnan Adamou — Data Analyst & Information Manager, Niamey" loading="eager">
+          <img src="images/photo.jpg" alt="Adnan Adamou à Gorée, Sénégal" loading="lazy">
         </div>
 
         <div class="about-text reveal">
@@ -120,12 +164,12 @@
   </section>
 
   <!-- ============== APPROACH ============== -->
-  <section style="background:var(--paper-soft);">
+  <section class="section-soft">
     <div class="container">
       <div class="section-head">
         <div>
           <span class="eyebrow"><span lang="fr">Approche</span><span lang="en">Approach</span></span>
-          <h2 style="margin-top:1rem;">
+          <h2 class="mt-1">
             <span lang="fr">Trois principes simples.</span>
             <span lang="en">Three simple principles.</span>
           </h2>
@@ -228,6 +272,7 @@
           </h2>
 
           <iframe
+            title="Formulaire de contact — Adnan Adamou"
             src="https://docs.google.com/forms/d/e/1FAIpQLSfrw0zJBl3CwaogMDV66cau7f7n-jDGNalXiYECZj-oZSLuFQ/viewform?embedded=true"
             width="100%"
             height="700"
@@ -241,12 +286,13 @@
     </div>
   </section>
 
+  </main>
+
   <!-- ============== FOOTER (shared) ============== -->
   <footer class="site-footer">
     <div class="footer-grid">
       <div class="footer-brand">
-        <img src="images/logo.jpg" alt="Data Solution" class="footer-logo">
-        <h3>Adnan Adamou</h3>
+        <img src="assets/logo-horizontal.svg" alt="Data Solution — Adnan Adamou" loading="lazy">
         <p>
           <span lang="fr">Data Analyst &amp; Information Manager. Niamey, Niger.</span>
           <span lang="en">Data Analyst &amp; Information Manager. Niamey, Niger.</span>
@@ -272,10 +318,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© <span data-year>2026</span> Adnan Adamou. <span lang="fr">Tous droits réservés.</span><span lang="en">All rights reserved.</span></span>
-      <span lang="fr">Conçu avec soin · Niamey</span>
-      <span lang="en">Crafted with care · Niamey</span>
-    </div>
+      <span>© <span data-year>2026</span> Adnan Adamou. <span lang="fr">Tous droits réservés.</span><span lang="en">All rights reserved.</span></span></div>
   </footer>
 
   <script src="js/main.js"></script>

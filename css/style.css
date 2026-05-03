@@ -3,7 +3,7 @@
    Design: Editorial / Refined
    ============================================ */
 
-@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..700,0..100&family=Manrope:wght@300;400;500;600;700&display=swap');
+/* Google Fonts are loaded via <link> in HTML <head> for better performance */
 
 /* --- Design tokens --- */
 :root {
@@ -12,7 +12,7 @@
   --paper-soft: #EFEAE0;     /* variante plus chaude */
   --ink: #1A1F2E;            /* texte principal */
   --ink-soft: #4A4F5C;       /* texte secondaire */
-  --ink-muted: #8A8E97;      /* texte tertiaire */
+  --ink-muted: #636770;      /* texte tertiaire — WCAG AA 4.6:1 sur fond crème */
   --terracotta: #B85C3A;     /* accent principal */
   --terracotta-deep: #8C3F23;/* hover accent */
   --line: #DCD5C5;           /* lignes / séparateurs */
@@ -139,26 +139,43 @@ p { max-width: 65ch; }
 }
 
 .brand {
-  font-family: var(--serif);
-  font-size: 1.35rem;
-  font-weight: 500;
-  letter-spacing: -0.01em;
   display: flex;
   align-items: center;
-  gap: 0.55rem;
+  gap: 0.7rem;
+  text-decoration: none;
+  transition: opacity 0.3s var(--ease);
 }
-.brand-mark {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 34px; height: 34px;
-  border-radius: 50%;
-  background: var(--ink);
-  color: var(--paper);
+.brand:hover { opacity: 0.75; }
+.brand-logo {
+  width: 38px;
+  height: 38px;
+  flex-shrink: 0;
+}
+.brand-text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+}
+.brand-name {
   font-family: var(--serif);
+  font-size: 1.15rem;
   font-weight: 500;
-  font-size: 0.95rem;
-  letter-spacing: 0;
+  font-style: italic;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+.brand-sub {
+  font-family: var(--sans);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin-top: 1px;
+}
+@media (max-width: 480px) {
+  .brand-sub { display: none; }
+  .brand-name { font-size: 1rem; }
 }
 
 .nav-links {
@@ -1243,15 +1260,6 @@ section {
 }
 .video-tab:hover, .video-tab.active { background: var(--ink); color: var(--paper); border-color: var(--ink); }
 
-/* --- Brand logo (nav header) --- */
-.brand-logo {
-  height: 36px;
-  width: 36px;
-  object-fit: contain;
-  flex-shrink: 0;
-  border-radius: 4px;
-}
-
 /* --- Footer logo --- */
 .footer-logo {
   height: 52px;
@@ -1274,3 +1282,24 @@ section {
   object-position: top center;
   display: block;
 }
+
+/* --- Footer brand logo (remplace les inline styles répétés) --- */
+.footer-brand img {
+  max-width: 280px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+/* ─── Classes utilitaires ──────────────────────────────────────
+   Extraites des inline styles pour réduire la duplication HTML.
+   ──────────────────────────────────────────────────────────── */
+.flush-top    { padding-top: 0; }
+.section-soft { background: var(--paper-soft); }
+.text-center  { text-align: center; }
+.btn-center   { justify-content: center; flex-wrap: wrap; }
+.mt-1         { margin-top: 1rem; }
+.mb-1         { margin-bottom: 1rem; }
+.mb-2         { margin-bottom: 2rem; }
+.mt-175       { margin-top: 1.75rem; }
+.color-soft   { color: var(--ink-soft); }
+.color-muted  { color: var(--ink-muted); }

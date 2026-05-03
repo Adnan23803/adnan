@@ -3,46 +3,72 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Adnan Adamou — Data Analyst & Information Manager</title>
+  <title>Adnan Adamou — Data Analyst & Information Manager · Niger</title>
   <meta name="description" content="Adnan Adamou — Data Analyst & Information Manager. Collecte, traitement, visualisation de données pour le secteur humanitaire et du développement." />
   <meta property="og:title" content="Adnan Adamou — Data Analyst & Information Manager" />
   <meta property="og:description" content="Spécialiste collecte, traitement et visualisation de données. Fondateur de la chaîne Data Solution." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://adnan-data.netlify.app/" />
-  <meta property="og:image" content="https://adnan-data.netlify.app/images/logo.jpg" />
-  <meta name="twitter:card" content="summary" />
-  <link rel="canonical" href="https://adnan-data.netlify.app/" />
+  <meta property="og:url" content="https://www.adnandata.com/" />
+  <meta property="og:image" content="https://www.adnandata.com/images/logo.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://www.adnandata.com/images/logo.jpg" />
+  <link rel="canonical" href="https://www.adnandata.com/" />
+  <link rel="alternate" hreflang="fr" href="https://www.adnandata.com/" />
+  <link rel="alternate" hreflang="en" href="https://www.adnandata.com/" />
+  <link rel="alternate" hreflang="x-default" href="https://www.adnandata.com/" />
   <meta name="robots" content="index, follow" />
-  <link rel="icon" href="images/logo.jpg" type="image/jpeg" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="alternate icon" href="assets/favicon.ico" />
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..700,0..100&family=Manrope:wght@300;400;500;600;700&display=swap">
   <link rel="stylesheet" href="css/style.css" />
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "Person",
-    "name": "Adnan Adamou Daouda",
-    "jobTitle": "Data Analyst & Information Manager",
-    "url": "https://adnan-data.netlify.app",
-    "email": "adnanadamou@gmail.com",
-    "telephone": "+22790941410",
-    "address": {
-      "@type": "PostalAddress",
-      "addressLocality": "Niamey",
-      "addressCountry": "NE"
-    },
-    "sameAs": [
-      "https://www.linkedin.com/in/adnan-data",
-      "https://youtube.com/@datasolution",
-      "https://m.facebook.com/106771031899764/"
-    ],
-    "knowsAbout": [
-      "Data Analysis", "KoboToolbox", "ODK Collect", "Power BI",
-      "QGIS", "ArcGIS", "DHIS2", "Humanitarian Data", "GIS Mapping",
-      "XLSForm", "SPSS", "Tableau"
-    ],
-    "alumniOf": {
-      "@type": "EducationalOrganization",
-      "name": "Université Abdou Moumouni de Niamey"
-    }
+    "@graph": [
+      {
+        "@type": "Person",
+        "name": "Adnan Adamou Daouda",
+        "jobTitle": "Data Analyst & Information Manager",
+        "url": "https://www.adnandata.com",
+        "email": "adnanadamou@gmail.com",
+        "telephone": "+22790941410",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Niamey",
+          "addressCountry": "NE"
+        },
+        "areaServed": ["Niger", "Mali", "Burkina Faso", "République Démocratique du Congo", "République Centrafricaine"],
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "telephone": "+22790941410",
+          "email": "adnanadamou@gmail.com",
+          "contactType": "professional",
+          "availableLanguage": ["French", "English", "Hausa", "Zarma"]
+        },
+        "sameAs": [
+          "https://www.linkedin.com/in/adnan-data",
+          "https://youtube.com/@datasolution",
+          "https://m.facebook.com/106771031899764/"
+        ],
+        "knowsAbout": [
+          "Data Analysis", "KoboToolbox", "ODK Collect", "Power BI",
+          "QGIS", "ArcGIS", "DHIS2", "Humanitarian Data", "GIS Mapping",
+          "XLSForm", "SPSS", "Tableau", "Make", "Zapier", "Google Apps Script"
+        ],
+        "alumniOf": {
+          "@type": "EducationalOrganization",
+          "name": "Université Abdou Moumouni de Niamey"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "name": "Data Solution — Adnan Adamou",
+        "url": "https://www.adnandata.com"
+      }
+    ]
   }
   </script>
 </head>
@@ -50,10 +76,13 @@
 
   <!-- ============== HEADER (shared) ============== -->
   <header class="site-header">
-    <div class="nav">
+    <nav class="nav" aria-label="Navigation">
       <a href="index.html" class="brand">
-        <img src="images/logo.jpg" alt="Data Solution" class="brand-logo">
-        <span>Adnan Adamou</span>
+        <img src="assets/picto.svg" alt="Data Solution" class="brand-logo" />
+        <span class="brand-text">
+          <span class="brand-name">Data Solution</span>
+          <span class="brand-sub">Adnan Adamou</span>
+        </span>
       </a>
       <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
         <span></span><span></span><span></span>
@@ -70,8 +99,10 @@
           </div>
         </li>
       </ul>
-    </div>
+    </nav>
   </header>
+
+  <main>
 
   <!-- ============== HERO ============== -->
   <section class="hero">
@@ -139,7 +170,7 @@
   </section>
 
   <!-- ============== FEATURED: DATA SOLUTION ============== -->
-  <section style="padding-top:0;">
+  <section class="flush-top">
     <div class="container">
       <div class="feature-card reveal">
         <div>
@@ -147,8 +178,8 @@
             <span lang="fr">Projet phare</span>
             <span lang="en">Featured project</span>
           </span>
-          <h2 style="margin-bottom:1rem;">Data Solution</h2>
-          <p style="color:var(--ink-soft);">
+          <h2 class="mb-1">Data Solution</h2>
+          <p class="color-soft">
             <span lang="fr">
               Chaîne YouTube éducative dédiée aux outils, techniques et méthodes de collecte, traitement et analyse de données. Tutoriels en français sur KoboToolbox, ODK Collect, ArcGIS, QGIS, Power BI, Tableau, Excel, SPSS et plus encore.
             </span>
@@ -156,7 +187,7 @@
               Educational YouTube channel covering tools, techniques and methods for data collection, processing and analysis. French-language tutorials on KoboToolbox, ODK Collect, ArcGIS, QGIS, Power BI, Tableau, Excel, SPSS and more.
             </span>
           </p>
-          <div class="btn-row" style="margin-top:1.75rem;">
+          <div class="btn-row mt-175">
             <a href="https://youtube.com/@datasolution" target="_blank" rel="noopener" class="btn btn-primary">
               <span lang="fr">Visiter la chaîne</span>
               <span lang="en">Visit the channel</span>
@@ -164,8 +195,8 @@
             </a>
           </div>
         </div>
-        <div class="feature-visual" onclick="playYT(this,'HWlhjwzC2gA')" role="button" tabindex="0" aria-label="Lire la vidéo Data Solution" onkeydown="if(event.key==='Enter'||event.key===' ')playYT(this,'HWlhjwzC2gA')">
-          <img src="https://img.youtube.com/vi/HWlhjwzC2gA/hqdefault.jpg" alt="Tutoriel Data Solution" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;">
+        <div class="feature-visual" onclick="playYT(this,'HWlhjwzC2gA')" role="button" tabindex="0" aria-label="Lire la vidéo — Play video" onkeydown="if(event.key==='Enter'||event.key===' ')playYT(this,'HWlhjwzC2gA')">
+          <img src="https://img.youtube.com/vi/HWlhjwzC2gA/hqdefault.jpg" alt="Tutoriel Data Solution" loading="lazy" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover;">
           <div class="play-icon" aria-hidden="true"></div>
           <span class="channel-handle">@datasolution</span>
         </div>
@@ -182,7 +213,7 @@
             <span lang="fr">Expertise</span>
             <span lang="en">Expertise</span>
           </span>
-          <h2 style="margin-top:1rem;">
+          <h2 class="mt-1">
             <span lang="fr">Le cycle complet de la donnée.</span>
             <span lang="en">The full data lifecycle.</span>
           </h2>
@@ -273,7 +304,7 @@
   </section>
 
   <!-- ============== PHILOSOPHY ============== -->
-  <section style="background:var(--paper-soft);">
+  <section class="section-soft">
     <div class="container">
       <div class="quote-block reveal">
         <blockquote lang="fr">
@@ -289,7 +320,7 @@
 
   <!-- ============== CTA ============== -->
   <section>
-    <div class="container" style="text-align:center;">
+    <div class="container text-center">
       <span class="eyebrow">
         <span lang="fr">Travaillons ensemble</span>
         <span lang="en">Let's work together</span>
@@ -298,7 +329,7 @@
         <span lang="fr">Un projet de données <em style="font-style:italic; color:var(--terracotta);">à structurer</em> ?</span>
         <span lang="en">A data project <em style="font-style:italic; color:var(--terracotta);">to scope</em> ?</span>
       </h2>
-      <div class="btn-row" style="justify-content:center;">
+      <div class="btn-row btn-center">
         <a href="contact.html" class="btn btn-primary">
           <span lang="fr">Démarrer une conversation</span>
           <span lang="en">Start a conversation</span>
@@ -308,12 +339,13 @@
     </div>
   </section>
 
+  </main>
+
   <!-- ============== FOOTER (shared) ============== -->
   <footer class="site-footer">
     <div class="footer-grid">
       <div class="footer-brand">
-        <img src="images/logo.jpg" alt="Data Solution" class="footer-logo">
-        <h3>Adnan Adamou</h3>
+        <img src="assets/logo-horizontal.svg" alt="Data Solution — Adnan Adamou" loading="lazy">
         <p>
           <span lang="fr">Data Analyst &amp; Information Manager. Niamey, Niger.</span>
           <span lang="en">Data Analyst &amp; Information Manager. Niamey, Niger.</span>
@@ -339,10 +371,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© <span data-year>2026</span> Adnan Adamou. <span lang="fr">Tous droits réservés.</span><span lang="en">All rights reserved.</span></span>
-      <span lang="fr">Conçu avec soin · Niamey</span>
-      <span lang="en">Crafted with care · Niamey</span>
-    </div>
+      <span>© <span data-year>2026</span> Adnan Adamou. <span lang="fr">Tous droits réservés.</span><span lang="en">All rights reserved.</span></span></div>
   </footer>
 
   <script src="js/main.js"></script>

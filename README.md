@@ -3,7 +3,7 @@
 Site vitrine statique, bilingue **FR / EN**.  
 Stack : HTML + CSS + JavaScript pur. Aucun framework, aucun build step.
 
-Live : [adnan-data.netlify.app](https://adnan-data.netlify.app)
+Live : [adnan-data.netlify.app](https://www.adnandata.com)
 
 ---
 

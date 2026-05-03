@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1000 280" width="1000" height="280">
+  <defs>
+    <style>
+      .display { font-family: 'Fraunces', Georgia, 'Times New Roman', serif; font-weight: 500; }
+      .sub { font-family: 'Manrope', system-ui, sans-serif; font-weight: 500; letter-spacing: 0.22em; }
+    </style>
+  </defs>
+
+  <!-- Picto à gauche -->
+  <g transform="translate(140 140)">
+    <circle cx="0" cy="0" r="100" fill="none" stroke="#1E3A5F" stroke-width="11" stroke-linecap="round"
+            stroke-dasharray="565 628" transform="rotate(-30)"/>
+
+    <rect x="-40" y="0" width="15" height="55" rx="2" fill="#1A1F2E"/>
+    <rect x="-20" y="-28" width="15" height="83" rx="2" fill="#1A1F2E"/>
+    <rect x="0" y="-50" width="15" height="105" rx="2" fill="#1A1F2E"/>
+    <rect x="20" y="-15" width="15" height="70" rx="2" fill="#1E3A5F"/>
+
+    <path d="M -57 33 L -25 5 L -3 20 L 27 -15 L 50 -32"
+          stroke="#B85C3A" stroke-width="6" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M 39 -38 L 53 -38 L 53 -23" stroke="#B85C3A" stroke-width="6" fill="none"
+          stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+
+  <!-- Séparateur vertical fin -->
+  <line x1="290" y1="80" x2="290" y2="200" stroke="#DCD5C5" stroke-width="1.5"/>
+
+  <!-- Texte à droite -->
+  <text x="320" y="135" class="display" font-size="56" font-style="italic" fill="#1A1F2E">
+    Data Solution
+  </text>
+
+  <!-- Petit accent terracotta -->
+  <line x1="320" y1="165" x2="370" y2="165" stroke="#B85C3A" stroke-width="2"/>
+
+  <!-- Sous-titre -->
+  <text x="320" y="195" class="sub" font-size="16" fill="#4A4F5C">
+    ADNAN ADAMOU
+  </text>
+
+  <!-- Spécialité -->
+  <text x="320" y="220" class="sub" font-size="11" font-weight="400" fill="#8A8E97">
+    DATA ANALYST · INFORMATION MANAGER
+  </text>
+</svg>

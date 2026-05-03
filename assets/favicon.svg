@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <!-- Fond doux pour le contraste à petite taille -->
+  <rect width="64" height="64" rx="12" fill="#1E3A5F"/>
+
+  <!-- Barres simplifiées -->
+  <rect x="14" y="32" width="6" height="18" rx="1" fill="#F5F1E8"/>
+  <rect x="22" y="24" width="6" height="26" rx="1" fill="#F5F1E8"/>
+  <rect x="30" y="18" width="6" height="32" rx="1" fill="#F5F1E8"/>
+  <rect x="38" y="28" width="6" height="22" rx="1" fill="#DCD5C5"/>
+
+  <!-- Flèche terracotta -->
+  <path d="M 11 40 L 22 30 L 32 35 L 44 22 L 52 16"
+        stroke="#D4825C" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M 47 14 L 53 14 L 53 20" stroke="#D4825C" stroke-width="2.5" fill="none"
+        stroke-linecap="round" stroke-linejoin="round"/>
+</svg>

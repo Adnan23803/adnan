@@ -175,8 +175,8 @@ p { max-width: 65ch; }
   margin-top: 2px;
 }
 @media (max-width: 480px) {
-  .brand-sub { display: none; }
   .brand-name { font-size: 1rem; }
+  .brand-sub  { font-size: 0.62rem; }
 }
 
 .nav-links {

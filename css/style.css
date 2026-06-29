@@ -1617,6 +1617,14 @@ section {
   font-weight: 500;
   color: var(--ink);
 }
+.article-body h4 {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--terracotta);
+  margin: 2.25rem 0 0.75rem;
+}
 .article-body h2:first-child,
 .article-body h3:first-child { margin-top: 0; }
 

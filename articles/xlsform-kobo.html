@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ✏️  À MODIFIER POUR CHAQUE ARTICLE -->
+  <title>Cinq pièges classiques dans la conception d'un formulaire KoboToolbox — Adnan Adamou</title>
+  <meta name="description" content="Après des dizaines de déploiements terrain, je vois revenir les mêmes erreurs. En les anticipant dès la conception, on gagne des jours de débogage." />
+  <meta property="og:title" content="Cinq pièges classiques dans la conception d'un formulaire KoboToolbox" />
+  <meta property="og:description" content="Après des dizaines de déploiements terrain, je vois revenir les mêmes erreurs." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.adnandata.com/articles/xlsform-kobo.html" />
+  <meta property="og:image" content="https://www.adnandata.com/images/logo.jpg" />
+  <meta property="article:published_time" content="2026-06-29" />
+  <meta property="article:author" content="Adnan Adamou" />
+  <!-- ✏️  FIN -->
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://www.adnandata.com/images/logo.jpg" />
+  <link rel="canonical" href="https://www.adnandata.com/articles/xlsform-kobo.html" />
+  <meta name="robots" content="index, follow" />
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+  <link rel="alternate icon" href="../assets/favicon.ico" />
+  <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..700,0..100&family=Manrope:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="../css/style.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Cinq pièges classiques dans la conception d'un formulaire KoboToolbox",
+    "datePublished": "2026-06-29",
+    "author": {
+      "@type": "Person",
+      "name": "Adnan Adamou Daouda",
+      "url": "https://www.adnandata.com"
+    },
+    "publisher": { "@type": "Person", "name": "Adnan Adamou Daouda", "url": "https://www.adnandata.com" },
+    "url": "https://www.adnandata.com/articles/xlsform-kobo.html",
+    "description": "Après des dizaines de déploiements terrain, je vois revenir les mêmes erreurs. En les anticipant dès la conception, on gagne des jours de débogage."
+  }
+  </script>
+</head>
+<body class="lang-fr">
+
+  <!-- ============== HEADER ============== -->
+  <header class="site-header">
+    <nav class="nav" aria-label="Navigation">
+      <a href="../index.html" class="brand">
+        <img src="../assets/picto.svg" alt="Data Solution" class="brand-logo" />
+        <span class="brand-text">
+          <span class="brand-name">Data Solution</span>
+          <span class="brand-sub">Adnan Adamou</span>
+        </span>
+      </a>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="../index.html"><span lang="fr">Accueil</span><span lang="en">Home</span></a></li>
+        <li><a href="../articles.html"><span lang="fr">Blog</span><span lang="en">Blog</span></a></li>
+        <li><a href="../portfolio.html"><span lang="fr">Portfolio</span><span lang="en">Portfolio</span></a></li>
+        <li><a href="../projects.html"><span lang="fr">Projets</span><span lang="en">Projects</span></a></li>
+        <li><a href="../videos.html"><span lang="fr">Tutoriels</span><span lang="en">Tutorials</span></a></li>
+        <li class="lang-toggle-wrapper">
+          <div class="lang-toggle" role="group" aria-label="Language">
+            <button data-lang="fr" aria-pressed="true">FR</button>
+            <button data-lang="en" aria-pressed="false">EN</button>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+  <!-- ============== ARTICLE HERO ============== -->
+  <!-- ✏️  Méta, titre, chapô, auteur — modifier ici -->
+  <section class="article-hero">
+    <div class="container">
+
+      <div class="article-meta-top reveal">
+        <span class="cat">KoboToolbox</span>
+        <span class="sep"></span>
+        <span><span lang="fr">29 juin 2026</span><span lang="en">June 29, 2026</span></span>
+        <span class="sep"></span>
+        <span><span lang="fr">8 min de lecture</span><span lang="en">8 min read</span></span>
+      </div>
+
+      <h1 class="reveal">
+        <span lang="fr">Cinq pièges classiques dans la conception d'un formulaire KoboToolbox</span>
+        <span lang="en">Five classic pitfalls when designing a KoboToolbox form</span>
+      </h1>
+
+      <p class="subtitle reveal">
+        <span lang="fr">Après des dizaines de déploiements terrain, je vois revenir les mêmes erreurs. En les anticipant dès la conception, on gagne des jours de débogage et des données bien plus propres.</span>
+        <span lang="en">After dozens of field deployments, the same errors keep appearing. Anticipating them at design time saves days of debugging and yields much cleaner data.</span>
+      </p>
+
+      <div class="article-author reveal">
+        <div class="article-author-avatar">A</div>
+        <div class="article-author-info">
+          <span class="article-author-name">Adnan Adamou</span>
+          <span class="article-author-meta">
+            <span lang="fr">Data Analyst &amp; Information Manager</span>
+            <span lang="en">Data Analyst &amp; Information Manager</span>
+          </span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============== CONTENU DE L'ARTICLE ============== -->
+  <!--
+    ✏️  COMMENT RÉDIGER :
+    - Enveloppez chaque bloc dans <div lang="fr"> et <div lang="en">
+    - Balises disponibles :
+        <p class="lead-paragraph">…</p>   ← chapô d'intro (italique, plus grand)
+        <p>…</p>                           ← paragraphe normal
+        <h2>…</h2>  <h3>…</h3>            ← titres de section
+        <ul><li>…</li></ul>               ← liste à puces (marqueurs terracotta)
+        <ol><li>…</li></ol>               ← liste numérotée
+        <blockquote>…</blockquote>        ← citation mise en avant
+        <code>code inline</code>          ← code court
+        <pre><code>…</code></pre>         ← bloc de code (fond sombre)
+        <figure>
+          <img src="../assets/images/mon-image.jpg" alt="…">
+          <figcaption>Légende</figcaption>
+        </figure>                          ← image avec légende
+        <hr>                              ← séparateur "···"
+        <a href="…">lien</a>              ← lien (souligné terracotta)
+        <strong>gras</strong>  <em>italique</em>
+  -->
+  <article class="article-body">
+    <div class="container" style="padding:0;">
+
+      <!-- ============ VERSION FRANÇAISE ============ -->
+      <div lang="fr">
+
+        <p class="lead-paragraph">
+          Concevoir un formulaire KoboToolbox semble simple jusqu'au moment où vous récupérez les premières données du terrain. Voici cinq erreurs que je rencontre encore régulièrement, et comment les éviter.
+        </p>
+
+        <h2>1. Oublier la validation sur les champs numériques</h2>
+
+        <p>
+          C'est l'erreur la plus fréquente. Un enquêteur saisit <code>250</code> au lieu de <code>25.0</code> pour le poids d'un enfant, et personne ne le remarque avant l'analyse — trois semaines plus tard.
+        </p>
+
+        <p>
+          La solution est simple : ajoutez systématiquement une <strong>contrainte de plage</strong> sur chaque champ numérique. Dans XLSForm :
+        </p>
+
+        <pre><code>type        | name   | label   | constraint           | constraint_message
+integer     | poids  | Poids   | . >= 2 and . <= 80   | Poids inhabituel</code></pre>
+
+        <p>
+          Le message d'erreur s'affiche immédiatement sur le terminal de l'enquêteur, qui peut corriger sa saisie sur place.
+        </p>
+
+        <h2>2. Coder en dur les choix au lieu d'utiliser un fichier externe</h2>
+
+        <p>
+          Quand vous avez une liste de 200 villages, ne les saisissez pas un par un dans l'onglet <code>choices</code>. Utilisez plutôt un fichier CSV externe (<code>itemsets.csv</code>) que vous pouvez mettre à jour sans toucher au formulaire.
+        </p>
+
+        <h3>Pourquoi c'est essentiel</h3>
+
+        <ul>
+          <li>Vous évitez les fautes de frappe dans les noms de localités</li>
+          <li>Vous pouvez ajouter ou retirer des choix sans redéployer le formulaire</li>
+          <li>Le formulaire reste rapide à charger sur les anciens téléphones</li>
+        </ul>
+
+        <blockquote>
+          Un formulaire bien conçu fait économiser plus de temps que dix tableaux de bord ne pourront jamais en récupérer.
+        </blockquote>
+
+        <h2>3. Ne pas tester en mode hors-ligne</h2>
+
+        <p>
+          La plupart des terrains en zone rurale n'ont pas de connexion stable. Testez systématiquement votre formulaire <em>en mode avion</em> avant de le déployer. Vérifiez en particulier :
+        </p>
+
+        <ol>
+          <li>Les médias (audio, vidéo) référencés dans le formulaire</li>
+          <li>Les listes en cascade qui dépendent de fichiers externes</li>
+          <li>La sauvegarde locale des soumissions partielles</li>
+        </ol>
+
+        <hr>
+
+        <h2>4. Négliger les labels en langue locale</h2>
+
+        <p>
+          Si vos enquêteurs travaillent en haoussa, en zarma ou en peulh, traduisez les questions principales. Ce n'est pas seulement une question de confort : c'est une question de <strong>qualité des données</strong>. Une question mal comprise produit une réponse aléatoire.
+        </p>
+
+        <p>
+          KoboToolbox gère nativement plusieurs langues via les colonnes <code>label::fr</code>, <code>label::ha</code>, etc. <a href="https://support.kobotoolbox.org/multiple_languages.html" target="_blank" rel="noopener">Documentation officielle ici</a>.
+        </p>
+
+        <h2>5. Concevoir le formulaire seul, sans pilote terrain</h2>
+
+        <p>
+          Même avec quinze ans d'expérience, je fais toujours <strong>au moins un pilote</strong> avec deux à trois enquêteurs avant de déployer. Vous découvrirez des problèmes que vous n'auriez jamais imaginés : un mot ambigu, une question qui prend cinq minutes au lieu d'une, une logique de saut qui ne couvre pas un cas réel.
+        </p>
+
+        <h3>Le bon ratio temps</h3>
+
+        <p>
+          Pour un déploiement de 30 jours, prévoyez <strong>3 à 5 jours de pilote</strong>. C'est le meilleur investissement possible.
+        </p>
+
+        <hr>
+
+        <p>
+          Ces cinq pièges ne sont pas exhaustifs, mais ils représentent à eux seuls 80 % des problèmes que je rencontre quand on me demande de réparer une collecte en cours. Anticipez-les, et vous gagnerez des semaines.
+        </p>
+
+        <p>
+          Pour aller plus loin, j'ai publié une série de tutoriels vidéo sur ces sujets sur ma chaîne <a href="https://youtube.com/@datasolution" target="_blank" rel="noopener">Data Solution</a>.
+        </p>
+
+      </div>
+
+      <!-- ============ VERSION ANGLAISE ============ -->
+      <div lang="en">
+
+        <p class="lead-paragraph">
+          Designing a KoboToolbox form seems simple until you receive the first field data. Here are five mistakes I still encounter regularly, and how to avoid them.
+        </p>
+
+        <h2>1. Forgetting validation on numeric fields</h2>
+
+        <p>
+          This is the most common error. A surveyor enters <code>250</code> instead of <code>25.0</code> for a child's weight, and no one notices until analysis — three weeks later.
+        </p>
+
+        <p>
+          The solution is simple: systematically add a <strong>range constraint</strong> to each numeric field. In XLSForm:
+        </p>
+
+        <pre><code>type        | name   | label   | constraint           | constraint_message
+integer     | weight | Weight  | . >= 2 and . <= 80   | Unusual weight</code></pre>
+
+        <p>
+          The error message appears immediately on the surveyor's device, who can correct on the spot.
+        </p>
+
+        <h2>2. Hard-coding choices instead of using an external file</h2>
+
+        <p>
+          When you have a list of 200 villages, don't enter them one by one in the <code>choices</code> tab. Use an external CSV file (<code>itemsets.csv</code>) that you can update without touching the form.
+        </p>
+
+        <h3>Why it matters</h3>
+
+        <ul>
+          <li>You avoid typos in locality names</li>
+          <li>You can add or remove choices without redeploying the form</li>
+          <li>The form stays fast to load on older phones</li>
+        </ul>
+
+        <blockquote>
+          A well-designed form saves more time than ten dashboards could ever recover.
+        </blockquote>
+
+        <h2>3. Not testing offline</h2>
+
+        <p>
+          Most rural field sites don't have stable connectivity. Always test your form <em>in airplane mode</em> before deployment. In particular, check:
+        </p>
+
+        <ol>
+          <li>Media (audio, video) referenced in the form</li>
+          <li>Cascading lists depending on external files</li>
+          <li>Local saving of partial submissions</li>
+        </ol>
+
+        <hr>
+
+        <h2>4. Neglecting labels in local languages</h2>
+
+        <p>
+          If your surveyors work in Hausa, Zarma or Fulani, translate the key questions. It's not just a comfort issue — it's a <strong>data quality</strong> issue. A misunderstood question produces a random answer.
+        </p>
+
+        <p>
+          KoboToolbox natively supports multiple languages via the <code>label::fr</code>, <code>label::ha</code> columns, etc. <a href="https://support.kobotoolbox.org/multiple_languages.html" target="_blank" rel="noopener">Official documentation here</a>.
+        </p>
+
+        <h2>5. Designing the form alone, without a field pilot</h2>
+
+        <p>
+          Even with fifteen years of experience, I always run <strong>at least one pilot</strong> with two or three surveyors before deployment. You'll uncover issues you'd never have imagined: an ambiguous word, a question that takes five minutes instead of one, a skip logic that doesn't cover a real-world case.
+        </p>
+
+        <h3>The right time ratio</h3>
+
+        <p>
+          For a 30-day deployment, plan <strong>3 to 5 pilot days</strong>. It's the best investment you can make.
+        </p>
+
+        <hr>
+
+        <p>
+          These five pitfalls aren't exhaustive, but they alone account for 80% of the problems I encounter when asked to fix an ongoing collection. Anticipate them, and you'll save weeks.
+        </p>
+
+        <p>
+          For more, I've published a series of video tutorials on these topics on my <a href="https://youtube.com/@datasolution" target="_blank" rel="noopener">Data Solution</a> channel.
+        </p>
+
+      </div>
+
+    </div>
+  </article>
+
+  <!-- ============== FOOTER ARTICLE ============== -->
+  <!-- ✏️  Tags, partage, navigation précédent/suivant -->
+  <div class="article-footer">
+    <div class="container" style="padding:0;">
+
+      <div class="article-tags">
+        <span class="tag">KoboToolbox</span>
+        <span class="tag">XLSForm</span>
+        <span class="tag"><span lang="fr">Terrain</span><span lang="en">Field</span></span>
+        <span class="tag"><span lang="fr">Bonnes pratiques</span><span lang="en">Best practices</span></span>
+      </div>
+
+      <div class="article-share">
+        <span class="article-share-label">
+          <span lang="fr">Partager</span>
+          <span lang="en">Share</span>
+        </span>
+        <div class="article-share-links">
+          <a href="https://twitter.com/intent/tweet?url=https://www.adnandata.com/articles/xlsform-kobo.html" target="_blank" rel="noopener">Twitter / X</a>
+          <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.adnandata.com/articles/xlsform-kobo.html" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.adnandata.com/articles/xlsform-kobo.html" target="_blank" rel="noopener">Facebook</a>
+          <a href="mailto:?subject=Article%20intéressant&body=https://www.adnandata.com/articles/xlsform-kobo.html">Email</a>
+        </div>
+      </div>
+
+      <!-- ✏️  Liens vers l'article précédent et suivant -->
+      <nav class="article-nav" aria-label="Navigation entre articles">
+        <a href="../articles.html" class="prev">
+          <div class="article-nav-label">
+            <span lang="fr">← Tous les articles</span>
+            <span lang="en">← All articles</span>
+          </div>
+          <div class="article-nav-title">
+            <span lang="fr">Retour au Blog</span>
+            <span lang="en">Back to Blog</span>
+          </div>
+        </a>
+        <!-- Décommenter et remplir quand un article suivant existe :
+        <a href="NOM-ARTICLE-SUIVANT.html" class="next">
+          <div class="article-nav-label">
+            <span lang="fr">Article suivant →</span>
+            <span lang="en">Next post →</span>
+          </div>
+          <div class="article-nav-title">
+            <span lang="fr">Titre de l'article suivant</span>
+            <span lang="en">Next article title</span>
+          </div>
+        </a>
+        -->
+      </nav>
+
+    </div>
+  </div>
+
+  </main>
+
+  <!-- ============== FOOTER ============== -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="../assets/logo-horizontal.svg" alt="Data Solution — Adnan Adamou" loading="lazy">
+        <p>
+          <span lang="fr">Data Analyst &amp; Information Manager. Niamey, Niger.</span>
+          <span lang="en">Data Analyst &amp; Information Manager. Niamey, Niger.</span>
+        </p>
+      </div>
+      <div class="footer-col">
+        <h5><span lang="fr">Navigation</span><span lang="en">Navigation</span></h5>
+        <ul>
+          <li><a href="../index.html"><span lang="fr">Accueil</span><span lang="en">Home</span></a></li>
+          <li><a href="../articles.html"><span lang="fr">Blog</span><span lang="en">Blog</span></a></li>
+          <li><a href="../portfolio.html"><span lang="fr">Portfolio</span><span lang="en">Portfolio</span></a></li>
+          <li><a href="../projects.html"><span lang="fr">Projets</span><span lang="en">Projects</span></a></li>
+          <li><a href="../videos.html"><span lang="fr">Tutoriels</span><span lang="en">Tutorials</span></a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5><span lang="fr">Suivre</span><span lang="en">Follow</span></h5>
+        <ul>
+          <li><a href="https://www.linkedin.com/in/adnan-data" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+          <li><a href="https://youtube.com/@datasolution" target="_blank" rel="noopener">YouTube ↗</a></li>
+          <li><a href="https://m.facebook.com/106771031899764/" target="_blank" rel="noopener">Facebook ↗</a></li>
+          <li><a href="mailto:hello@adnandata.com">Email ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-year>2026</span> Adnan Adamou. <span lang="fr">Tous droits réservés.</span><span lang="en">All rights reserved.</span></span>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

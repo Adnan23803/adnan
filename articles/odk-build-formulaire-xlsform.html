@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ODK Build : concevoir des formulaires XLSForm sans coder — Adnan Adamou</title>
+  <meta name="description" content="Découvrez ODK Build, l'application gratuite pour concevoir vos formulaires de collecte de données sans connexion internet ni compétences en codage. Tutoriel complet avec liens de téléchargement." />
+  <meta property="og:title" content="ODK Build : concevoir des formulaires XLSForm sans coder" />
+  <meta property="og:description" content="ODK Build permet de paramétrer différents types de variables, des questions ouvertes aux coordonnées GPS, pour générer facilement vos fichiers XLSForm." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.adnandata.com/articles/odk-build-formulaire-xlsform.html" />
+  <meta property="og:image" content="https://getodk.b-cdn.net/uploads/default/original/2X/2/2d2cd654ddd844056e5ea87c88374e7b97e0f6f7.png" />
+  <meta property="article:published_time" content="2026-06-29" />
+  <meta property="article:author" content="Adnan Adamou" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://getodk.b-cdn.net/uploads/default/original/2X/2/2d2cd654ddd844056e5ea87c88374e7b97e0f6f7.png" />
+  <link rel="canonical" href="https://www.adnandata.com/articles/odk-build-formulaire-xlsform.html" />
+  <link rel="alternate" hreflang="fr" href="https://www.adnandata.com/articles/odk-build-formulaire-xlsform.html" />
+  <link rel="alternate" hreflang="en" href="https://www.adnandata.com/articles/odk-build-formulaire-xlsform.html" />
+  <link rel="alternate" hreflang="x-default" href="https://www.adnandata.com/" />
+  <meta name="robots" content="index, follow" />
+  <link rel="icon" type="image/svg+xml" href="../assets/favicon.svg" />
+  <link rel="alternate icon" href="../assets/favicon.ico" />
+  <link rel="apple-touch-icon" href="../assets/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..700,0..100&family=Manrope:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="../css/style.css" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "ODK Build : concevoir des formulaires XLSForm sans coder",
+    "datePublished": "2026-06-29",
+    "author": {
+      "@type": "Person",
+      "name": "Adnan Adamou Daouda",
+      "url": "https://www.adnandata.com"
+    },
+    "publisher": { "@type": "Person", "name": "Adnan Adamou Daouda", "url": "https://www.adnandata.com" },
+    "url": "https://www.adnandata.com/articles/odk-build-formulaire-xlsform.html",
+    "image": "https://getodk.b-cdn.net/uploads/default/original/2X/2/2d2cd654ddd844056e5ea87c88374e7b97e0f6f7.png",
+    "description": "Découvrez ODK Build, l'application gratuite pour concevoir vos formulaires de collecte de données sans connexion internet ni compétences en codage.",
+    "keywords": ["ODK Build", "XLSForm", "KoboToolbox", "collecte de données", "formulaire mobile", "humanitaire"]
+  }
+  </script>
+</head>
+<body class="lang-fr">
+
+  <!-- ============== HEADER ============== -->
+  <header class="site-header">
+    <nav class="nav" aria-label="Navigation">
+      <a href="../index.html" class="brand">
+        <img src="../assets/picto.svg" alt="Data Solution" class="brand-logo" />
+        <span class="brand-text">
+          <span class="brand-name">Data Solution</span>
+          <span class="brand-sub">Adnan Adamou</span>
+        </span>
+      </a>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="../index.html"><span lang="fr">Accueil</span><span lang="en">Home</span></a></li>
+        <li><a href="../articles.html"><span lang="fr">Blog</span><span lang="en">Blog</span></a></li>
+        <li><a href="../portfolio.html"><span lang="fr">Portfolio</span><span lang="en">Portfolio</span></a></li>
+        <li><a href="../projects.html"><span lang="fr">Projets</span><span lang="en">Projects</span></a></li>
+        <li><a href="../videos.html"><span lang="fr">Tutoriels</span><span lang="en">Tutorials</span></a></li>
+        <li class="lang-toggle-wrapper">
+          <div class="lang-toggle" role="group" aria-label="Language">
+            <button data-lang="fr" aria-pressed="true">FR</button>
+            <button data-lang="en" aria-pressed="false">EN</button>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+
+  <!-- ============== ARTICLE HERO ============== -->
+  <section class="article-hero">
+    <div class="container">
+
+      <div class="article-meta-top reveal">
+        <span class="cat">ODK · XLSForm</span>
+        <span class="sep"></span>
+        <span><span lang="fr">29 juin 2026</span><span lang="en">June 29, 2026</span></span>
+        <span class="sep"></span>
+        <span><span lang="fr">10 min de lecture</span><span lang="en">10 min read</span></span>
+      </div>
+
+      <h1 class="reveal">
+        <span lang="fr">ODK Build : concevoir des formulaires XLSForm sans coder</span>
+        <span lang="en">ODK Build: design XLSForm forms without coding</span>
+      </h1>
+
+      <p class="subtitle reveal">
+        <span lang="fr">Une application gratuite, utilisable hors connexion, qui permet à n'importe quel professionnel du terrain de construire ses formulaires de collecte — des questions simples aux coordonnées GPS — et de générer un fichier XLSForm en quelques clics.</span>
+        <span lang="en">A free, offline-capable application that lets any field professional build data collection forms — from simple questions to GPS coordinates — and generate an XLSForm file in just a few clicks.</span>
+      </p>
+
+      <div class="article-author reveal">
+        <div class="article-author-avatar">A</div>
+        <div class="article-author-info">
+          <span class="article-author-name">Adnan Adamou</span>
+          <span class="article-author-meta">
+            <span lang="fr">Data Analyst &amp; Information Manager · Niamey, Niger</span>
+            <span lang="en">Data Analyst &amp; Information Manager · Niamey, Niger</span>
+          </span>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ============== CONTENU DE L'ARTICLE ============== -->
+  <article class="article-body">
+    <div class="container" style="padding:0;">
+
+      <!-- Image de couverture (avant les blocs lang) -->
+      <figure>
+        <img
+          src="https://getodk.b-cdn.net/uploads/default/original/2X/2/2d2cd654ddd844056e5ea87c88374e7b97e0f6f7.png"
+          alt="Interface de l'application ODK Build"
+          loading="eager"
+        />
+        <figcaption>
+          <span lang="fr">Interface principale d'ODK Build — source : getodk.org</span>
+          <span lang="en">ODK Build main interface — source: getodk.org</span>
+        </figcaption>
+      </figure>
+
+      <!-- ============ VERSION FRANÇAISE ============ -->
+      <div lang="fr">
+
+        <p class="lead-paragraph">
+          Concevoir un formulaire XLSForm rigoureux est souvent le premier obstacle que rencontrent les équipes de terrain. ODK Build lève cette barrière en proposant une interface graphique intuitive, utilisable sans connexion internet et sans toucher à une seule formule Excel.
+        </p>
+
+        <h2>Qu'est-ce qu'ODK Build ?</h2>
+
+        <p>
+          ODK Build est un outil gratuit développé par la communauté <strong>Open Data Kit (ODK)</strong>, désormais maintenu par l'organisation Getodk.org. Il s'agit d'un éditeur visuel de formulaires de collecte de données qui génère en sortie un fichier au standard <strong>XLSForm</strong> — le format universel lu par KoboToolbox, ODK Collect, CommCare et la plupart des plateformes de collecte mobile.
+        </p>
+
+        <p>
+          Son avantage principal : vous construisez votre formulaire par glisser-déposer, sans écrire une seule ligne de code ni maîtriser la syntaxe XLSForm. L'application s'occupe de générer le fichier <code>.xlsx</code> ou <code>.xml</code> pour vous.
+        </p>
+
+        <h3>ODK Build en ligne vs. version desktop</h3>
+
+        <p>ODK Build existe sous deux formes :</p>
+
+        <ul>
+          <li><strong>Version en ligne</strong> sur <a href="https://build.getodk.org" target="_blank" rel="noopener">build.getodk.org</a> — accessible depuis un navigateur, nécessite une connexion internet.</li>
+          <li><strong>Version desktop</strong> (Windows 32/64 bits et Mac OS) — s'installe sur votre machine et fonctionne <strong>entièrement hors connexion</strong>. C'est celle que je recommande pour le terrain.</li>
+        </ul>
+
+        <h2>Télécharger et installer ODK Build</h2>
+
+        <p>Voici les liens de téléchargement directs selon votre système d'exploitation :</p>
+
+        <div class="download-box">
+          <p>Choisissez la version correspondant à votre système :</p>
+          <ul>
+            <li>
+              <a href="https://bit.ly/3FrhfSA" target="_blank" rel="noopener" class="text-link">⬇ ODK Build — Windows 64 bits</a>
+              <span class="note">(recommandé pour la plupart des PC récents)</span>
+            </li>
+            <li>
+              <a href="https://bit.ly/3KhHcYw" target="_blank" rel="noopener" class="text-link">⬇ ODK Build — Windows 32 bits</a>
+              <span class="note">(PC plus anciens)</span>
+            </li>
+            <li>
+              <a href="https://bit.ly/3SmlDtl" target="_blank" rel="noopener" class="text-link">⬇ ODK Build — Mac OS</a>
+            </li>
+          </ul>
+        </div>
+
+        <p>L'installation est simple : téléchargez le fichier, double-cliquez dessus et suivez les étapes. Aucune configuration particulière n'est requise.</p>
+
+        <h3>Comment savoir si vous avez un PC 32 ou 64 bits ?</h3>
+
+        <p>
+          Sous Windows, faites un clic droit sur <strong>Ce PC</strong> → <strong>Propriétés</strong>. Dans la section <em>Système</em>, regardez la ligne <em>Type du système</em>. Elle indique clairement "système d'exploitation 64 bits" ou "32 bits".
+        </p>
+
+        <h2>Découverte de l'interface</h2>
+
+        <p>Au premier lancement, ODK Build vous présente une interface épurée divisée en trois zones principales :</p>
+
+        <ol>
+          <li><strong>La barre de types de questions</strong> (en haut) — elle liste tous les types de champs disponibles : texte, nombre, date, image, audio, GPS, liste à choix unique, liste à choix multiple, etc.</li>
+          <li><strong>La zone de construction</strong> (au centre) — c'est ici que vous glissez et organisez vos questions.</li>
+          <li><strong>Le panneau de propriétés</strong> (à droite) — il affiche les paramètres de la question sélectionnée : libellé, contrainte, condition d'affichage, etc.</li>
+        </ol>
+
+        <p>La navigation est volontairement simple. Vous n'avez pas besoin de formation technique pour commencer à l'utiliser.</p>
+
+        <h2>Types de questions disponibles</h2>
+
+        <p>ODK Build couvre l'essentiel des besoins d'une enquête terrain :</p>
+
+        <ul>
+          <li><strong>Text</strong> — question ouverte, réponse libre</li>
+          <li><strong>Number</strong> — champ numérique (entier ou décimal)</li>
+          <li><strong>Select One</strong> — liste à choix unique (radio)</li>
+          <li><strong>Select Multiple</strong> — liste à choix multiples (cases à cocher)</li>
+          <li><strong>Date / Time / Date and Time</strong> — saisie de dates et heures</li>
+          <li><strong>GPS Location</strong> — capture des coordonnées géographiques (latitude, longitude, altitude, précision)</li>
+          <li><strong>Image / Audio / Video</strong> — capture de médias depuis l'appareil</li>
+          <li><strong>Barcode</strong> — lecture de code-barres ou QR code</li>
+          <li><strong>Note</strong> — texte informatif affiché à l'enquêteur sans saisie</li>
+          <li><strong>Group</strong> — regroupement de questions en sections</li>
+          <li><strong>Repeat</strong> — répétition d'un groupe de questions (utile pour les membres d'un ménage par exemple)</li>
+        </ul>
+
+        <blockquote>
+          Pour la majorité des enquêtes humanitaires et sociales, ces types couvrent 95 % des besoins. Les cas avancés (listes en cascade, calculs complexes, géofencing) nécessiteront d'éditer directement le XLSForm généré.
+        </blockquote>
+
+        <h2>Construire un formulaire pas à pas</h2>
+
+        <p>Voici comment créer un formulaire simple d'identification d'un ménage :</p>
+
+        <h3>1. Créer un nouveau formulaire</h3>
+
+        <p>Au lancement, ODK Build crée automatiquement un formulaire vide. Vous pouvez aussi aller dans <strong>File → New Form</strong>. Donnez un titre à votre formulaire en haut de l'interface.</p>
+
+        <h3>2. Ajouter des questions</h3>
+
+        <p>Cliquez sur le type de question souhaité dans la barre du haut — un nouveau champ apparaît dans la zone centrale. Renseignez ensuite dans le panneau de droite :</p>
+
+        <ul>
+          <li><strong>Label</strong> : le libellé de la question affiché à l'enquêteur</li>
+          <li><strong>Name</strong> : l'identifiant technique (sans espace, sans accent, ex. <code>nom_chef_menage</code>)</li>
+          <li><strong>Hint</strong> : une indication optionnelle affichée sous la question</li>
+          <li><strong>Required</strong> : cochez si la question est obligatoire</li>
+        </ul>
+
+        <h3>3. Configurer une liste à choix</h3>
+
+        <p>Pour un <em>Select One</em> ou <em>Select Multiple</em>, cliquez sur <strong>Edit Choices</strong> dans le panneau de droite. Une fenêtre s'ouvre pour saisir les options une par une (libellé + valeur technique).</p>
+
+        <h3>4. Ajouter une question GPS</h3>
+
+        <p>Glissez le type <strong>GPS Location</strong> dans votre formulaire. Lors de la collecte sur ODK Collect, l'application demande automatiquement à l'enquêteur d'activer le GPS et capture les coordonnées. Aucune configuration supplémentaire n'est nécessaire dans ODK Build.</p>
+
+        <h3>5. Organiser en groupes</h3>
+
+        <p>Pour structurer votre formulaire en sections (ex. "Identification", "Logement", "Nutrition"), glissez un bloc <strong>Group</strong> et faites glisser vos questions à l'intérieur. Cela améliore la lisibilité et, dans KoboToolbox, génère automatiquement un affichage en pages séparées.</p>
+
+        <hr>
+
+        <h2>Exporter le formulaire</h2>
+
+        <p>Une fois votre formulaire construit, exportez-le en allant dans <strong>File → Export to XLSForm</strong>. ODK Build génère un fichier <code>.xlsx</code> que vous pouvez :</p>
+
+        <ul>
+          <li>Importer directement dans <strong>KoboToolbox</strong> (Nouveau projet → Importer un XLSForm)</li>
+          <li>Importer dans <strong>ODK Central</strong> ou <strong>ODK Aggregate</strong></li>
+          <li>Ouvrir dans Excel pour des modifications avancées (listes en cascade, calculs, etc.)</li>
+        </ul>
+
+        <p>Vous pouvez aussi sauvegarder votre formulaire au format natif ODK Build (<code>.odkbuild</code>) pour le reprendre plus tard.</p>
+
+        <h2>Limites à connaître</h2>
+
+        <p>ODK Build est excellent pour démarrer, mais il a des limites dont il faut être conscient :</p>
+
+        <ul>
+          <li><strong>Pas de listes en cascade</strong> — si vous avez besoin de listes filtrées (Région → Département → Commune), vous devrez éditer le XLSForm dans Excel.</li>
+          <li><strong>Pas de calculs automatiques</strong> — les champs calculés (âge à partir d'une date de naissance, score composite, etc.) nécessitent la syntaxe XLSForm directement.</li>
+          <li><strong>Pas de logique de saut complexe</strong> — les conditions d'affichage simples sont gérées, mais les expressions complexes devront être éditées manuellement.</li>
+          <li><strong>Interface en anglais uniquement</strong> — les libellés de l'interface ne sont pas traduits, même si les questions de votre formulaire peuvent être en n'importe quelle langue.</li>
+        </ul>
+
+        <p>Pour ces cas avancés, je recommande de commencer dans ODK Build puis de finaliser le XLSForm dans Excel. C'est la meilleure approche pour les équipes mixtes (techniciens et non-techniciens).</p>
+
+        <hr>
+
+        <h2>Tutoriel vidéo complet</h2>
+
+        <p>J'ai enregistré un tutoriel vidéo en français qui vous guide pas à pas dans l'utilisation d'ODK Build : installation, découverte de l'interface, construction d'un formulaire complet et export XLSForm.</p>
+
+        <p>N'hésitez pas à vous abonner à la chaîne <a href="https://youtube.com/@datasolution" target="_blank" rel="noopener">Data Solution</a> pour ne manquer aucun tutoriel sur les outils de collecte et d'analyse de données.</p>
+
+        <h2>Conclusion</h2>
+
+        <p>ODK Build est la porte d'entrée idéale pour toute équipe qui souhaite se lancer dans la collecte mobile de données sans passer par la case technique. En quelques heures de prise en main, vous pouvez construire des formulaires professionnels, les exporter au format XLSForm et les déployer sur KoboToolbox ou ODK Collect.</p>
+
+        <p>Pour les formulaires plus complexes, ODK Build reste utile pour la structure de base — vous compléterez ensuite les fonctionnalités avancées directement dans le fichier Excel. C'est une combinaison qui fonctionne très bien en contexte humanitaire et de développement, où les équipes ont des profils techniques variés.</p>
+
+        <p>Dans le prochain article, nous verrons comment importer ce formulaire XLSForm dans KoboToolbox et le déployer pour une collecte terrain.</p>
+
+      </div>
+
+      <!-- ============ VERSION ANGLAISE ============ -->
+      <div lang="en">
+
+        <p class="lead-paragraph">
+          Designing a rigorous XLSForm is often the first obstacle field teams encounter. ODK Build removes this barrier by offering an intuitive graphical interface, usable without internet connection and without touching a single Excel formula.
+        </p>
+
+        <h2>What is ODK Build?</h2>
+
+        <p>
+          ODK Build is a free tool developed by the <strong>Open Data Kit (ODK)</strong> community, now maintained by Getodk.org. It is a visual editor for data collection forms that outputs a file in the <strong>XLSForm</strong> standard — the universal format read by KoboToolbox, ODK Collect, CommCare and most mobile data collection platforms.
+        </p>
+
+        <p>
+          Its main advantage: you build your form by drag and drop, without writing a single line of code or mastering XLSForm syntax. The application handles generating the <code>.xlsx</code> or <code>.xml</code> file for you.
+        </p>
+
+        <h3>ODK Build online vs. desktop version</h3>
+
+        <p>ODK Build comes in two forms:</p>
+
+        <ul>
+          <li><strong>Online version</strong> at <a href="https://build.getodk.org" target="_blank" rel="noopener">build.getodk.org</a> — accessible from a browser, requires an internet connection.</li>
+          <li><strong>Desktop version</strong> (Windows 32/64-bit and Mac OS) — installs on your machine and works <strong>entirely offline</strong>. This is the one I recommend for field use.</li>
+        </ul>
+
+        <h2>Download and install ODK Build</h2>
+
+        <p>Here are the direct download links by operating system:</p>
+
+        <div class="download-box">
+          <p>Choose the version for your system:</p>
+          <ul>
+            <li>
+              <a href="https://bit.ly/3FrhfSA" target="_blank" rel="noopener" class="text-link">⬇ ODK Build — Windows 64-bit</a>
+              <span class="note">(recommended for most recent PCs)</span>
+            </li>
+            <li>
+              <a href="https://bit.ly/3KhHcYw" target="_blank" rel="noopener" class="text-link">⬇ ODK Build — Windows 32-bit</a>
+              <span class="note">(older PCs)</span>
+            </li>
+            <li>
+              <a href="https://bit.ly/3SmlDtl" target="_blank" rel="noopener" class="text-link">⬇ ODK Build — Mac OS</a>
+            </li>
+          </ul>
+        </div>
+
+        <h2>Discovering the interface</h2>
+
+        <p>On first launch, ODK Build presents a clean interface divided into three main areas:</p>
+
+        <ol>
+          <li><strong>The question type bar</strong> (top) — lists all available field types: text, number, date, image, audio, GPS, single-select, multi-select, etc.</li>
+          <li><strong>The build area</strong> (center) — drag and arrange your questions here.</li>
+          <li><strong>The properties panel</strong> (right) — shows the parameters of the selected question: label, constraint, display condition, etc.</li>
+        </ol>
+
+        <p>The interface is intentionally simple. No technical training is needed to start using it.</p>
+
+        <h2>Available question types</h2>
+
+        <ul>
+          <li><strong>Text</strong> — open question, free response</li>
+          <li><strong>Number</strong> — numeric field (integer or decimal)</li>
+          <li><strong>Select One</strong> — single-select list (radio)</li>
+          <li><strong>Select Multiple</strong> — multi-select list (checkboxes)</li>
+          <li><strong>Date / Time / Date and Time</strong></li>
+          <li><strong>GPS Location</strong> — captures geographic coordinates (lat, lon, altitude, accuracy)</li>
+          <li><strong>Image / Audio / Video</strong> — captures media from the device</li>
+          <li><strong>Barcode</strong> — barcode or QR code reader</li>
+          <li><strong>Note</strong> — informational text displayed without input</li>
+          <li><strong>Group</strong> — groups questions into sections</li>
+          <li><strong>Repeat</strong> — repeating group (useful for household members)</li>
+        </ul>
+
+        <blockquote>
+          For the vast majority of humanitarian and social surveys, these types cover 95% of needs. Advanced cases (cascading lists, complex calculations, geofencing) will require editing the generated XLSForm directly.
+        </blockquote>
+
+        <h2>Building a form step by step</h2>
+
+        <p>Click a question type in the top bar — a new field appears in the central area. In the right panel, fill in:</p>
+
+        <ul>
+          <li><strong>Label</strong>: the question text displayed to the enumerator</li>
+          <li><strong>Name</strong>: the technical identifier (no spaces, no accents, e.g. <code>hh_head_name</code>)</li>
+          <li><strong>Hint</strong>: an optional note shown under the question</li>
+          <li><strong>Required</strong>: check if the question is mandatory</li>
+        </ul>
+
+        <p>For <em>Select One</em> / <em>Select Multiple</em>, click <strong>Edit Choices</strong> in the right panel to enter options one by one. To organize your form into sections, drag a <strong>Group</strong> block and nest your questions inside it.</p>
+
+        <hr>
+
+        <h2>Exporting the form</h2>
+
+        <p>Once your form is built, export it via <strong>File → Export to XLSForm</strong>. ODK Build generates an <code>.xlsx</code> file you can:</p>
+
+        <ul>
+          <li>Import directly into <strong>KoboToolbox</strong> (New project → Import XLSForm)</li>
+          <li>Import into <strong>ODK Central</strong> or <strong>ODK Aggregate</strong></li>
+          <li>Open in Excel for advanced modifications (cascading lists, calculations, etc.)</li>
+        </ul>
+
+        <h2>Known limitations</h2>
+
+        <ul>
+          <li><strong>No cascading lists</strong> — filtered lists (Region → District → Village) require editing the XLSForm in Excel.</li>
+          <li><strong>No calculated fields</strong> — composite scores and date-based calculations need XLSForm syntax directly.</li>
+          <li><strong>No complex skip logic</strong> — simple display conditions are handled, but complex expressions must be edited manually.</li>
+          <li><strong>English interface only</strong> — form questions can be in any language, but the UI itself is English.</li>
+        </ul>
+
+        <p>For advanced cases, I recommend starting in ODK Build then completing the XLSForm in Excel. This combination works very well in humanitarian and development contexts where teams have mixed technical profiles.</p>
+
+        <hr>
+
+        <h2>Full video tutorial</h2>
+
+        <p>I recorded a French-language video tutorial walking through ODK Build step by step: installation, interface overview, building a complete form and XLSForm export. Subscribe to the <a href="https://youtube.com/@datasolution" target="_blank" rel="noopener">Data Solution</a> channel to stay up to date.</p>
+
+        <h2>Conclusion</h2>
+
+        <p>ODK Build is the ideal entry point for any team that wants to start mobile data collection without going through the technical hurdle. Within a few hours of practice, you can build professional forms, export them as XLSForm and deploy them on KoboToolbox or ODK Collect.</p>
+
+        <p>In the next article, we will see how to import this XLSForm into KoboToolbox and deploy it for field data collection.</p>
+
+      </div>
+
+      <!-- Vidéo YouTube (commune FR + EN) -->
+      <div class="video-embed">
+        <iframe
+          src="https://www.youtube.com/embed/PbXFKHrtrYU"
+          title="Tutoriel ODK Build — Data Solution par Adnan Adamou"
+          frameborder="0"
+          allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          loading="lazy">
+        </iframe>
+      </div>
+      <p class="video-caption">
+        <span lang="fr">Tutoriel complet ODK Build · Chaîne Data Solution</span>
+        <span lang="en">Full ODK Build tutorial · Data Solution channel</span>
+      </p>
+
+    </div>
+  </article>
+
+  <!-- ============== FOOTER ARTICLE ============== -->
+  <div class="article-footer">
+    <div class="container" style="padding:0;">
+
+      <div class="article-tags">
+        <span class="tag">ODK Build</span>
+        <span class="tag">XLSForm</span>
+        <span class="tag">ODK Collect</span>
+        <span class="tag">KoboToolbox</span>
+        <span class="tag"><span lang="fr">Collecte de données</span><span lang="en">Data collection</span></span>
+        <span class="tag"><span lang="fr">Hors connexion</span><span lang="en">Offline</span></span>
+      </div>
+
+      <div class="article-share">
+        <span class="article-share-label">
+          <span lang="fr">Partager</span>
+          <span lang="en">Share</span>
+        </span>
+        <div class="article-share-links">
+          <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.adnandata.com/articles/odk-build-formulaire-xlsform.html" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://twitter.com/intent/tweet?url=https://www.adnandata.com/articles/odk-build-formulaire-xlsform.html&text=ODK+Build+%3A+concevoir+des+formulaires+XLSForm+sans+coder" target="_blank" rel="noopener">Twitter / X</a>
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.adnandata.com/articles/odk-build-formulaire-xlsform.html" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://api.whatsapp.com/send?text=ODK+Build+%3A+concevoir+des+formulaires+XLSForm+sans+coder+https://www.adnandata.com/articles/odk-build-formulaire-xlsform.html" target="_blank" rel="noopener">WhatsApp</a>
+          <a href="mailto:?subject=Article%20utile%20%E2%80%94%20ODK%20Build&body=https://www.adnandata.com/articles/odk-build-formulaire-xlsform.html">Email</a>
+        </div>
+      </div>
+
+      <nav class="article-nav" aria-label="Navigation entre articles">
+        <a href="../articles.html" class="prev">
+          <div class="article-nav-label">
+            <span lang="fr">← Retour au blog</span>
+            <span lang="en">← Back to blog</span>
+          </div>
+          <div class="article-nav-title">
+            <span lang="fr">Tous les articles</span>
+            <span lang="en">All articles</span>
+          </div>
+        </a>
+        <a href="#" class="next">
+          <div class="article-nav-label">
+            <span lang="fr">Article suivant →</span>
+            <span lang="en">Next post →</span>
+          </div>
+          <div class="article-nav-title">
+            <span lang="fr">Importer un XLSForm dans KoboToolbox</span>
+            <span lang="en">Importing an XLSForm into KoboToolbox</span>
+          </div>
+        </a>
+      </nav>
+
+    </div>
+  </div>
+
+  </main>
+
+  <!-- ============== FOOTER ============== -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="../assets/logo-horizontal.svg" alt="Data Solution — Adnan Adamou" loading="lazy">
+        <p>
+          <span lang="fr">Data Analyst &amp; Information Manager. Niamey, Niger.</span>
+          <span lang="en">Data Analyst &amp; Information Manager. Niamey, Niger.</span>
+        </p>
+      </div>
+      <div class="footer-col">
+        <h5><span lang="fr">Navigation</span><span lang="en">Navigation</span></h5>
+        <ul>
+          <li><a href="../index.html"><span lang="fr">Accueil</span><span lang="en">Home</span></a></li>
+          <li><a href="../articles.html"><span lang="fr">Blog</span><span lang="en">Blog</span></a></li>
+          <li><a href="../portfolio.html"><span lang="fr">Portfolio</span><span lang="en">Portfolio</span></a></li>
+          <li><a href="../projects.html"><span lang="fr">Projets</span><span lang="en">Projects</span></a></li>
+          <li><a href="../videos.html"><span lang="fr">Tutoriels</span><span lang="en">Tutorials</span></a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5><span lang="fr">Suivre</span><span lang="en">Follow</span></h5>
+        <ul>
+          <li><a href="https://www.linkedin.com/in/adnan-data" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+          <li><a href="https://youtube.com/@datasolution" target="_blank" rel="noopener">YouTube ↗</a></li>
+          <li><a href="https://m.facebook.com/106771031899764/" target="_blank" rel="noopener">Facebook ↗</a></li>
+          <li><a href="mailto:hello@adnandata.com">Email ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-year>2026</span> Adnan Adamou. <span lang="fr">Tous droits réservés.</span><span lang="en">All rights reserved.</span></span>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+</body>
+</html>

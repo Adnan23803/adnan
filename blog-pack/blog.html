@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Blog — Adnan Adamou</title>
+  <meta name="description" content="Articles et tutoriels sur la collecte, l'analyse et la visualisation de données par Adnan Adamou." />
+  <meta property="og:title" content="Blog — Adnan Adamou" />
+  <meta property="og:description" content="Articles sur la donnée, l'humanitaire et le développement." />
+  <meta property="og:type" content="website" />
+
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+  <link rel="icon" type="image/png" sizes="48x48" href="assets/favicon-48.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="assets/favicon-192.png" />
+  <link rel="icon" type="image/png" sizes="512x512" href="assets/favicon-512.png" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png" />
+
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="lang-fr">
+
+  <!-- ============== HEADER (shared) ============== -->
+  <header class="site-header">
+    <div class="nav">
+      <a href="index.html" class="brand">
+        <img src="assets/picto.svg" alt="Data Solution" class="brand-logo" />
+        <span class="brand-text">
+          <span class="brand-name">Data Solution</span>
+          <span class="brand-sub">Adnan Adamou</span>
+        </span>
+      </a>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="index.html"><span lang="fr">Accueil</span><span lang="en">Home</span></a></li>
+        <li><a href="about.html"><span lang="fr">À propos</span><span lang="en">About</span></a></li>
+        <li><a href="projects.html"><span lang="fr">Projets</span><span lang="en">Projects</span></a></li>
+        <li><a href="blog.html"><span lang="fr">Blog</span><span lang="en">Blog</span></a></li>
+        <li><a href="contact.html"><span lang="fr">Contact</span><span lang="en">Contact</span></a></li>
+        <li class="lang-toggle-wrapper">
+          <div class="lang-toggle" role="group" aria-label="Language">
+            <button data-lang="fr" aria-pressed="true">FR</button>
+            <button data-lang="en" aria-pressed="false">EN</button>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </header>
+
+  <!-- ============== PAGE HERO ============== -->
+  <section class="page-hero">
+    <div class="container">
+      <span class="eyebrow reveal">
+        <span lang="fr">Journal</span>
+        <span lang="en">Journal</span>
+      </span>
+      <h1 class="reveal">
+        <span lang="fr">Notes de <em>terrain</em>, idées de <em>fond</em>.</span>
+        <span lang="en">Field <em>notes</em>, deeper <em>ideas</em>.</span>
+      </h1>
+      <p class="lead reveal" style="margin-top:1.5rem;">
+        <span lang="fr">
+          Articles, retours d'expérience et tutoriels sur la collecte, le traitement et la visualisation de données — au service de l'humanitaire et du développement.
+        </span>
+        <span lang="en">
+          Articles, field experience and tutorials on data collection, processing and visualization — for humanitarian and development work.
+        </span>
+      </p>
+    </div>
+  </section>
+
+  <!-- ============== ARTICLES LIST ============== -->
+  <section>
+    <div class="container">
+
+      <!--
+           ✏️  COMMENT AJOUTER UN ARTICLE :
+           1. Crée ton article dans blog/articles/ (en copiant article-template.html)
+           2. Copie un bloc <a class="blog-card"> ci-dessous et modifie :
+              - href : chemin vers ton article
+              - date (FR + EN)
+              - titre (FR + EN)
+              - excerpt (FR + EN)
+              - tags
+              - reading-time
+           3. Place le nouvel article EN HAUT de la liste (le plus récent en premier)
+      -->
+
+      <div class="blog-list">
+
+        <!-- ── ARTICLE 1 (le plus récent) ── -->
+        <a href="blog/articles/exemple-article.html" class="blog-card reveal">
+          <div class="blog-card-date">
+            <span lang="fr">15 mai 2026</span>
+            <span lang="en">May 15, 2026</span>
+          </div>
+          <div class="blog-card-body">
+            <h3>
+              <span lang="fr">Cinq pièges classiques dans la conception d'un formulaire KoboToolbox</span>
+              <span lang="en">Five classic pitfalls when designing a KoboToolbox form</span>
+            </h3>
+            <p class="blog-card-excerpt">
+              <span lang="fr">
+                Après des dizaines de déploiements terrain, je vois revenir les mêmes erreurs. En les anticipant dès la conception, on gagne des jours de débogage et des données bien plus propres.
+              </span>
+              <span lang="en">
+                After dozens of field deployments, the same errors keep appearing. Anticipating them at the design stage saves days of debugging and yields much cleaner data.
+              </span>
+            </p>
+            <div class="blog-card-meta">
+              <span class="tag">KoboToolbox</span>
+              <span class="tag">XLSForm</span>
+              <span class="tag"><span lang="fr">Terrain</span><span lang="en">Field</span></span>
+              <span class="reading-time">
+                <span lang="fr">· 8 min de lecture</span>
+                <span lang="en">· 8 min read</span>
+              </span>
+            </div>
+          </div>
+          <div class="blog-card-arrow">→</div>
+        </a>
+
+        <!-- ── ARTICLE 2 ── -->
+        <a href="#" class="blog-card reveal">
+          <div class="blog-card-date">
+            <span lang="fr">2 mai 2026</span>
+            <span lang="en">May 2, 2026</span>
+          </div>
+          <div class="blog-card-body">
+            <h3>
+              <span lang="fr">Du Kobo à Power BI sans intervention humaine : la chaîne automatisée</span>
+              <span lang="en">From Kobo to Power BI with zero human touch: the automated pipeline</span>
+            </h3>
+            <p class="blog-card-excerpt">
+              <span lang="fr">
+                Make + Google Apps Script + DHIS2 : comment j'ai monté un pipeline qui transforme chaque soumission terrain en mise à jour de dashboard, en moins de 30 secondes.
+              </span>
+              <span lang="en">
+                Make + Google Apps Script + DHIS2: how I built a pipeline that turns each field submission into a dashboard update, in under 30 seconds.
+              </span>
+            </p>
+            <div class="blog-card-meta">
+              <span class="tag">Make</span>
+              <span class="tag">Power BI</span>
+              <span class="tag">Apps Script</span>
+              <span class="reading-time">
+                <span lang="fr">· 12 min de lecture</span>
+                <span lang="en">· 12 min read</span>
+              </span>
+            </div>
+          </div>
+          <div class="blog-card-arrow">→</div>
+        </a>
+
+        <!-- ── ARTICLE 3 ── -->
+        <a href="#" class="blog-card reveal">
+          <div class="blog-card-date">
+            <span lang="fr">18 avril 2026</span>
+            <span lang="en">April 18, 2026</span>
+          </div>
+          <div class="blog-card-body">
+            <h3>
+              <span lang="fr">Cinq tests statistiques essentiels avec Le Sphinx, expliqués simplement</span>
+              <span lang="en">Five essential statistical tests with Le Sphinx, simply explained</span>
+            </h3>
+            <p class="blog-card-excerpt">
+              <span lang="fr">
+                Khi-deux, Student, ANOVA, corrélation, régression : quand les utiliser, comment les interpréter, et quelles erreurs éviter dans un contexte d'enquête sociale.
+              </span>
+              <span lang="en">
+                Chi-square, Student's t, ANOVA, correlation, regression: when to use them, how to interpret them, and what mistakes to avoid in a social survey context.
+              </span>
+            </p>
+            <div class="blog-card-meta">
+              <span class="tag">Sphinx</span>
+              <span class="tag"><span lang="fr">Statistiques</span><span lang="en">Statistics</span></span>
+              <span class="reading-time">
+                <span lang="fr">· 15 min de lecture</span>
+                <span lang="en">· 15 min read</span>
+              </span>
+            </div>
+          </div>
+          <div class="blog-card-arrow">→</div>
+        </a>
+
+        <!-- ── DUPLIQUE CE BLOC POUR AJOUTER UN ARTICLE ── -->
+
+      </div>
+
+      <!-- Bloc à afficher si aucun article (à supprimer quand tu en as) -->
+      <!--
+      <div class="blog-empty">
+        <span lang="fr">Les premiers articles arrivent bientôt — abonne-toi à ma chaîne YouTube en attendant.</span>
+        <span lang="en">First articles coming soon — subscribe to my YouTube channel in the meantime.</span>
+      </div>
+      -->
+
+    </div>
+  </section>
+
+  <!-- ============== CTA ============== -->
+  <section style="background:var(--paper-soft);">
+    <div class="container" style="text-align:center;">
+      <span class="eyebrow"><span lang="fr">Suivre</span><span lang="en">Follow</span></span>
+      <h2 style="margin: 1rem auto 1.5rem; max-width: 22ch;">
+        <span lang="fr">Reste à jour sur la <em style="font-style:italic; color:var(--terracotta);">prochaine publication</em>.</span>
+        <span lang="en">Stay tuned for the <em style="font-style:italic; color:var(--terracotta);">next post</em>.</span>
+      </h2>
+      <div class="btn-row" style="justify-content:center;">
+        <a href="https://youtube.com/@datasolution" target="_blank" rel="noopener" class="btn btn-primary">
+          <span lang="fr">S'abonner sur YouTube</span>
+          <span lang="en">Subscribe on YouTube</span>
+          <span class="arrow">↗</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== FOOTER (shared) ============== -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>Adnan Adamou</h3>
+        <p>
+          <span lang="fr">Data Analyst &amp; Information Manager. Niamey, Niger.</span>
+          <span lang="en">Data Analyst &amp; Information Manager. Niamey, Niger.</span>
+        </p>
+      </div>
+      <div class="footer-col">
+        <h5><span lang="fr">Navigation</span><span lang="en">Navigation</span></h5>
+        <ul>
+          <li><a href="index.html"><span lang="fr">Accueil</span><span lang="en">Home</span></a></li>
+          <li><a href="about.html"><span lang="fr">À propos</span><span lang="en">About</span></a></li>
+          <li><a href="projects.html"><span lang="fr">Projets</span><span lang="en">Projects</span></a></li>
+          <li><a href="blog.html"><span lang="fr">Blog</span><span lang="en">Blog</span></a></li>
+          <li><a href="contact.html"><span lang="fr">Contact</span><span lang="en">Contact</span></a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5><span lang="fr">Suivre</span><span lang="en">Follow</span></h5>
+        <ul>
+          <li><a href="https://youtube.com/@datasolution" target="_blank" rel="noopener">YouTube ↗</a></li>
+          <li><a href="https://m.facebook.com/106771031899764/" target="_blank" rel="noopener">Facebook ↗</a></li>
+          <li><a href="mailto:adnanadamou@gmail.com">Email ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-year>2026</span> Adnan Adamou. <span lang="fr">Tous droits réservés.</span><span lang="en">All rights reserved.</span></span>
+      <span lang="fr">Conçu avec soin · Niamey</span>
+      <span lang="en">Crafted with care · Niamey</span>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

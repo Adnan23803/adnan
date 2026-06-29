@@ -152,7 +152,8 @@ p { max-width: 65ch; }
   flex-shrink: 0;
 }
 .brand-text {
-  display: block;
+  display: flex;
+  flex-direction: column;
   line-height: 1.1;
 }
 .brand-name {
@@ -1333,6 +1334,7 @@ section {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  z-index: 10;
   width: 72px;
   height: 72px;
   border-radius: 50%;
@@ -1340,18 +1342,16 @@ section {
   display: flex;
   align-items: center;
   justify-content: center;
-  transition: transform 0.3s var(--ease), opacity 0.3s var(--ease);
+  transition: transform 0.3s var(--ease);
   pointer-events: none;
 }
 .portrait-video:hover .play-icon { transform: translate(-50%, -50%) scale(1.1); }
-.portrait-video .play-icon::after {
-  content: "";
-  width: 0;
-  height: 0;
-  border-left: 18px solid var(--paper);
-  border-top: 11px solid transparent;
-  border-bottom: 11px solid transparent;
-  margin-left: 5px;
+.portrait-video .play-icon svg {
+  width: 30px;
+  height: 30px;
+  fill: var(--paper);
+  margin-left: 4px;
+  flex-shrink: 0;
 }
 
 /* --- Footer brand logo (remplace les inline styles répétés) --- */
@@ -1575,6 +1575,7 @@ section {
   font-style: italic;
   font-size: 1.1rem;
   flex-shrink: 0;
+  object-fit: cover;
 }
 .article-author-info { display: flex; flex-direction: column; line-height: 1.3; }
 .article-author-name { font-weight: 600; font-size: 0.92rem; }
@@ -1583,7 +1584,7 @@ section {
 .article-body {
   max-width: 720px;
   margin: 0 auto;
-  padding: clamp(3rem, 6vw, 5rem) 0;
+  padding: clamp(3rem, 6vw, 5rem) var(--gutter);
 }
 .article-body > * { max-width: 65ch; }
 
@@ -1712,7 +1713,7 @@ section {
 .article-footer {
   max-width: 720px;
   margin: 0 auto;
-  padding: 2rem 0 4rem;
+  padding: 2rem var(--gutter) 4rem;
   border-top: 1px solid var(--line);
 }
 .article-tags {
@@ -1859,4 +1860,36 @@ section {
   margin-top: 0.75rem;
   margin-bottom: 2rem;
   max-width: none;
+}
+
+/* ─── Responsive mobile — article & blog ────────────────── */
+@media (max-width: 640px) {
+  /* Article hero */
+  .article-hero h1 { letter-spacing: -0.01em; }
+  .article-author-meta { font-size: 0.75rem; }
+
+  /* Article body */
+  .article-body { padding-top: 2.5rem; padding-bottom: 2.5rem; }
+  .article-body h2 { margin-top: 2.5rem; }
+  .article-body blockquote { font-size: 1.1rem; padding-left: 1rem; }
+  .article-body ul,
+  .article-body ol { margin-left: 1.1rem; }
+
+  /* Download box — note sur ligne séparée */
+  .download-box .note { display: block; margin-left: 0; margin-top: 0.2rem; }
+
+  /* Article footer */
+  .article-footer { padding-top: 1.5rem; padding-bottom: 3rem; }
+  .article-share { flex-direction: column; align-items: flex-start; gap: 0.75rem; }
+  .article-share-links { gap: 0.5rem; }
+  .article-nav { margin-top: 2rem; }
+  .article-nav a { padding: 1.25rem 1.25rem; }
+
+  /* Blog listing — date bien séparée du corps */
+  .blog-card-date { margin-bottom: 0.6rem; }
+  .blog-card { padding: 2rem 0; }
+  .blog-card:hover { padding-left: 0; padding-right: 0; }
+
+  /* Video embed plus compact */
+  .video-embed { margin: 1.5rem 0; }
 }

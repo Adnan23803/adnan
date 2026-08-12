@@ -17,12 +17,63 @@
 [[headers]]
   for = "/css/*"
   [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
+    Cache-Control = "public, max-age=3600, must-revalidate"
 
 [[headers]]
   for = "/js/*"
   [headers.values]
-    Cache-Control = "public, max-age=31536000, immutable"
+    Cache-Control = "public, max-age=3600, must-revalidate"
+
+# Les pages anglaises sont de vrais fichiers statiques versionnés sous /en/,
+# générés par `node tools/build.js`. Aucune réécriture n'est donc nécessaire :
+# Google reçoit de l'anglais dès la réponse HTML initiale.
+
+# Une seule origine indexable : le sous-domaine Netlify redirige vers le domaine
+# principal pour éviter que Google découvre deux copies du site.
+[[redirects]]
+  from = "https://adnan-data.netlify.app/*"
+  to = "https://www.adnandata.com/:splat"
+  status = 301
+  force = true
+
+# `publish = "."` sert tout le dépôt. Les fichiers de travail sont donc bloqués
+# explicitement : tools/partials/*.html sont des fragments (avec {{base}} non résolu)
+# que Google ne doit ni explorer ni indexer.
+[[redirects]]
+  from = "/tools/*"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/.claude/*"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/.vscode/*"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/README.md"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/EDITORIAL.md"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/Correctifs_SEO.md"
+  to = "/404.html"
+  status = 404
+  force = true
 
 # Redirection propre (page 404 perso)
 [[redirects]]

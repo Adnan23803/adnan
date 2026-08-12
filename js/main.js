@@ -6,30 +6,33 @@
   'use strict';
 
   // ---- Language toggle (FR / EN) ----
-  const STORAGE_KEY = 'aa-lang';
-  const supported = ['fr', 'en'];
+  // Les pages anglaises sont de vrais fichiers statiques sous /en/ (générés par
+  // tools/build.js). La langue, le canonical, les hreflang et les métadonnées sont
+  // donc déjà corrects dans le HTML servi : ce script ne les modifie jamais.
+  // Il se contente de refléter l'état courant et de naviguer vers l'autre version.
 
-  function setLang(lang) {
-    if (!supported.includes(lang)) lang = 'fr';
-    document.body.classList.remove('lang-fr', 'lang-en');
-    document.body.classList.add('lang-' + lang);
-    document.documentElement.setAttribute('lang', lang);
-    try { localStorage.setItem(STORAGE_KEY, lang); } catch (e) {}
-    document.querySelectorAll('.lang-toggle button').forEach(b => {
-      b.classList.toggle('is-active', b.dataset.lang === lang);
-      b.setAttribute('aria-pressed', b.dataset.lang === lang);
-    });
+  function frenchPath() {
+    const path = window.location.pathname.replace(/^\/en(?=\/|$)/, '');
+    return path === '' ? '/' : path;
+  }
+
+  function englishPath() {
+    const path = frenchPath();
+    return path === '/' ? '/en/' : '/en' + path;
   }
 
   function initLang() {
-    let saved;
-    try { saved = localStorage.getItem(STORAGE_KEY); } catch (e) {}
-    const browserLang = (navigator.language || 'fr').slice(0, 2);
-    const initial = saved || (supported.includes(browserLang) ? browserLang : 'fr');
-    setLang(initial);
+    const current = /^\/en(?:\/|$)/.test(window.location.pathname) ? 'en' : 'fr';
 
     document.querySelectorAll('.lang-toggle button').forEach(btn => {
-      btn.addEventListener('click', () => setLang(btn.dataset.lang));
+      const lang = btn.dataset.lang;
+      const isCurrent = lang === current;
+      btn.classList.toggle('is-active', isCurrent);
+      btn.setAttribute('aria-pressed', String(isCurrent));
+      btn.addEventListener('click', () => {
+        if (isCurrent) return;
+        window.location.href = lang === 'en' ? englishPath() : frenchPath();
+      });
     });
   }
 
@@ -56,7 +59,7 @@
 
   // ---- Mark active nav link ----
   function initActiveNav() {
-    const path = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
+    const path = (frenchPath().split('/').pop() || 'index.html').toLowerCase();
     document.querySelectorAll('.nav-links a').forEach(a => {
       const href = (a.getAttribute('href') || '').toLowerCase();
       if (href === path || (path === '' && href === 'index.html')) {

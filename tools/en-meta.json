@@ -1,0 +1,109 @@
+{
+  "_comment": "Métadonnées anglaises utilisées par tools/build.js pour générer /en/**. Une entrée par page source française. 'breadcrumb' suit l'ordre des ListItem du JSON-LD de la page source.",
+
+  "_comment_attributes": "Libellés d'accessibilité (aria-label, alt, title) : ils ne peuvent pas être portés par un élément lang=, il faut donc les traduire ici. Toute nouvelle valeur française ajoutée dans une page doit être déclarée ci-dessous, sinon elle restera en français sur le site anglais.",
+  "attributes": {
+    "Expertise principale": "Core expertise",
+    "Fil d'Ariane": "Breadcrumb",
+    "Navigation entre articles": "Article navigation",
+    "Navigation entre réalisations": "Case study navigation",
+    "Adnan Adamou à Gorée, Sénégal": "Adnan Adamou in Gorée, Senegal",
+    "Portrait vidéo — Adnan Adamou": "Video portrait — Adnan Adamou",
+    "Visionner le portrait vidéo — Watch video portrait": "Watch video portrait",
+    "Lire la vidéo — Play video": "Play video",
+    "Formulaire de contact — Adnan Adamou": "Contact form — Adnan Adamou",
+    "Interface de l'application ODK Build": "The ODK Build application interface",
+    "Logo du logiciel Le Sphinx V5 Plus²": "Le Sphinx V5 Plus² software logo",
+    "Tutoriel Data Solution": "Data Solution tutorial",
+    "Tutoriel ODK Build — Data Solution par Adnan Adamou": "ODK Build tutorial — Data Solution by Adnan Adamou",
+    "Importer des données Excel dans Le Sphinx — tris à plat et tris croisés · Data Solution": "Import Excel data into Le Sphinx — frequency tables and cross-tabs · Data Solution",
+    "Voir l’étude de cas : enquête d’audience radio et SIG": "View case study: radio audience survey and GIS",
+    "Voir l’étude de cas : système de collecte multi-pays KoboToolbox": "View case study: multi-country KoboToolbox data collection system",
+    "Voir l’étude de cas : tableau de bord Power BI et DHIS2": "View case study: Power BI and DHIS2 dashboard"
+  },
+
+  "pages": {
+    "index.html": {
+      "title": "Adnan Adamou — Data Analyst & Information Manager, Niger",
+      "description": "Data Analyst and Information Manager in Niamey: KoboToolbox data collection, analysis, mapping, dashboards and training for humanitarian organizations.",
+      "ogTitle": "Adnan Adamou — Data Analyst & Information Manager",
+      "ogDescription": "From field data to decisions: data systems, dashboards, mapping and training for humanitarian and development organizations."
+    },
+    "portfolio.html": {
+      "title": "Portfolio — Adnan Adamou, Data Analyst in Niamey",
+      "description": "Data collection, processing and visualization specialist for humanitarian and development organizations. Based in Niamey, Niger.",
+      "ogTitle": "Adnan Adamou — Data Analyst & Information Manager",
+      "ogDescription": "Data collection, processing and visualization specialist. Founder of the Data Solution YouTube channel.",
+      "breadcrumb": ["Home", "Portfolio"]
+    },
+    "projects.html": {
+      "title": "Data projects — KoboToolbox, Power BI, QGIS",
+      "description": "Selected projects in data analysis, KoboToolbox collection, Power BI dashboards, QGIS mapping and humanitarian training by Adnan Adamou, Niamey.",
+      "ogTitle": "Projects — Adnan Adamou · Data Analyst Niger",
+      "ogDescription": "Selected projects in data analysis, KoboToolbox collection, Power BI dashboards, QGIS mapping and humanitarian training.",
+      "breadcrumb": ["Home", "Projects"]
+    },
+    "articles.html": {
+      "title": "Data blog — field notes on collection and analysis",
+      "description": "Articles and field lessons on data collection, KoboToolbox, Power BI, QGIS and humanitarian information management — by Adnan Adamou.",
+      "ogTitle": "Blog — Adnan Adamou · Data Analyst Niger",
+      "ogDescription": "Articles on collecting, processing and visualizing data for humanitarian and development work.",
+      "breadcrumb": ["Home", "Blog"]
+    },
+    "videos.html": {
+      "title": "KoboToolbox, ODK and Power BI video tutorials",
+      "description": "Free video tutorials on KoboToolbox, ODK, Power BI, Tableau, QGIS, ArcGIS, Excel and SPSS — by Adnan Adamou, Data Solution channel.",
+      "ogTitle": "Data Solution tutorials — Adnan Adamou",
+      "ogDescription": "8 structured, free playlists on KoboToolbox, ODK, QGIS, Excel, SPSS and Le Sphinx for data professionals in Africa.",
+      "breadcrumb": ["Home", "Tutorials"]
+    },
+    "articles/sphinx-v5.html": {
+      "title": "Le Sphinx V5 Plus²: a guide to statistical surveys",
+      "description": "Design a questionnaire, run frequency and cross tabulations, then produce your survey reports with Le Sphinx V5 Plus².",
+      "ogDescription": "Questionnaire design, data entry, frequency and cross tabulations, advanced analysis and result exports with Le Sphinx V5 Plus².",
+      "headline": "Le Sphinx V5 Plus²: a guide to statistical surveys",
+      "keywords": ["Le Sphinx", "statistics", "survey", "frequency table", "cross tabulation", "data analysis", "survey software"],
+      "breadcrumb": ["Home", "Blog", "Le Sphinx V5 Plus²: a guide to statistical surveys"]
+    },
+    "articles/odk-build.html": {
+      "title": "ODK Build: create an XLSForm without coding",
+      "description": "Discover ODK Build, the free application to design offline data collection forms and export an XLSForm file without writing any code.",
+      "ogDescription": "ODK Build lets you configure every question type, from open text to GPS coordinates, and generate your XLSForm files easily.",
+      "headline": "ODK Build: create an XLSForm without coding",
+      "keywords": ["ODK Build", "XLSForm", "KoboToolbox", "data collection", "mobile form", "humanitarian"],
+      "breadcrumb": ["Home", "Blog", "ODK Build: create an XLSForm without coding"]
+    },
+    "articles/xlsform-kobo.html": {
+      "title": "Five pitfalls of a KoboToolbox form",
+      "description": "After dozens of field deployments, the same mistakes keep coming back. Anticipating them at design time saves days of debugging.",
+      "ogDescription": "After dozens of field deployments, the same mistakes keep coming back.",
+      "headline": "Five pitfalls of a KoboToolbox form",
+      "keywords": ["KoboToolbox", "XLSForm", "data collection", "data quality", "mobile form"],
+      "breadcrumb": ["Home", "Blog", "Five pitfalls of a KoboToolbox form"]
+    },
+    "projets/collecte-multi-pays-kobotoolbox.html": {
+      "title": "Multi-country KoboToolbox system — Case study",
+      "description": "Case study: designing and deploying a standardized KoboToolbox and XLSForm system across four countries, with centralized data consolidation.",
+      "ogTitle": "Multi-country data collection with KoboToolbox",
+      "ogDescription": "Multilingual XLSForm forms, field validation and cross-site consolidation.",
+      "headline": "Multi-country data collection system with KoboToolbox",
+      "breadcrumb": ["Home", "Projects", "Multi-country data collection with KoboToolbox"]
+    },
+    "projets/tableau-bord-power-bi-dhis2.html": {
+      "title": "Power BI dashboard connected to DHIS2 — Case study",
+      "description": "Case study: consolidating DHIS2 and Excel data into an operational Power BI dashboard using Power Query and DAX.",
+      "ogTitle": "Operational Power BI and DHIS2 dashboard",
+      "ogDescription": "Readable regional monitoring built from several data sources.",
+      "headline": "Operational Power BI and DHIS2 dashboard",
+      "breadcrumb": ["Home", "Projects", "Power BI and DHIS2 dashboard"]
+    },
+    "projets/enquete-audience-radio-sig.html": {
+      "title": "Radio audience survey and GIS in Niamey — Case study",
+      "description": "Case study: a 300-respondent audience survey, 10 focus groups and GIS mapping with Landsat and SRTM for a local radio station in Niamey.",
+      "ogTitle": "Radio audience survey and GIS mapping in Niamey",
+      "ogDescription": "A mixed-method study combining 300 CAPI interviews, 10 focus groups, SPSS and GIS analysis.",
+      "headline": "Radio audience survey and GIS mapping in Niamey",
+      "breadcrumb": ["Home", "Projects", "Radio audience survey and GIS in Niamey"]
+    }
+  }
+}

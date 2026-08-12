@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tableau de bord Power BI et DHIS2 — Étude de cas</title>
+  <meta name="description" content="Étude de cas : centralisation de données DHIS2 et Excel dans un tableau de bord Power BI opérationnel avec Power Query et DAX." />
+  <meta property="og:title" content="Tableau de bord opérationnel Power BI et DHIS2" />
+  <meta property="og:description" content="Un pilotage régional lisible à partir de plusieurs sources de données." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.adnandata.com/projets/tableau-bord-power-bi-dhis2.html" />
+  <meta property="og:image" content="https://www.adnandata.com/images/logo.png" />
+  <meta property="article:published_time" content="2026-08-07" />
+  <meta property="article:modified_time" content="2026-08-07" />
+  <meta property="article:author" content="Adnan Adamou" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://www.adnandata.com/images/logo.png" />
+  <link rel="canonical" href="https://www.adnandata.com/projets/tableau-bord-power-bi-dhis2.html" />
+  <link rel="alternate" hreflang="fr" href="https://www.adnandata.com/projets/tableau-bord-power-bi-dhis2.html" />
+  <link rel="alternate" hreflang="en" href="https://www.adnandata.com/en/projets/tableau-bord-power-bi-dhis2.html" />
+  <link rel="alternate" hreflang="x-default" href="https://www.adnandata.com/projets/tableau-bord-power-bi-dhis2.html" />
+  <meta name="robots" content="index, follow" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+  <link rel="alternate icon" href="/assets/favicon.ico" />
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..700,0..100&family=Manrope:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="/css/style.css?v=20260812-1" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.adnandata.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Projets", "item": "https://www.adnandata.com/projects.html" },
+          { "@type": "ListItem", "position": 3, "name": "Tableau de bord Power BI et DHIS2" }
+        ]
+      },
+      {
+        "@type": "Article",
+        "headline": "Tableau de bord opérationnel Power BI et DHIS2",
+        "datePublished": "2026-08-07",
+        "dateModified": "2026-08-07",
+        "inLanguage": "fr",
+        "author": { "@id": "https://www.adnandata.com/portfolio.html#person" },
+        "publisher": { "@id": "https://www.adnandata.com/portfolio.html#person" },
+        "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.adnandata.com/projets/tableau-bord-power-bi-dhis2.html" },
+        "url": "https://www.adnandata.com/projets/tableau-bord-power-bi-dhis2.html",
+        "image": "https://www.adnandata.com/images/logo.png",
+        "description": "Étude de cas : centralisation de données DHIS2 et Excel dans un tableau de bord Power BI opérationnel avec Power Query et DAX.",
+        "about": ["Power BI", "DHIS2", "Power Query", "DAX"]
+      },
+      {
+        "@type": "Person",
+        "@id": "https://www.adnandata.com/portfolio.html#person",
+        "name": "Adnan Adamou Daouda",
+        "url": "https://www.adnandata.com/portfolio.html",
+        "jobTitle": "Data Analyst & Information Manager",
+        "sameAs": [
+          "https://www.linkedin.com/in/adnan-data",
+          "https://youtube.com/@datasolution"
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="lang-fr">
+
+  <!-- ============== HEADER ============== -->
+  <!-- #partial:header — généré depuis tools/partials/header.html, ne pas éditer ici -->
+  <header class="site-header">
+    <nav class="nav" aria-label="Navigation">
+      <a href="../index.html" class="brand">
+        <img src="/assets/picto.svg" alt="Data Solution" class="brand-logo" width="38" height="38" />
+        <span class="brand-text">
+          <span class="brand-name">Data Solution</span>
+          <span class="brand-sub">Adnan Adamou</span>
+        </span>
+      </a>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="../index.html"><span lang="fr">Accueil</span><span lang="en">Home</span></a></li>
+        <li><a href="../articles.html"><span lang="fr">Blog</span><span lang="en">Blog</span></a></li>
+        <li><a href="../portfolio.html"><span lang="fr">Portfolio</span><span lang="en">Portfolio</span></a></li>
+        <li><a href="../projects.html"><span lang="fr">Projets</span><span lang="en">Projects</span></a></li>
+        <li><a href="../videos.html"><span lang="fr">Tutoriels</span><span lang="en">Tutorials</span></a></li>
+        <li class="lang-toggle-wrapper">
+          <div class="lang-toggle" role="group" aria-label="Language">
+            <button data-lang="fr" aria-pressed="true">FR</button>
+            <button data-lang="en" aria-pressed="false">EN</button>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <!-- /partial:header -->
+
+  <main>
+
+  <!-- ============== HERO ============== -->
+  <section class="article-hero">
+    <div class="container">
+
+      <nav class="breadcrumb" aria-label="Fil d'Ariane">
+        <ol>
+          <li><a href="../index.html"><span lang="fr">Accueil</span><span lang="en">Home</span></a></li>
+          <li><a href="../projects.html"><span lang="fr">Projets</span><span lang="en">Projects</span></a></li>
+          <li aria-current="page"><span lang="fr">Tableau de bord Power BI et DHIS2</span><span lang="en">Power BI and DHIS2 dashboard</span></li>
+        </ol>
+      </nav>
+
+      <div class="article-meta-top reveal">
+        <span class="cat">Power BI · DHIS2 · DAX</span>
+        <span class="sep"></span>
+        <span>2024</span>
+      </div>
+
+      <h1 class="reveal">
+        <span lang="fr">Rendre plusieurs sources lisibles dans un seul tableau de bord.</span>
+        <span lang="en">Turning multiple sources into one readable dashboard.</span>
+      </h1>
+
+      <p class="subtitle reveal">
+        <span lang="fr">Un outil de pilotage conçu pour les équipes opérationnelles, sans prérequis technique.</span>
+        <span lang="en">A monitoring tool designed for operational teams with no technical prerequisites.</span>
+      </p>
+
+    </div>
+  </section>
+
+  <!-- ============== CORPS ============== -->
+  <article class="article-body">
+    <div>
+
+      <div lang="fr">
+        <p class="lead-paragraph">Les informations utiles au pilotage étaient réparties entre DHIS2 et plusieurs fichiers Excel. Le défi n’était pas seulement de les agréger, mais de les rendre compréhensibles et actionnables.</p>
+
+        <dl class="facts-list">
+          <dt>Période</dt>
+          <dd>2024</dd>
+
+          <dt>Sources</dt>
+          <dd>DHIS2 · fichiers Excel</dd>
+
+          <dt>Rôle</dt>
+          <dd>Modélisation des données et conception du tableau de bord</dd>
+
+          <dt>Outils</dt>
+          <dd>Power BI · Power Query · DAX</dd>
+        </dl>
+
+        <h2>Le défi</h2>
+        <p>Les formats, rythmes de mise à jour et niveaux géographiques variaient selon les sources. Une consolidation manuelle aurait ralenti la production et fragilisé les indicateurs.</p>
+
+        <h2>La solution</h2>
+        <p>J’ai construit un modèle Power BI alimenté par DHIS2 et Excel. Power Query assure la préparation des données, tandis que les mesures DAX calculent les indicateurs de performance et leurs déclinaisons régionales.</p>
+
+        <!-- Décommenter quand l'image existe :
+        <figure class="video-embed">
+          <img src="/images/projets/tableau-bord-power-bi-dhis2.webp"
+               alt="Vue anonymisée du tableau de bord Power BI et de ses filtres régionaux"
+               width="1200" height="675" loading="lazy" decoding="async">
+          <figcaption class="video-caption">Vue anonymisée du tableau de bord et de ses filtres régionaux.</figcaption>
+        </figure>
+        -->
+
+        <h2>Principes de conception</h2>
+        <div class="infra-list-port">
+          <div class="infra-item-port">
+            <span class="infra-num">01</span>
+            <div>
+              <strong>Une question par vue</strong>
+              <p>Chaque écran répond à une seule question opérationnelle, plutôt que d’empiler des graphiques sans hiérarchie.</p>
+            </div>
+          </div>
+          <div class="infra-item-port">
+            <span class="infra-num">02</span>
+            <div>
+              <strong>Filtres régionaux cohérents</strong>
+              <p>Les mêmes filtres se comportent de la même façon partout, pour que la navigation reste prévisible.</p>
+            </div>
+          </div>
+          <div class="infra-item-port">
+            <span class="infra-num">03</span>
+            <div>
+              <strong>Indicateurs documentés</strong>
+              <p>Chaque mesure DAX est définie et réutilisable, ce qui évite les variantes divergentes d’un même indicateur.</p>
+            </div>
+          </div>
+          <div class="infra-item-port">
+            <span class="infra-num">04</span>
+            <div>
+              <strong>Traitements automatisés</strong>
+              <p>La préparation des données passe par Power Query plutôt que par des manipulations manuelles à chaque cycle.</p>
+            </div>
+          </div>
+          <div class="infra-item-port">
+            <span class="infra-num">05</span>
+            <div>
+              <strong>Lecture sans formation</strong>
+              <p>Le tableau de bord reste interprétable par une équipe opérationnelle sans prérequis technique.</p>
+            </div>
+          </div>
+        </div>
+
+        <h2>Résultat</h2>
+        <div class="results-grid-port">
+          <div class="result-item-port">
+            <span class="result-icon" aria-hidden="true">◆</span>
+            <div>
+              <h4>Vue consolidée</h4>
+              <p>Les indicateurs clés réunis en un seul point d’entrée.</p>
+            </div>
+          </div>
+          <div class="result-item-port">
+            <span class="result-icon" aria-hidden="true">◆</span>
+            <div>
+              <h4>Comparaison régionale</h4>
+              <p>Les régions peuvent être mises en regard directement dans l’outil.</p>
+            </div>
+          </div>
+          <div class="result-item-port">
+            <span class="result-icon" aria-hidden="true">◆</span>
+            <div>
+              <h4>Écarts repérés plus vite</h4>
+              <p>Les situations nécessitant une action ressortent sans analyse préalable.</p>
+            </div>
+          </div>
+          <div class="result-item-port">
+            <span class="result-icon" aria-hidden="true">◆</span>
+            <div>
+              <h4>Production allégée</h4>
+              <p>Les mises à jour ne dépendent plus d’une consolidation manuelle.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div lang="en">
+        <p class="lead-paragraph">Operational information was distributed between DHIS2 and several Excel files. The challenge was not only to aggregate it, but to make it understandable and actionable.</p>
+
+        <dl class="facts-list">
+          <dt>Period</dt>
+          <dd>2024</dd>
+
+          <dt>Sources</dt>
+          <dd>DHIS2 · Excel files</dd>
+
+          <dt>Role</dt>
+          <dd>Data modelling and dashboard design</dd>
+
+          <dt>Tools</dt>
+          <dd>Power BI · Power Query · DAX</dd>
+        </dl>
+
+        <h2>The challenge</h2>
+        <p>Formats, refresh cycles and geographic levels differed between sources. Manual consolidation would have slowed reporting and weakened indicator reliability.</p>
+
+        <h2>The solution</h2>
+        <p>I built a Power BI model fed by DHIS2 and Excel. Power Query prepares the data while DAX measures calculate performance indicators and regional breakdowns.</p>
+
+        <!-- Uncomment once the image exists:
+        <figure class="video-embed">
+          <img src="/images/projets/tableau-bord-power-bi-dhis2.webp"
+               alt="Anonymized view of the Power BI dashboard and its regional filters"
+               width="1200" height="675" loading="lazy" decoding="async">
+          <figcaption class="video-caption">Anonymized view of the dashboard and its regional filters.</figcaption>
+        </figure>
+        -->
+
+        <h2>Design principles</h2>
+        <div class="infra-list-port">
+          <div class="infra-item-port">
+            <span class="infra-num">01</span>
+            <div>
+              <strong>One question per view</strong>
+              <p>Each screen answers a single operational question rather than stacking charts without hierarchy.</p>
+            </div>
+          </div>
+          <div class="infra-item-port">
+            <span class="infra-num">02</span>
+            <div>
+              <strong>Consistent regional filters</strong>
+              <p>The same filters behave the same way everywhere, keeping navigation predictable.</p>
+            </div>
+          </div>
+          <div class="infra-item-port">
+            <span class="infra-num">03</span>
+            <div>
+              <strong>Documented indicators</strong>
+              <p>Every DAX measure is defined and reusable, avoiding diverging variants of the same indicator.</p>
+            </div>
+          </div>
+          <div class="infra-item-port">
+            <span class="infra-num">04</span>
+            <div>
+              <strong>Automated processing</strong>
+              <p>Data preparation runs through Power Query instead of manual work at every cycle.</p>
+            </div>
+          </div>
+          <div class="infra-item-port">
+            <span class="infra-num">05</span>
+            <div>
+              <strong>Readable without training</strong>
+              <p>The dashboard stays interpretable by an operational team with no technical prerequisites.</p>
+            </div>
+          </div>
+        </div>
+
+        <h2>Outcome</h2>
+        <div class="results-grid-port">
+          <div class="result-item-port">
+            <span class="result-icon" aria-hidden="true">◆</span>
+            <div>
+              <h4>Consolidated view</h4>
+              <p>Key indicators brought together in a single entry point.</p>
+            </div>
+          </div>
+          <div class="result-item-port">
+            <span class="result-icon" aria-hidden="true">◆</span>
+            <div>
+              <h4>Regional comparison</h4>
+              <p>Regions can be set side by side directly in the tool.</p>
+            </div>
+          </div>
+          <div class="result-item-port">
+            <span class="result-icon" aria-hidden="true">◆</span>
+            <div>
+              <h4>Faster gap detection</h4>
+              <p>Situations requiring action stand out without prior analysis.</p>
+            </div>
+          </div>
+          <div class="result-item-port">
+            <span class="result-icon" aria-hidden="true">◆</span>
+            <div>
+              <h4>Lighter reporting</h4>
+              <p>Updates no longer depend on manual consolidation.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-cta">
+        <h2><span lang="fr">Besoin d’un tableau de bord utile au terrain ?</span><span lang="en">Need a field-ready dashboard?</span></h2>
+        <a href="../index.html#contact" class="btn btn-primary"><span lang="fr">Parler du besoin</span><span lang="en">Discuss your needs</span> →</a>
+      </div>
+
+    </div>
+  </article>
+
+  <!-- ============== FOOTER ARTICLE ============== -->
+  <div class="article-footer">
+    <div>
+
+      <div class="article-tags">
+        <span class="tag">Power BI</span>
+        <span class="tag">DHIS2</span>
+        <span class="tag">Power Query</span>
+        <span class="tag">DAX</span>
+        <span class="tag"><span lang="fr">Tableau de bord</span><span lang="en">Dashboard</span></span>
+        <span class="tag"><span lang="fr">Pilotage</span><span lang="en">Monitoring</span></span>
+      </div>
+
+      <div class="article-share">
+        <span class="article-share-label">
+          <span lang="fr">Partager</span>
+          <span lang="en">Share</span>
+        </span>
+        <div class="article-share-links">
+          <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.adnandata.com/projets/tableau-bord-power-bi-dhis2.html" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://twitter.com/intent/tweet?url=https://www.adnandata.com/projets/tableau-bord-power-bi-dhis2.html" target="_blank" rel="noopener">Twitter / X</a>
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.adnandata.com/projets/tableau-bord-power-bi-dhis2.html" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://api.whatsapp.com/send?text=https://www.adnandata.com/projets/tableau-bord-power-bi-dhis2.html" target="_blank" rel="noopener">WhatsApp</a>
+          <a href="mailto:?body=https://www.adnandata.com/projets/tableau-bord-power-bi-dhis2.html">Email</a>
+        </div>
+      </div>
+
+      <nav class="article-nav" aria-label="Navigation entre réalisations">
+        <a href="collecte-multi-pays-kobotoolbox.html" class="prev">
+          <div class="article-nav-label"><span lang="fr">← Étude précédente</span><span lang="en">← Previous case study</span></div>
+          <div class="article-nav-title"><span lang="fr">Le système KoboToolbox déployé dans quatre pays</span><span lang="en">The KoboToolbox system deployed across four countries</span></div>
+        </a>
+        <a href="enquete-audience-radio-sig.html" class="next">
+          <div class="article-nav-label"><span lang="fr">Étude suivante →</span><span lang="en">Next case study →</span></div>
+          <div class="article-nav-title"><span lang="fr">L’enquête d’audience radio et SIG à Niamey</span><span lang="en">The radio audience survey and GIS study in Niamey</span></div>
+        </a>
+      </nav>
+
+      <section class="article-related">
+        <h2><span lang="fr">Pour aller plus loin</span><span lang="en">Go further</span></h2>
+        <ul>
+          <li>
+            <span class="kind"><span lang="fr">Article</span><span lang="en">Article</span></span>
+            <a href="../articles/xlsform-kobo.html"><span lang="fr">Assurer la qualité des données en amont du tableau de bord</span><span lang="en">Securing data quality upstream of the dashboard</span></a>
+          </li>
+          <li>
+            <span class="kind"><span lang="fr">Tutoriels</span><span lang="en">Tutorials</span></span>
+            <a href="../videos.html"><span lang="fr">Suivre les playlists vidéo d’analyse et de visualisation</span><span lang="en">Watch the analysis and visualization video playlists</span></a>
+          </li>
+          <li>
+            <span class="kind"><span lang="fr">Étude de cas</span><span lang="en">Case study</span></span>
+            <a href="collecte-multi-pays-kobotoolbox.html"><span lang="fr">Voir le système KoboToolbox déployé dans quatre pays</span><span lang="en">See the KoboToolbox system deployed across four countries</span></a>
+          </li>
+          <li>
+            <span class="kind"><span lang="fr">Contact</span><span lang="en">Contact</span></span>
+            <a href="../index.html#contact"><span lang="fr">Faire concevoir un tableau de bord pour vos équipes</span><span lang="en">Have a dashboard designed for your teams</span></a>
+          </li>
+        </ul>
+      </section>
+
+    </div>
+  </div>
+
+  </main>
+
+  <!-- ============== FOOTER ============== -->
+  <!-- #partial:footer — généré depuis tools/partials/footer.html, ne pas éditer ici -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="/assets/logo-horizontal.svg" alt="Data Solution — Adnan Adamou" width="1000" height="280" loading="lazy" decoding="async">
+        <p>
+          <span lang="fr">Data Analyst &amp; Information Manager. Niamey, Niger.</span>
+          <span lang="en">Data Analyst &amp; Information Manager. Niamey, Niger.</span>
+        </p>
+      </div>
+      <div class="footer-col">
+        <h5><span lang="fr">Navigation</span><span lang="en">Navigation</span></h5>
+        <ul>
+          <li><a href="../index.html"><span lang="fr">Accueil</span><span lang="en">Home</span></a></li>
+          <li><a href="../articles.html"><span lang="fr">Blog</span><span lang="en">Blog</span></a></li>
+          <li><a href="../portfolio.html"><span lang="fr">Portfolio</span><span lang="en">Portfolio</span></a></li>
+          <li><a href="../projects.html"><span lang="fr">Projets</span><span lang="en">Projects</span></a></li>
+          <li><a href="../videos.html"><span lang="fr">Tutoriels</span><span lang="en">Tutorials</span></a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5><span lang="fr">Suivre</span><span lang="en">Follow</span></h5>
+        <ul>
+          <li><a href="https://www.linkedin.com/in/adnan-data" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+          <li><a href="https://youtube.com/@datasolution" target="_blank" rel="noopener">YouTube ↗</a></li>
+          <li><a href="https://m.facebook.com/106771031899764/" target="_blank" rel="noopener">Facebook ↗</a></li>
+          <li><a href="mailto:contact@adnandata.com">Email ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-year>2026</span> Adnan Adamou. <span lang="fr">Tous droits réservés.</span><span lang="en">All rights reserved.</span></span>
+    </div>
+  </footer>
+  <!-- /partial:footer -->
+
+  <script src="/js/main.js?v=20260812-1"></script>
+</body>
+</html>

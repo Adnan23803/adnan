@@ -1,5 +1,12 @@
-﻿User-agent: *
+User-agent: *
 Allow: /
+
+# Fichiers de travail présents dans le dépôt mais qui ne sont pas des pages.
+Disallow: /tools/
+Disallow: /.claude/
 Disallow: /.vscode/
+Disallow: /README.md
+Disallow: /EDITORIAL.md
+Disallow: /Correctifs_SEO.md
 
 Sitemap: https://www.adnandata.com/sitemap.xml

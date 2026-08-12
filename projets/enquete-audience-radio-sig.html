@@ -1,0 +1,480 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Enquête d’audience radio et SIG à Niamey — Étude de cas</title>
+  <meta name="description" content="Étude de cas : enquête d’audience de 300 répondants, 10 focus groups et cartographie SIG avec Landsat et SRTM pour une radio locale à Niamey." />
+  <meta property="og:title" content="Enquête d’audience radio et cartographie SIG" />
+  <meta property="og:description" content="Méthodes mixtes, collecte CAPI, SPSS, Landsat et SRTM à Niamey." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.adnandata.com/projets/enquete-audience-radio-sig.html" />
+  <meta property="og:image" content="https://www.adnandata.com/images/logo.png" />
+  <meta property="article:published_time" content="2026-08-07" />
+  <meta property="article:modified_time" content="2026-08-07" />
+  <meta property="article:author" content="Adnan Adamou" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://www.adnandata.com/images/logo.png" />
+  <link rel="canonical" href="https://www.adnandata.com/projets/enquete-audience-radio-sig.html" />
+  <link rel="alternate" hreflang="fr" href="https://www.adnandata.com/projets/enquete-audience-radio-sig.html" />
+  <link rel="alternate" hreflang="en" href="https://www.adnandata.com/en/projets/enquete-audience-radio-sig.html" />
+  <link rel="alternate" hreflang="x-default" href="https://www.adnandata.com/projets/enquete-audience-radio-sig.html" />
+  <meta name="robots" content="index, follow" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+  <link rel="alternate icon" href="/assets/favicon.ico" />
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..700,0..100&family=Manrope:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="/css/style.css?v=20260812-1" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.adnandata.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Projets", "item": "https://www.adnandata.com/projects.html" },
+          { "@type": "ListItem", "position": 3, "name": "Enquête d’audience radio et SIG à Niamey" }
+        ]
+      },
+      {
+        "@type": "Article",
+        "headline": "Enquête d’audience radio et cartographie SIG à Niamey",
+        "datePublished": "2026-08-07",
+        "dateModified": "2026-08-07",
+        "inLanguage": "fr",
+        "author": { "@id": "https://www.adnandata.com/portfolio.html#person" },
+        "publisher": { "@id": "https://www.adnandata.com/portfolio.html#person" },
+        "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.adnandata.com/projets/enquete-audience-radio-sig.html" },
+        "url": "https://www.adnandata.com/projets/enquete-audience-radio-sig.html",
+        "image": "https://www.adnandata.com/images/logo.png",
+        "description": "Étude de cas : enquête d’audience de 300 répondants, 10 focus groups et cartographie SIG avec Landsat et SRTM pour une radio locale à Niamey.",
+        "about": ["KoboToolbox", "CAPI", "SPSS", "QGIS", "Landsat", "SRTM"]
+      },
+      {
+        "@type": "Person",
+        "@id": "https://www.adnandata.com/portfolio.html#person",
+        "name": "Adnan Adamou Daouda",
+        "url": "https://www.adnandata.com/portfolio.html",
+        "jobTitle": "Data Analyst & Information Manager",
+        "sameAs": [
+          "https://www.linkedin.com/in/adnan-data",
+          "https://youtube.com/@datasolution"
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="lang-fr">
+
+  <!-- ============== HEADER ============== -->
+  <!-- #partial:header — généré depuis tools/partials/header.html, ne pas éditer ici -->
+  <header class="site-header">
+    <nav class="nav" aria-label="Navigation">
+      <a href="../index.html" class="brand">
+        <img src="/assets/picto.svg" alt="Data Solution" class="brand-logo" width="38" height="38" />
+        <span class="brand-text">
+          <span class="brand-name">Data Solution</span>
+          <span class="brand-sub">Adnan Adamou</span>
+        </span>
+      </a>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="../index.html"><span lang="fr">Accueil</span><span lang="en">Home</span></a></li>
+        <li><a href="../articles.html"><span lang="fr">Blog</span><span lang="en">Blog</span></a></li>
+        <li><a href="../portfolio.html"><span lang="fr">Portfolio</span><span lang="en">Portfolio</span></a></li>
+        <li><a href="../projects.html"><span lang="fr">Projets</span><span lang="en">Projects</span></a></li>
+        <li><a href="../videos.html"><span lang="fr">Tutoriels</span><span lang="en">Tutorials</span></a></li>
+        <li class="lang-toggle-wrapper">
+          <div class="lang-toggle" role="group" aria-label="Language">
+            <button data-lang="fr" aria-pressed="true">FR</button>
+            <button data-lang="en" aria-pressed="false">EN</button>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <!-- /partial:header -->
+
+  <main>
+
+  <!-- ============== HERO ============== -->
+  <section class="article-hero">
+    <div class="container">
+
+      <nav class="breadcrumb" aria-label="Fil d'Ariane">
+        <ol>
+          <li><a href="../index.html"><span lang="fr">Accueil</span><span lang="en">Home</span></a></li>
+          <li><a href="../projects.html"><span lang="fr">Projets</span><span lang="en">Projects</span></a></li>
+          <li aria-current="page"><span lang="fr">Enquête d’audience radio et SIG à Niamey</span><span lang="en">Radio audience survey and GIS in Niamey</span></li>
+        </ol>
+      </nav>
+
+      <div class="article-meta-top reveal">
+        <span class="cat">CAPI · SPSS · QGIS</span>
+        <span class="sep"></span>
+        <span>2026 · Niamey</span>
+      </div>
+
+      <h1 class="reveal">
+        <span lang="fr">Mesurer une audience et cartographier une couverture radio.</span>
+        <span lang="en">Measuring an audience and mapping radio coverage.</span>
+      </h1>
+
+      <p class="subtitle reveal">
+        <span lang="fr">Une méthode mixte associant enquête quantitative, groupes de discussion et analyse géospatiale.</span>
+        <span lang="en">A mixed-method approach combining a quantitative survey, focus groups and geospatial analysis.</span>
+      </p>
+
+    </div>
+  </section>
+
+  <!-- ============== CORPS ============== -->
+  <article class="article-body">
+    <div>
+
+      <div lang="fr">
+        <p class="lead-paragraph">Pour comprendre l’audience d’une radio locale à Niamey, les déclarations des auditeurs devaient être croisées avec une lecture territoriale de la couverture.</p>
+
+        <dl class="facts-list">
+          <dt>Période</dt>
+          <dd>2026</dd>
+
+          <dt>Terrain</dt>
+          <dd>Niamey, Niger</dd>
+
+          <dt>Dispositif</dt>
+          <dd>300 entretiens CAPI · 10 focus groups</dd>
+
+          <dt>Rôle</dt>
+          <dd>Conception méthodologique, analyse et cartographie</dd>
+
+          <dt>Outils</dt>
+          <dd>KoboToolbox · SPSS · QGIS · Landsat · SRTM</dd>
+        </dl>
+
+        <h2>Le défi</h2>
+        <p>Une mesure uniquement quantitative aurait indiqué qui écoute, mais moins bien pourquoi et dans quelles conditions. Une carte de couverture seule n’aurait pas expliqué les usages et attentes du public.</p>
+
+        <h2>La méthode</h2>
+        <p>Le dispositif a combiné 300 entretiens CAPI et 10 focus groups. KoboToolbox a servi à la collecte structurée, SPSS à l’analyse statistique et QGIS à la représentation spatiale.</p>
+
+        <h2>Composante SIG</h2>
+        <p>La cartographie a mobilisé des images satellitaires Landsat et des modèles numériques de terrain NASA/SRTM afin d’intégrer l’occupation du sol et le relief dans la lecture de la zone de couverture.</p>
+
+        <!-- Décommenter quand l'image existe :
+        <figure class="video-embed">
+          <img src="/images/projets/carte-couverture-radio-niamey.webp"
+               alt="Carte thématique de la zone de couverture radio étudiée à Niamey"
+               width="1200" height="675" loading="lazy" decoding="async">
+          <figcaption class="video-caption">Carte thématique de la zone de couverture étudiée.</figcaption>
+        </figure>
+        -->
+
+        <h2>Déroulé de l’étude</h2>
+        <div class="infra-list-port">
+          <div class="infra-item-port">
+            <span class="infra-num">01</span>
+            <div>
+              <strong>Collecte quantitative</strong>
+              <p>300 entretiens en face à face menés en CAPI, avec un questionnaire structuré sous KoboToolbox.</p>
+            </div>
+          </div>
+          <div class="infra-item-port">
+            <span class="infra-num">02</span>
+            <div>
+              <strong>Groupes de discussion</strong>
+              <p>10 focus groups pour recueillir les usages, les attentes et les conditions d’écoute que le questionnaire ne capte pas.</p>
+            </div>
+          </div>
+          <div class="infra-item-port">
+            <span class="infra-num">03</span>
+            <div>
+              <strong>Analyse statistique</strong>
+              <p>Traitement des réponses sous SPSS pour caractériser les comportements d’écoute.</p>
+            </div>
+          </div>
+          <div class="infra-item-port">
+            <span class="infra-num">04</span>
+            <div>
+              <strong>Analyse géospatiale</strong>
+              <p>Intégration sous QGIS des images Landsat et des modèles de terrain SRTM, pour tenir compte de l’occupation du sol et du relief.</p>
+            </div>
+          </div>
+          <div class="infra-item-port">
+            <span class="infra-num">05</span>
+            <div>
+              <strong>Croisement des résultats</strong>
+              <p>Mise en regard des déclarations d’audience et de la lecture territoriale de la couverture.</p>
+            </div>
+          </div>
+        </div>
+
+        <h2>Livrables</h2>
+        <div class="results-grid-port">
+          <div class="result-item-port">
+            <span class="result-icon" aria-hidden="true">◆</span>
+            <div>
+              <h4>Base de 300 répondants</h4>
+              <p>Une base quantitative contrôlée, prête pour l’analyse.</p>
+            </div>
+          </div>
+          <div class="result-item-port">
+            <span class="result-icon" aria-hidden="true">◆</span>
+            <div>
+              <h4>Synthèse qualitative</h4>
+              <p>Les enseignements issus des 10 focus groups.</p>
+            </div>
+          </div>
+          <div class="result-item-port">
+            <span class="result-icon" aria-hidden="true">◆</span>
+            <div>
+              <h4>Analyse des comportements</h4>
+              <p>Une lecture statistique des habitudes d’écoute.</p>
+            </div>
+          </div>
+          <div class="result-item-port">
+            <span class="result-icon" aria-hidden="true">◆</span>
+            <div>
+              <h4>Cartes thématiques</h4>
+              <p>La couverture et les zones étudiées, représentées spatialement.</p>
+            </div>
+          </div>
+        </div>
+
+        <h2>Résultat</h2>
+        <p>Le commanditaire dispose d’une lecture combinée de son audience, des attentes exprimées et de la distribution géographique de sa couverture pour orienter ses décisions éditoriales et techniques.</p>
+      </div>
+
+      <div lang="en">
+        <p class="lead-paragraph">Understanding a local Niamey radio station’s audience required combining listener statements with a territorial reading of coverage.</p>
+
+        <dl class="facts-list">
+          <dt>Period</dt>
+          <dd>2026</dd>
+
+          <dt>Field</dt>
+          <dd>Niamey, Niger</dd>
+
+          <dt>Design</dt>
+          <dd>300 CAPI interviews · 10 focus groups</dd>
+
+          <dt>Role</dt>
+          <dd>Methodological design, analysis and mapping</dd>
+
+          <dt>Tools</dt>
+          <dd>KoboToolbox · SPSS · QGIS · Landsat · SRTM</dd>
+        </dl>
+
+        <h2>The challenge</h2>
+        <p>A quantitative measure alone would show who listens, but less clearly why and under what conditions. A coverage map alone would not explain audience habits and expectations.</p>
+
+        <h2>Method</h2>
+        <p>The design combined 300 CAPI interviews and 10 focus groups. KoboToolbox supported structured collection, SPSS statistical analysis and QGIS spatial representation.</p>
+
+        <h2>GIS component</h2>
+        <p>Mapping used Landsat satellite imagery and NASA/SRTM digital elevation models to incorporate land cover and terrain into the coverage analysis.</p>
+
+        <!-- Uncomment once the image exists:
+        <figure class="video-embed">
+          <img src="/images/projets/carte-couverture-radio-niamey.webp"
+               alt="Thematic map of the studied radio coverage area in Niamey"
+               width="1200" height="675" loading="lazy" decoding="async">
+          <figcaption class="video-caption">Thematic map of the studied coverage area.</figcaption>
+        </figure>
+        -->
+
+        <h2>How the study unfolded</h2>
+        <div class="infra-list-port">
+          <div class="infra-item-port">
+            <span class="infra-num">01</span>
+            <div>
+              <strong>Quantitative collection</strong>
+              <p>300 face-to-face CAPI interviews, using a structured KoboToolbox questionnaire.</p>
+            </div>
+          </div>
+          <div class="infra-item-port">
+            <span class="infra-num">02</span>
+            <div>
+              <strong>Focus groups</strong>
+              <p>10 focus groups to capture habits, expectations and listening conditions the questionnaire cannot reach.</p>
+            </div>
+          </div>
+          <div class="infra-item-port">
+            <span class="infra-num">03</span>
+            <div>
+              <strong>Statistical analysis</strong>
+              <p>Responses processed in SPSS to characterize listening behavior.</p>
+            </div>
+          </div>
+          <div class="infra-item-port">
+            <span class="infra-num">04</span>
+            <div>
+              <strong>Geospatial analysis</strong>
+              <p>Landsat imagery and SRTM terrain models integrated in QGIS, to account for land cover and relief.</p>
+            </div>
+          </div>
+          <div class="infra-item-port">
+            <span class="infra-num">05</span>
+            <div>
+              <strong>Cross-reading</strong>
+              <p>Audience statements set against the territorial reading of coverage.</p>
+            </div>
+          </div>
+        </div>
+
+        <h2>Deliverables</h2>
+        <div class="results-grid-port">
+          <div class="result-item-port">
+            <span class="result-icon" aria-hidden="true">◆</span>
+            <div>
+              <h4>Dataset of 300 respondents</h4>
+              <p>A controlled quantitative dataset, ready for analysis.</p>
+            </div>
+          </div>
+          <div class="result-item-port">
+            <span class="result-icon" aria-hidden="true">◆</span>
+            <div>
+              <h4>Qualitative synthesis</h4>
+              <p>The findings drawn from the 10 focus groups.</p>
+            </div>
+          </div>
+          <div class="result-item-port">
+            <span class="result-icon" aria-hidden="true">◆</span>
+            <div>
+              <h4>Behavioral analysis</h4>
+              <p>A statistical reading of listening habits.</p>
+            </div>
+          </div>
+          <div class="result-item-port">
+            <span class="result-icon" aria-hidden="true">◆</span>
+            <div>
+              <h4>Thematic maps</h4>
+              <p>Coverage and study areas, represented spatially.</p>
+            </div>
+          </div>
+        </div>
+
+        <h2>Outcome</h2>
+        <p>The client received a combined view of the audience, expressed expectations and geographic coverage to guide editorial and technical decisions.</p>
+      </div>
+
+      <div class="article-cta">
+        <h2><span lang="fr">Une enquête ou une analyse territoriale à concevoir ?</span><span lang="en">Planning a survey or territorial analysis?</span></h2>
+        <a href="../index.html#contact" class="btn btn-primary"><span lang="fr">Échanger sur la méthode</span><span lang="en">Discuss the method</span> →</a>
+      </div>
+
+    </div>
+  </article>
+
+  <!-- ============== FOOTER ARTICLE ============== -->
+  <div class="article-footer">
+    <div>
+
+      <div class="article-tags">
+        <span class="tag">KoboToolbox</span>
+        <span class="tag">CAPI</span>
+        <span class="tag">SPSS</span>
+        <span class="tag">QGIS</span>
+        <span class="tag">Landsat</span>
+        <span class="tag"><span lang="fr">Enquête</span><span lang="en">Survey</span></span>
+        <span class="tag"><span lang="fr">Cartographie</span><span lang="en">Mapping</span></span>
+      </div>
+
+      <div class="article-share">
+        <span class="article-share-label">
+          <span lang="fr">Partager</span>
+          <span lang="en">Share</span>
+        </span>
+        <div class="article-share-links">
+          <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.adnandata.com/projets/enquete-audience-radio-sig.html" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://twitter.com/intent/tweet?url=https://www.adnandata.com/projets/enquete-audience-radio-sig.html" target="_blank" rel="noopener">Twitter / X</a>
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.adnandata.com/projets/enquete-audience-radio-sig.html" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://api.whatsapp.com/send?text=https://www.adnandata.com/projets/enquete-audience-radio-sig.html" target="_blank" rel="noopener">WhatsApp</a>
+          <a href="mailto:?body=https://www.adnandata.com/projets/enquete-audience-radio-sig.html">Email</a>
+        </div>
+      </div>
+
+      <nav class="article-nav" aria-label="Navigation entre réalisations">
+        <a href="tableau-bord-power-bi-dhis2.html" class="prev">
+          <div class="article-nav-label"><span lang="fr">← Étude précédente</span><span lang="en">← Previous case study</span></div>
+          <div class="article-nav-title"><span lang="fr">Le tableau de bord Power BI connecté à DHIS2</span><span lang="en">The Power BI dashboard connected to DHIS2</span></div>
+        </a>
+        <a href="../projects.html" class="next">
+          <div class="article-nav-label"><span lang="fr">Toutes les réalisations →</span><span lang="en">All case studies →</span></div>
+          <div class="article-nav-title"><span lang="fr">Retour aux projets</span><span lang="en">Back to projects</span></div>
+        </a>
+      </nav>
+
+      <section class="article-related">
+        <h2><span lang="fr">Pour aller plus loin</span><span lang="en">Go further</span></h2>
+        <ul>
+          <li>
+            <span class="kind"><span lang="fr">Article</span><span lang="en">Article</span></span>
+            <a href="../articles/sphinx-v5.html"><span lang="fr">Concevoir et analyser une enquête statistique avec Le Sphinx</span><span lang="en">Design and analyse a statistical survey with Le Sphinx</span></a>
+          </li>
+          <li>
+            <span class="kind"><span lang="fr">Tutoriels</span><span lang="en">Tutorials</span></span>
+            <a href="../videos.html"><span lang="fr">Suivre la playlist vidéo « Cartographie vectorielle avec QGIS »</span><span lang="en">Watch the “Vector mapping with QGIS” video playlist</span></a>
+          </li>
+          <li>
+            <span class="kind"><span lang="fr">Étude de cas</span><span lang="en">Case study</span></span>
+            <a href="collecte-multi-pays-kobotoolbox.html"><span lang="fr">Voir le système KoboToolbox déployé dans quatre pays</span><span lang="en">See the KoboToolbox system deployed across four countries</span></a>
+          </li>
+          <li>
+            <span class="kind"><span lang="fr">Contact</span><span lang="en">Contact</span></span>
+            <a href="../index.html#contact"><span lang="fr">Faire concevoir une enquête ou une analyse territoriale</span><span lang="en">Have a survey or territorial analysis designed</span></a>
+          </li>
+        </ul>
+      </section>
+
+    </div>
+  </div>
+
+  </main>
+
+  <!-- ============== FOOTER ============== -->
+  <!-- #partial:footer — généré depuis tools/partials/footer.html, ne pas éditer ici -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="/assets/logo-horizontal.svg" alt="Data Solution — Adnan Adamou" width="1000" height="280" loading="lazy" decoding="async">
+        <p>
+          <span lang="fr">Data Analyst &amp; Information Manager. Niamey, Niger.</span>
+          <span lang="en">Data Analyst &amp; Information Manager. Niamey, Niger.</span>
+        </p>
+      </div>
+      <div class="footer-col">
+        <h5><span lang="fr">Navigation</span><span lang="en">Navigation</span></h5>
+        <ul>
+          <li><a href="../index.html"><span lang="fr">Accueil</span><span lang="en">Home</span></a></li>
+          <li><a href="../articles.html"><span lang="fr">Blog</span><span lang="en">Blog</span></a></li>
+          <li><a href="../portfolio.html"><span lang="fr">Portfolio</span><span lang="en">Portfolio</span></a></li>
+          <li><a href="../projects.html"><span lang="fr">Projets</span><span lang="en">Projects</span></a></li>
+          <li><a href="../videos.html"><span lang="fr">Tutoriels</span><span lang="en">Tutorials</span></a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5><span lang="fr">Suivre</span><span lang="en">Follow</span></h5>
+        <ul>
+          <li><a href="https://www.linkedin.com/in/adnan-data" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+          <li><a href="https://youtube.com/@datasolution" target="_blank" rel="noopener">YouTube ↗</a></li>
+          <li><a href="https://m.facebook.com/106771031899764/" target="_blank" rel="noopener">Facebook ↗</a></li>
+          <li><a href="mailto:contact@adnandata.com">Email ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-year>2026</span> Adnan Adamou. <span lang="fr">Tous droits réservés.</span><span lang="en">All rights reserved.</span></span>
+    </div>
+  </footer>
+  <!-- /partial:footer -->
+
+  <script src="/js/main.js?v=20260812-1"></script>
+</body>
+</html>

@@ -530,6 +530,7 @@ section {
   margin-bottom: 1rem;
   display: block;
 }
+.expertise-item h3,
 .expertise-item h4 {
   margin-bottom: 0.75rem;
   font-variation-settings: "opsz" 60, "SOFT" 50;
@@ -862,6 +863,23 @@ section {
 .reveal.in:nth-child(3) { animation-delay: 0.25s; }
 .reveal.in:nth-child(4) { animation-delay: 0.35s; }
 .reveal.in:nth-child(5) { animation-delay: 0.45s; }
+
+/* Limit rendering work below the fold on long pages. */
+main > section:not(:first-child),
+.article-body {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 700px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  .reveal { opacity: 1; transform: none; }
+}
 
 /* --- Misc --- */
 .divider {
@@ -1520,6 +1538,30 @@ section {
 }
 .article-hero .container { max-width: 800px; }
 
+/* --- Fil d'Ariane --- */
+.breadcrumb {
+  margin-bottom: 1.5rem;
+  font-size: 0.82rem;
+  color: var(--ink-muted);
+}
+.breadcrumb ol {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.breadcrumb li { display: flex; align-items: center; gap: 0.5rem; }
+.breadcrumb li + li::before {
+  content: "›";
+  color: var(--line);
+}
+.breadcrumb a { border-bottom: 1px solid transparent; }
+.breadcrumb a:hover { color: var(--terracotta); border-bottom-color: currentColor; }
+.breadcrumb [aria-current="page"] { color: var(--ink-soft); }
+
 .article-meta-top {
   display: flex;
   flex-wrap: wrap;
@@ -1810,6 +1852,53 @@ section {
   line-height: 1.35;
 }
 .article-nav a.next { text-align: right; }
+
+/* --- Contenus liés (maillage interne) --- */
+.article-related {
+  margin-top: 3.5rem;
+  padding-top: 2.5rem;
+  border-top: 1px solid var(--line);
+}
+.article-related h2 {
+  font-size: 1.15rem;
+  letter-spacing: 0.02em;
+  margin-bottom: 1.5rem;
+}
+.article-related ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 1rem;
+}
+@media (min-width: 700px) {
+  .article-related ul { grid-template-columns: 1fr 1fr; gap: 1rem 1.5rem; }
+}
+.article-related li {
+  padding-left: 1.25rem;
+  position: relative;
+  line-height: 1.5;
+}
+.article-related li::before {
+  content: "→";
+  position: absolute;
+  left: 0;
+  color: var(--terracotta);
+}
+.article-related .kind {
+  display: block;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--ink-muted);
+  margin-bottom: 0.2rem;
+}
+.article-related a {
+  border-bottom: 1px solid var(--line);
+  font-size: 0.95rem;
+}
+.article-related a:hover { color: var(--terracotta); border-bottom-color: currentColor; }
 
 /* ─── Blog — Composants réutilisables ───────────────────── */
 .download-box {

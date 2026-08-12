@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Collecte multi-pays avec KoboToolbox — Étude de cas</title>
+  <meta name="description" content="Étude de cas : conception et déploiement d’un système KoboToolbox et XLSForm standardisé dans quatre pays, avec consolidation centralisée des données." />
+  <meta property="og:title" content="Système de collecte multi-pays avec KoboToolbox" />
+  <meta property="og:description" content="Formulaires XLSForm multilingues, validation terrain et consolidation inter-sites." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://www.adnandata.com/projets/collecte-multi-pays-kobotoolbox.html" />
+  <meta property="og:image" content="https://www.adnandata.com/images/logo.png" />
+  <meta property="article:published_time" content="2026-08-07" />
+  <meta property="article:modified_time" content="2026-08-07" />
+  <meta property="article:author" content="Adnan Adamou" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="https://www.adnandata.com/images/logo.png" />
+  <link rel="canonical" href="https://www.adnandata.com/projets/collecte-multi-pays-kobotoolbox.html" />
+  <link rel="alternate" hreflang="fr" href="https://www.adnandata.com/projets/collecte-multi-pays-kobotoolbox.html" />
+  <link rel="alternate" hreflang="en" href="https://www.adnandata.com/en/projets/collecte-multi-pays-kobotoolbox.html" />
+  <link rel="alternate" hreflang="x-default" href="https://www.adnandata.com/projets/collecte-multi-pays-kobotoolbox.html" />
+  <meta name="robots" content="index, follow" />
+  <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg" />
+  <link rel="alternate icon" href="/assets/favicon.ico" />
+  <link rel="apple-touch-icon" href="/assets/apple-touch-icon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..700,0..100&family=Manrope:wght@300;400;500;600;700&display=swap">
+  <link rel="stylesheet" href="/css/style.css?v=20260812-1" />
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.adnandata.com/" },
+          { "@type": "ListItem", "position": 2, "name": "Projets", "item": "https://www.adnandata.com/projects.html" },
+          { "@type": "ListItem", "position": 3, "name": "Collecte multi-pays avec KoboToolbox" }
+        ]
+      },
+      {
+        "@type": "Article",
+        "headline": "Système de collecte multi-pays avec KoboToolbox",
+        "datePublished": "2026-08-07",
+        "dateModified": "2026-08-07",
+        "inLanguage": "fr",
+        "author": { "@id": "https://www.adnandata.com/portfolio.html#person" },
+        "publisher": { "@id": "https://www.adnandata.com/portfolio.html#person" },
+        "mainEntityOfPage": { "@type": "WebPage", "@id": "https://www.adnandata.com/projets/collecte-multi-pays-kobotoolbox.html" },
+        "url": "https://www.adnandata.com/projets/collecte-multi-pays-kobotoolbox.html",
+        "image": "https://www.adnandata.com/images/logo.png",
+        "description": "Étude de cas : conception et déploiement d’un système KoboToolbox et XLSForm standardisé dans quatre pays, avec consolidation centralisée des données.",
+        "about": ["KoboToolbox", "XLSForm", "Humanitarian Data"]
+      },
+      {
+        "@type": "Person",
+        "@id": "https://www.adnandata.com/portfolio.html#person",
+        "name": "Adnan Adamou Daouda",
+        "url": "https://www.adnandata.com/portfolio.html",
+        "jobTitle": "Data Analyst & Information Manager",
+        "sameAs": [
+          "https://www.linkedin.com/in/adnan-data",
+          "https://youtube.com/@datasolution"
+        ]
+      }
+    ]
+  }
+  </script>
+</head>
+<body class="lang-fr">
+
+  <!-- ============== HEADER ============== -->
+  <!-- #partial:header — généré depuis tools/partials/header.html, ne pas éditer ici -->
+  <header class="site-header">
+    <nav class="nav" aria-label="Navigation">
+      <a href="../index.html" class="brand">
+        <img src="/assets/picto.svg" alt="Data Solution" class="brand-logo" width="38" height="38" />
+        <span class="brand-text">
+          <span class="brand-name">Data Solution</span>
+          <span class="brand-sub">Adnan Adamou</span>
+        </span>
+      </a>
+      <button class="nav-toggle" aria-label="Menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="../index.html"><span lang="fr">Accueil</span><span lang="en">Home</span></a></li>
+        <li><a href="../articles.html"><span lang="fr">Blog</span><span lang="en">Blog</span></a></li>
+        <li><a href="../portfolio.html"><span lang="fr">Portfolio</span><span lang="en">Portfolio</span></a></li>
+        <li><a href="../projects.html"><span lang="fr">Projets</span><span lang="en">Projects</span></a></li>
+        <li><a href="../videos.html"><span lang="fr">Tutoriels</span><span lang="en">Tutorials</span></a></li>
+        <li class="lang-toggle-wrapper">
+          <div class="lang-toggle" role="group" aria-label="Language">
+            <button data-lang="fr" aria-pressed="true">FR</button>
+            <button data-lang="en" aria-pressed="false">EN</button>
+          </div>
+        </li>
+      </ul>
+    </nav>
+  </header>
+  <!-- /partial:header -->
+
+  <main>
+
+  <!-- ============== HERO ============== -->
+  <section class="article-hero">
+    <div class="container">
+
+      <nav class="breadcrumb" aria-label="Fil d'Ariane">
+        <ol>
+          <li><a href="../index.html"><span lang="fr">Accueil</span><span lang="en">Home</span></a></li>
+          <li><a href="../projects.html"><span lang="fr">Projets</span><span lang="en">Projects</span></a></li>
+          <li aria-current="page"><span lang="fr">Collecte multi-pays avec KoboToolbox</span><span lang="en">Multi-country data collection with KoboToolbox</span></li>
+        </ol>
+      </nav>
+
+      <div class="article-meta-top reveal">
+        <span class="cat">KoboToolbox · XLSForm</span>
+        <span class="sep"></span>
+        <span>2020–2024</span>
+      </div>
+
+      <h1 class="reveal">
+        <span lang="fr">Standardiser une collecte de données dans plusieurs pays.</span>
+        <span lang="en">Standardizing data collection across multiple countries.</span>
+      </h1>
+
+      <p class="subtitle reveal">
+        <span lang="fr">Un dispositif commun, multilingue et contrôlable pour consolider des données produites dans des contextes terrain différents.</span>
+        <span lang="en">A shared, multilingual and controllable system for consolidating data produced in different field contexts.</span>
+      </p>
+
+    </div>
+  </section>
+
+  <!-- ============== CORPS ============== -->
+  <article class="article-body">
+    <div>
+
+      <div lang="fr">
+        <p class="lead-paragraph">Le projet consistait à harmoniser la collecte et le traitement de données au Mali, au Burkina Faso, en République démocratique du Congo et en République centrafricaine, sans effacer les contraintes propres à chaque terrain.</p>
+
+        <dl class="facts-list">
+          <dt>Période</dt>
+          <dd>2020–2024</dd>
+
+          <dt>Zone couverte</dt>
+          <dd>Mali · Burkina Faso · RD Congo · République centrafricaine</dd>
+
+          <dt>Rôle</dt>
+          <dd>Conception du dispositif, formulaires et consolidation</dd>
+
+          <dt>Outils</dt>
+          <dd>KoboToolbox · XLSForm · API · Excel · Power Query</dd>
+        </dl>
+
+        <h2>Le défi</h2>
+        <p>Des équipes réparties entre plusieurs pays devaient utiliser les mêmes définitions d’indicateurs et produire des données comparables. Les différences de langue, de connectivité et de pratiques augmentaient le risque d’erreurs et de consolidation manuelle.</p>
+
+        <h2>La solution</h2>
+        <p>J’ai conçu des formulaires XLSForm avancés dans KoboToolbox avec contraintes, logique de saut, contrôles de cohérence et traductions multilingues. Les soumissions ont ensuite été structurées pour alimenter un entrepôt central et permettre l’analyse inter-sites.</p>
+
+        <!-- Décommenter quand l'image existe :
+        <figure class="video-embed">
+          <img src="/images/projets/kobo-pipeline-multipays.webp"
+               alt="Schéma du pipeline de consolidation des données entre les quatre pays"
+               width="1200" height="675" loading="lazy" decoding="async">
+          <figcaption class="video-caption">Le pipeline de consolidation, de la collecte terrain à l’entrepôt central.</figcaption>
+        </figure>
+        -->
+
+        <h2>Méthode</h2>
+        <div class="infra-list-port">
+          <div class="infra-item-port">
+            <span class="infra-num">01</span>
+            <div>
+              <strong>Harmonisation des variables</strong>
+              <p>Mêmes définitions d’indicateurs et mêmes règles de validation pour l’ensemble des pays, afin que les données restent comparables d’un site à l’autre.</p>
+            </div>
+          </div>
+          <div class="infra-item-port">
+            <span class="infra-num">02</span>
+            <div>
+              <strong>Tests avec les équipes</strong>
+              <p>Chaque formulaire est éprouvé par les équipes terrain avant déploiement, pour corriger les ambiguïtés de formulation et de traduction en amont.</p>
+            </div>
+          </div>
+          <div class="infra-item-port">
+            <span class="infra-num">03</span>
+            <div>
+              <strong>Collecte hors connexion</strong>
+              <p>Configuration adaptée aux zones à connectivité limitée : saisie locale, puis synchronisation différée vers le serveur.</p>
+            </div>
+          </div>
+          <div class="infra-item-port">
+            <span class="infra-num">04</span>
+            <div>
+              <strong>Consolidation automatisée</strong>
+              <p>Récupération et traitement des soumissions via API, Excel et Power Query, plutôt que par manipulation manuelle des exports.</p>
+            </div>
+          </div>
+          <div class="infra-item-port">
+            <span class="infra-num">05</span>
+            <div>
+              <strong>Documentation du dispositif</strong>
+              <p>Variables, règles et flux sont documentés pour que le système reste maintenable après la fin de la mission.</p>
+            </div>
+          </div>
+        </div>
+
+        <h2>Résultat</h2>
+        <div class="results-grid-port">
+          <div class="result-item-port">
+            <span class="result-icon" aria-hidden="true">◆</span>
+            <div>
+              <h4>Quatre capitales</h4>
+              <p>Un flux commun déployé à Bamako, Ouagadougou, Kinshasa et Bangui.</p>
+            </div>
+          </div>
+          <div class="result-item-port">
+            <span class="result-icon" aria-hidden="true">◆</span>
+            <div>
+              <h4>Structure homogène</h4>
+              <p>Une même structure de données produite par tous les sites.</p>
+            </div>
+          </div>
+          <div class="result-item-port">
+            <span class="result-icon" aria-hidden="true">◆</span>
+            <div>
+              <h4>Comparaison inter-sites</h4>
+              <p>L’analyse croisée entre pays devient possible sans retraitement.</p>
+            </div>
+          </div>
+          <div class="result-item-port">
+            <span class="result-icon" aria-hidden="true">◆</span>
+            <div>
+              <h4>Dispositif multilingue</h4>
+              <p>Des formulaires traduits, utilisables dans chaque contexte terrain.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div lang="en">
+        <p class="lead-paragraph">The project harmonized data collection and processing across Mali, Burkina Faso, the Democratic Republic of Congo and the Central African Republic while preserving each field context’s constraints.</p>
+
+        <dl class="facts-list">
+          <dt>Period</dt>
+          <dd>2020–2024</dd>
+
+          <dt>Coverage</dt>
+          <dd>Mali · Burkina Faso · DR Congo · Central African Republic</dd>
+
+          <dt>Role</dt>
+          <dd>System design, forms and data consolidation</dd>
+
+          <dt>Tools</dt>
+          <dd>KoboToolbox · XLSForm · API · Excel · Power Query</dd>
+        </dl>
+
+        <h2>The challenge</h2>
+        <p>Teams in several countries needed shared indicator definitions and comparable data. Language, connectivity and working-practice differences increased the risk of errors and manual consolidation.</p>
+
+        <h2>The solution</h2>
+        <p>I designed advanced KoboToolbox XLSForms with constraints, skip logic, consistency checks and multilingual labels. Submissions were then structured for a central repository and cross-site analysis.</p>
+
+        <!-- Uncomment once the image exists:
+        <figure class="video-embed">
+          <img src="/images/projets/kobo-pipeline-multipays.webp"
+               alt="Diagram of the data consolidation pipeline across the four countries"
+               width="1200" height="675" loading="lazy" decoding="async">
+          <figcaption class="video-caption">The consolidation pipeline, from field collection to the central repository.</figcaption>
+        </figure>
+        -->
+
+        <h2>Method</h2>
+        <div class="infra-list-port">
+          <div class="infra-item-port">
+            <span class="infra-num">01</span>
+            <div>
+              <strong>Harmonized variables</strong>
+              <p>Identical indicator definitions and validation rules across all countries, so that data stays comparable from one site to the next.</p>
+            </div>
+          </div>
+          <div class="infra-item-port">
+            <span class="infra-num">02</span>
+            <div>
+              <strong>Testing with field teams</strong>
+              <p>Every form is tested by the field teams before deployment, to catch wording and translation ambiguities early.</p>
+            </div>
+          </div>
+          <div class="infra-item-port">
+            <span class="infra-num">03</span>
+            <div>
+              <strong>Offline collection</strong>
+              <p>Configured for areas with limited connectivity: local data entry, then deferred synchronization to the server.</p>
+            </div>
+          </div>
+          <div class="infra-item-port">
+            <span class="infra-num">04</span>
+            <div>
+              <strong>Automated consolidation</strong>
+              <p>Submissions retrieved and processed through API, Excel and Power Query rather than by hand-editing exports.</p>
+            </div>
+          </div>
+          <div class="infra-item-port">
+            <span class="infra-num">05</span>
+            <div>
+              <strong>Documented system</strong>
+              <p>Variables, rules and flows are documented so the system remains maintainable after the assignment ends.</p>
+            </div>
+          </div>
+        </div>
+
+        <h2>Outcome</h2>
+        <div class="results-grid-port">
+          <div class="result-item-port">
+            <span class="result-icon" aria-hidden="true">◆</span>
+            <div>
+              <h4>Four capitals</h4>
+              <p>A shared workflow deployed in Bamako, Ouagadougou, Kinshasa and Bangui.</p>
+            </div>
+          </div>
+          <div class="result-item-port">
+            <span class="result-icon" aria-hidden="true">◆</span>
+            <div>
+              <h4>Consistent structure</h4>
+              <p>The same data structure produced by every site.</p>
+            </div>
+          </div>
+          <div class="result-item-port">
+            <span class="result-icon" aria-hidden="true">◆</span>
+            <div>
+              <h4>Cross-site comparison</h4>
+              <p>Country-to-country analysis becomes possible without reprocessing.</p>
+            </div>
+          </div>
+          <div class="result-item-port">
+            <span class="result-icon" aria-hidden="true">◆</span>
+            <div>
+              <h4>Multilingual system</h4>
+              <p>Translated forms, usable in each field context.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="article-cta">
+        <h2><span lang="fr">Un dispositif similaire à déployer ?</span><span lang="en">Planning a similar system?</span></h2>
+        <a href="../index.html#contact" class="btn btn-primary"><span lang="fr">Discuter du projet</span><span lang="en">Discuss the project</span> →</a>
+      </div>
+
+    </div>
+  </article>
+
+  <!-- ============== FOOTER ARTICLE ============== -->
+  <div class="article-footer">
+    <div>
+
+      <div class="article-tags">
+        <span class="tag">KoboToolbox</span>
+        <span class="tag">XLSForm</span>
+        <span class="tag">Power Query</span>
+        <span class="tag"><span lang="fr">Collecte de données</span><span lang="en">Data collection</span></span>
+        <span class="tag"><span lang="fr">Humanitaire</span><span lang="en">Humanitarian</span></span>
+        <span class="tag"><span lang="fr">Hors connexion</span><span lang="en">Offline</span></span>
+      </div>
+
+      <div class="article-share">
+        <span class="article-share-label">
+          <span lang="fr">Partager</span>
+          <span lang="en">Share</span>
+        </span>
+        <div class="article-share-links">
+          <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://www.adnandata.com/projets/collecte-multi-pays-kobotoolbox.html" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://twitter.com/intent/tweet?url=https://www.adnandata.com/projets/collecte-multi-pays-kobotoolbox.html" target="_blank" rel="noopener">Twitter / X</a>
+          <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.adnandata.com/projets/collecte-multi-pays-kobotoolbox.html" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://api.whatsapp.com/send?text=https://www.adnandata.com/projets/collecte-multi-pays-kobotoolbox.html" target="_blank" rel="noopener">WhatsApp</a>
+          <a href="mailto:?body=https://www.adnandata.com/projets/collecte-multi-pays-kobotoolbox.html">Email</a>
+        </div>
+      </div>
+
+      <nav class="article-nav" aria-label="Navigation entre réalisations">
+        <a href="../projects.html" class="prev">
+          <div class="article-nav-label"><span lang="fr">← Toutes les réalisations</span><span lang="en">← All case studies</span></div>
+          <div class="article-nav-title"><span lang="fr">Retour aux projets</span><span lang="en">Back to projects</span></div>
+        </a>
+        <a href="tableau-bord-power-bi-dhis2.html" class="next">
+          <div class="article-nav-label"><span lang="fr">Étude suivante →</span><span lang="en">Next case study →</span></div>
+          <div class="article-nav-title"><span lang="fr">Le tableau de bord Power BI connecté à DHIS2</span><span lang="en">The Power BI dashboard connected to DHIS2</span></div>
+        </a>
+      </nav>
+
+      <section class="article-related">
+        <h2><span lang="fr">Pour aller plus loin</span><span lang="en">Go further</span></h2>
+        <ul>
+          <li>
+            <span class="kind"><span lang="fr">Article</span><span lang="en">Article</span></span>
+            <a href="../articles/xlsform-kobo.html"><span lang="fr">Éviter les cinq pièges classiques d’un formulaire KoboToolbox</span><span lang="en">Avoid the five classic pitfalls of a KoboToolbox form</span></a>
+          </li>
+          <li>
+            <span class="kind"><span lang="fr">Tutoriels</span><span lang="en">Tutorials</span></span>
+            <a href="../videos.html"><span lang="fr">Suivre la playlist vidéo « KoboToolbox de A à Z »</span><span lang="en">Watch the “KoboToolbox from A to Z” video playlist</span></a>
+          </li>
+          <li>
+            <span class="kind"><span lang="fr">Étude de cas</span><span lang="en">Case study</span></span>
+            <a href="tableau-bord-power-bi-dhis2.html"><span lang="fr">Voir le tableau de bord Power BI connecté à DHIS2</span><span lang="en">See the Power BI dashboard connected to DHIS2</span></a>
+          </li>
+          <li>
+            <span class="kind"><span lang="fr">Contact</span><span lang="en">Contact</span></span>
+            <a href="../index.html#contact"><span lang="fr">Faire concevoir un dispositif de collecte multi-pays</span><span lang="en">Have a multi-country collection system designed</span></a>
+          </li>
+        </ul>
+      </section>
+
+    </div>
+  </div>
+
+  </main>
+
+  <!-- ============== FOOTER ============== -->
+  <!-- #partial:footer — généré depuis tools/partials/footer.html, ne pas éditer ici -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <img src="/assets/logo-horizontal.svg" alt="Data Solution — Adnan Adamou" width="1000" height="280" loading="lazy" decoding="async">
+        <p>
+          <span lang="fr">Data Analyst &amp; Information Manager. Niamey, Niger.</span>
+          <span lang="en">Data Analyst &amp; Information Manager. Niamey, Niger.</span>
+        </p>
+      </div>
+      <div class="footer-col">
+        <h5><span lang="fr">Navigation</span><span lang="en">Navigation</span></h5>
+        <ul>
+          <li><a href="../index.html"><span lang="fr">Accueil</span><span lang="en">Home</span></a></li>
+          <li><a href="../articles.html"><span lang="fr">Blog</span><span lang="en">Blog</span></a></li>
+          <li><a href="../portfolio.html"><span lang="fr">Portfolio</span><span lang="en">Portfolio</span></a></li>
+          <li><a href="../projects.html"><span lang="fr">Projets</span><span lang="en">Projects</span></a></li>
+          <li><a href="../videos.html"><span lang="fr">Tutoriels</span><span lang="en">Tutorials</span></a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h5><span lang="fr">Suivre</span><span lang="en">Follow</span></h5>
+        <ul>
+          <li><a href="https://www.linkedin.com/in/adnan-data" target="_blank" rel="noopener">LinkedIn ↗</a></li>
+          <li><a href="https://youtube.com/@datasolution" target="_blank" rel="noopener">YouTube ↗</a></li>
+          <li><a href="https://m.facebook.com/106771031899764/" target="_blank" rel="noopener">Facebook ↗</a></li>
+          <li><a href="mailto:contact@adnandata.com">Email ↗</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span data-year>2026</span> Adnan Adamou. <span lang="fr">Tous droits réservés.</span><span lang="en">All rights reserved.</span></span>
+    </div>
+  </footer>
+  <!-- /partial:footer -->
+
+  <script src="/js/main.js?v=20260812-1"></script>
+</body>
+</html>

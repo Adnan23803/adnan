@@ -1,18 +1,18 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Blog - Adnan Adamou · Data Analyst Niger</title>
-  <meta name="description" content="Articles et retours d'expérience sur la collecte de données, KoboToolbox, Power BI, QGIS et l'information management humanitaire — par Adnan Adamou." />
+  <title>Data blog — field notes on collection and analysis</title>
+  <meta name="description" content="Articles and field lessons on data collection, KoboToolbox, Power BI, QGIS and humanitarian information management — by Adnan Adamou." />
   <meta property="og:title" content="Blog — Adnan Adamou · Data Analyst Niger" />
-  <meta property="og:description" content="Articles sur la collecte, le traitement et la visualisation de données au service de l'humanitaire et du développement." />
+  <meta property="og:description" content="Articles on collecting, processing and visualizing data for humanitarian and development work." />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.adnandata.com/articles.html" />
+  <meta property="og:url" content="https://www.adnandata.com/en/articles.html" />
   <meta property="og:image" content="https://www.adnandata.com/images/logo.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:image" content="https://www.adnandata.com/images/logo.png" />
-  <link rel="canonical" href="https://www.adnandata.com/articles.html" />
+  <link rel="canonical" href="https://www.adnandata.com/en/articles.html" />
   <link rel="alternate" hreflang="fr" href="https://www.adnandata.com/articles.html" />
   <link rel="alternate" hreflang="en" href="https://www.adnandata.com/en/articles.html" />
   <link rel="alternate" hreflang="x-default" href="https://www.adnandata.com/articles.html" />
@@ -25,31 +25,41 @@
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,300..700,0..100&family=Manrope:wght@300;400;500;600;700&display=swap">
   <link rel="stylesheet" href="/css/style.css?v=20260812-1" />
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "BreadcrumbList",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Accueil", "item": "https://www.adnandata.com/" },
-          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://www.adnandata.com/articles.html" }
-        ]
-      },
-      {
-        "@type": "Blog",
-        "name": "Blog — Adnan Adamou",
-        "url": "https://www.adnandata.com/articles.html",
-        "author": {
-          "@type": "Person",
-          "name": "Adnan Adamou Daouda",
-          "url": "https://www.adnandata.com"
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.adnandata.com/en/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Blog",
+          "item": "https://www.adnandata.com/en/articles.html"
         }
+      ]
+    },
+    {
+      "@type": "Blog",
+      "name": "Data blog — field notes on collection and analysis",
+      "url": "https://www.adnandata.com/en/articles.html",
+      "author": {
+        "@type": "Person",
+        "name": "Adnan Adamou Daouda",
+        "url": "https://www.adnandata.com"
       }
-    ]
-  }
-  </script>
+    }
+  ]
+}
+</script>
 </head>
-<body class="lang-fr">
+<body class="lang-en">
 
   <!-- ============== HEADER ============== -->
   <!-- #partial:header — généré depuis tools/partials/header.html, ne pas éditer ici -->
@@ -66,15 +76,15 @@
         <span></span><span></span><span></span>
       </button>
       <ul class="nav-links">
-        <li><a href="index.html"><span lang="fr">Accueil</span><span lang="en">Home</span></a></li>
-        <li><a href="articles.html"><span lang="fr">Blog</span><span lang="en">Blog</span></a></li>
-        <li><a href="portfolio.html"><span lang="fr">Portfolio</span><span lang="en">Portfolio</span></a></li>
-        <li><a href="projects.html"><span lang="fr">Projets</span><span lang="en">Projects</span></a></li>
-        <li><a href="videos.html"><span lang="fr">Tutoriels</span><span lang="en">Tutorials</span></a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="articles.html">Blog</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="videos.html">Tutorials</a></li>
         <li class="lang-toggle-wrapper">
           <div class="lang-toggle" role="group" aria-label="Language">
-            <button data-lang="fr" aria-pressed="true">FR</button>
-            <button data-lang="en" aria-pressed="false">EN</button>
+            <button data-lang="fr" aria-pressed="false">FR</button>
+            <button data-lang="en" aria-pressed="true">EN</button>
           </div>
         </li>
       </ul>
@@ -88,16 +98,16 @@
   <section class="page-hero">
     <div class="container">
       <span class="eyebrow reveal">
-        <span lang="fr">Journal</span>
-        <span lang="en">Journal</span>
+        
+        Journal
       </span>
       <h1 class="reveal">
-        <span lang="fr">Notes de <em>terrain</em>, idées de <em>fond</em>.</span>
-        <span lang="en">Field <em>notes</em>, deeper <em>ideas</em>.</span>
+        
+        Field <em>notes</em>, deeper <em>ideas</em>.
       </h1>
       <p class="lead reveal" style="margin-top:1.5rem;">
-        <span lang="fr">Articles, retours d'expérience et analyses sur la collecte, le traitement et la visualisation de données — au service de l'humanitaire et du développement.</span>
-        <span lang="en">Articles, field experience and insights on data collection, processing and visualization — for humanitarian and development work.</span>
+        
+        Articles, field experience and insights on data collection, processing and visualization — for humanitarian and development work.
       </p>
     </div>
   </section>
@@ -119,25 +129,25 @@
         <!-- ── ARTICLE 1 (le plus récent en premier) ── -->
         <a href="articles/sphinx-v5.html" class="blog-card reveal">
           <div class="blog-card-date">
-            <span lang="fr">29 juin 2026</span>
-            <span lang="en">June 29, 2026</span>
+            
+            June 29, 2026
           </div>
           <div class="blog-card-body">
             <h3>
-              <span lang="fr">Le Sphinx V5 Plus² : le logiciel complet pour vos enquêtes statistiques</span>
-              <span lang="en">Le Sphinx V5 Plus²: the complete software for your statistical surveys</span>
+              
+              Le Sphinx V5 Plus²: the complete software for your statistical surveys
             </h3>
             <p class="blog-card-excerpt">
-              <span lang="fr">Du questionnaire à l'analyse, Le Sphinx V5 Plus² couvre l'intégralité du cycle d'une enquête : conception, tris à plat, tris croisés, analyses multivariées et production de rapports.</span>
-              <span lang="en">From questionnaire to analysis, Le Sphinx V5 Plus² covers the entire survey lifecycle: design, frequency tables, cross-tabulations, multivariate analyses and report production.</span>
+              
+              From questionnaire to analysis, Le Sphinx V5 Plus² covers the entire survey lifecycle: design, frequency tables, cross-tabulations, multivariate analyses and report production.
             </p>
             <div class="blog-card-meta">
               <span class="tag">Le Sphinx</span>
-              <span class="tag"><span lang="fr">Statistiques</span><span lang="en">Statistics</span></span>
-              <span class="tag"><span lang="fr">Enquête</span><span lang="en">Survey</span></span>
+              <span class="tag">Statistics</span>
+              <span class="tag">Survey</span>
               <span class="reading-time">
-                <span lang="fr">· 12 min de lecture</span>
-                <span lang="en">· 12 min read</span>
+                
+                · 12 min read
               </span>
             </div>
           </div>
@@ -147,25 +157,25 @@
         <!-- ── ARTICLE 2 ── -->
         <a href="articles/odk-build.html" class="blog-card reveal">
           <div class="blog-card-date">
-            <span lang="fr">29 juin 2026</span>
-            <span lang="en">June 29, 2026</span>
+            
+            June 29, 2026
           </div>
           <div class="blog-card-body">
             <h3>
-              <span lang="fr">ODK Build : concevoir des formulaires XLSForm sans coder</span>
-              <span lang="en">ODK Build: design XLSForm forms without coding</span>
+              
+              ODK Build: design XLSForm forms without coding
             </h3>
             <p class="blog-card-excerpt">
-              <span lang="fr">Une application gratuite et hors connexion pour construire vos formulaires de collecte mobile — des questions simples aux coordonnées GPS — et générer un XLSForm en quelques clics.</span>
-              <span lang="en">A free, offline-capable tool to build mobile data collection forms — from simple questions to GPS coordinates — and export an XLSForm file in just a few clicks.</span>
+              
+              A free, offline-capable tool to build mobile data collection forms — from simple questions to GPS coordinates — and export an XLSForm file in just a few clicks.
             </p>
             <div class="blog-card-meta">
               <span class="tag">ODK Build</span>
               <span class="tag">XLSForm</span>
               <span class="tag">KoboToolbox</span>
               <span class="reading-time">
-                <span lang="fr">· 10 min de lecture</span>
-                <span lang="en">· 10 min read</span>
+                
+                · 10 min read
               </span>
             </div>
           </div>
@@ -175,25 +185,25 @@
         <!-- ── ARTICLE 2 ── -->
         <a href="articles/xlsform-kobo.html" class="blog-card reveal">
           <div class="blog-card-date">
-            <span lang="fr">29 juin 2026</span>
-            <span lang="en">June 29, 2026</span>
+            
+            June 29, 2026
           </div>
           <div class="blog-card-body">
             <h3>
-              <span lang="fr">Cinq pièges classiques dans la conception d'un formulaire KoboToolbox</span>
-              <span lang="en">Five classic pitfalls when designing a KoboToolbox form</span>
+              
+              Five classic pitfalls when designing a KoboToolbox form
             </h3>
             <p class="blog-card-excerpt">
-              <span lang="fr">Après des dizaines de déploiements terrain, je vois revenir les mêmes erreurs. En les anticipant dès la conception, on gagne des jours de débogage et des données bien plus propres.</span>
-              <span lang="en">After dozens of field deployments, the same errors keep appearing. Anticipating them at design time saves days of debugging and yields much cleaner data.</span>
+              
+              After dozens of field deployments, the same errors keep appearing. Anticipating them at design time saves days of debugging and yields much cleaner data.
             </p>
             <div class="blog-card-meta">
               <span class="tag">KoboToolbox</span>
               <span class="tag">XLSForm</span>
-              <span class="tag"><span lang="fr">Terrain</span><span lang="en">Field</span></span>
+              <span class="tag">Field</span>
               <span class="reading-time">
-                <span lang="fr">· 8 min de lecture</span>
-                <span lang="en">· 8 min read</span>
+                
+                · 8 min read
               </span>
             </div>
           </div>
@@ -235,15 +245,15 @@
   <!-- ============== CTA ============== -->
   <section class="section-soft">
     <div class="container text-center">
-      <span class="eyebrow"><span lang="fr">Suivre</span><span lang="en">Follow</span></span>
+      <span class="eyebrow">Follow</span>
       <h2 class="mt-1" style="max-width:22ch; margin-left:auto; margin-right:auto;">
-        <span lang="fr">Reste à jour sur la <em style="font-style:italic; color:var(--terracotta);">prochaine publication</em>.</span>
-        <span lang="en">Stay tuned for the <em style="font-style:italic; color:var(--terracotta);">next post</em>.</span>
+        
+        Stay tuned for the <em style="font-style:italic; color:var(--terracotta);">next post</em>.
       </h2>
       <div class="btn-row btn-center mt-175">
         <a href="https://youtube.com/@datasolution" target="_blank" rel="noopener" class="btn btn-primary">
-          <span lang="fr">S'abonner sur YouTube</span>
-          <span lang="en">Subscribe on YouTube</span>
+          
+          Subscribe on YouTube
           <span class="arrow">↗</span>
         </a>
       </div>
@@ -259,22 +269,22 @@
       <div class="footer-brand">
         <img src="/assets/logo-horizontal.svg" alt="Data Solution — Adnan Adamou" width="1000" height="280" loading="lazy" decoding="async">
         <p>
-          <span lang="fr">Data Analyst &amp; Information Manager. Niamey, Niger.</span>
-          <span lang="en">Data Analyst &amp; Information Manager. Niamey, Niger.</span>
+          
+          Data Analyst &amp; Information Manager. Niamey, Niger.
         </p>
       </div>
       <div class="footer-col">
-        <h5><span lang="fr">Navigation</span><span lang="en">Navigation</span></h5>
+        <h5>Navigation</h5>
         <ul>
-          <li><a href="index.html"><span lang="fr">Accueil</span><span lang="en">Home</span></a></li>
-          <li><a href="articles.html"><span lang="fr">Blog</span><span lang="en">Blog</span></a></li>
-          <li><a href="portfolio.html"><span lang="fr">Portfolio</span><span lang="en">Portfolio</span></a></li>
-          <li><a href="projects.html"><span lang="fr">Projets</span><span lang="en">Projects</span></a></li>
-          <li><a href="videos.html"><span lang="fr">Tutoriels</span><span lang="en">Tutorials</span></a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="articles.html">Blog</a></li>
+          <li><a href="portfolio.html">Portfolio</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="videos.html">Tutorials</a></li>
         </ul>
       </div>
       <div class="footer-col">
-        <h5><span lang="fr">Suivre</span><span lang="en">Follow</span></h5>
+        <h5>Follow</h5>
         <ul>
           <li><a href="https://www.linkedin.com/in/adnan-data" target="_blank" rel="noopener">LinkedIn ↗</a></li>
           <li><a href="https://youtube.com/@datasolution" target="_blank" rel="noopener">YouTube ↗</a></li>
@@ -284,7 +294,7 @@
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© <span data-year>2026</span> Adnan Adamou. <span lang="fr">Tous droits réservés.</span><span lang="en">All rights reserved.</span></span>
+      <span>© <span data-year>2026</span> Adnan Adamou. All rights reserved.</span>
     </div>
   </footer>
   <!-- /partial:footer -->
